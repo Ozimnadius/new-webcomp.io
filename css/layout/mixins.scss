@@ -1,5 +1,6 @@
 //variables
 $vh: 1100;
+$vw: 1920;
 
 @function rem($size) {
   $remSize: $size / $font-size;
@@ -20,6 +21,9 @@ $vh: 1100;
   @return $size/$vh *100*1vh;
 }
 
+@function vw($size) {
+  @return $size/$vw *100*1vw;
+}
 @mixin content() {
   ul {
     margin: 1em 0;

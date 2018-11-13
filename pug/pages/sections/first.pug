@@ -35,3 +35,12 @@ section.first
             .test__desc
                 .test__title Пройдите тест
                 .test__text и получите скидку
+
+    //- MENU
+    .first__menu
+        .menu
+            each item in menu
+                a(href=item.href).menu__item
+                    .menu__item-container
+                        .menu__item-title= item.title
+                        .menu__item-value= item.val

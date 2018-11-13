@@ -96,13 +96,20 @@
   align-items: center;
   position: relative;
 
+  &:hover{
+    &:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
   &:after {
     content: url("../images/bg/round.png");
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(0deg);
     left: 43px;
+    transition: .7s;
   }
 
   &__percent {

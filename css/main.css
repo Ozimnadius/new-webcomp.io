@@ -546,15 +546,24 @@ button {
   position: relative;
 }
 
+.test:hover:after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .test:after {
   content: url("../images/bg/round.png");
   display: block;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) rotate(0deg);
+  -ms-transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
   left: 43px;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
 }
 
 .test__percent {

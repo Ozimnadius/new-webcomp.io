@@ -101,6 +101,7 @@ body {
   height: 100vh;
   background-image: url(../images/bg/bg-index.jpg);
   background-size: cover;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

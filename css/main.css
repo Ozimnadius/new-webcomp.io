@@ -182,7 +182,7 @@ button {
   width: 325px;
   overflow: hidden;
   padding-top: 9.09091vh;
-  padding-bottom: 9.54545vh;
+  padding-bottom: 9.09091vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,7 +193,7 @@ button {
 }
 
 .aside__logo {
-  margin-bottom: 6.27273vh;
+  margin-bottom: 5.72727vh;
   padding-left: 65px;
   padding-right: 90px;
 }
@@ -205,7 +205,7 @@ button {
 }
 
 .aside__seporator {
-  margin-bottom: 4.09091vh;
+  margin-bottom: 3.63636vh;
   padding-right: 90px;
 }
 
@@ -306,7 +306,7 @@ button {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
   position: relative;
-  margin-bottom: 2.27273vh;
+  margin-bottom: 1.81818vh;
 }
 
 .nav__item:last-child {

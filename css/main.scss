@@ -1,16 +1,17 @@
 //variables
 //fonts
-$font: 'Open Sans', Arial, sans-serif;
+$font: 'Exo 2', Arial, sans-serif;
 
 //colors
-$text: #333333;
-$bg: #ffffff;
-$button: #ef4836;
-$button-hover: rgba (#ef4836, 0.6);
-$require: red;
+$text: #ffffff;
+$bg: #000000;
+$Selective-yellow: #ffba00;
+$Battleship-grey: #838383;
+$Battleship-grey2: #848484;
+$White: #fefefe;
 
 //another
-$font-size: 16px;
+$font-size: 17px;
 
 //layout
 /*-----------------SECTION-MIXINS--------------------*/
@@ -27,6 +28,10 @@ $font-size: 16px;
 //sections
 /*------------------------SECTION-HEADER----------------*/
 @import "sections/header";
+/*-----------------SECTION-ASIDE--------------------*/
+@import "sections/aside";
+/*-----------------SECTION-FIRST--------------------*/
+@import "sections/first";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

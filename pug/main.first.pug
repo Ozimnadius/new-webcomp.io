@@ -9,7 +9,7 @@ html(lang="ru")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         meta(content="width=device-width, initial-scale=1" name="viewport")
 
-        title Portfolio | #{title}
+        title Web-comp | #{title}
         link(rel='stylesheet' href='css/vendor.min.css')
         link(rel='stylesheet' href='css/main.css')
     body
@@ -17,20 +17,16 @@ html(lang="ru")
 
             //- heeader
             header.header
-                nav.nav
-                    each val, index in menu
-                        a(href=val class='nav__item')= index
-
-                input(data-json!=`
-                  {
-                    "very-long": "piece of ",
-                    "data": true
-                  }
-                `)
 
             //- pages
             .page
-                block content
+
+                //- aside
+                include common/aside
+
+                //- main
+                main.main
+                    block content
 
             //- footer
             footer.footer

@@ -1,0 +1,65 @@
+include _mixins
+include _settings
+
+aside.aside
+
+    //- logo
+    .aside__logo
+        .logo
+            img.logo__img(src='images/bg/logo.png' title='Web-comp')
+
+
+    //- contacts
+    .aside__contacts
+        .contacts
+            each val in contacts
+                a(href=val.href class='contacts__item')= val.title1
+                    span.contacts__item_white= val.title2
+
+    .aside__seporator
+        .seporator
+            .seporator__line
+            .seporator__triangle
+
+    //- nav
+    .aside__nav
+        nav.nav
+            each val, index in nav
+                a(href=val class='nav__item')= index
+
+
+
+    //- search
+    .aside__search
+        .search
+            button.search__btn
+                .search__btn-line
+                .search__btn-round
+
+
+
+    //- controls
+    .aside__controls
+        .controls
+            each val, index in controls
+                a(href=val.href class='control')
+                    +icon(index, 'control__svg')
+                    .control__title= val.title
+
+
+
+    //- map-link
+    .aside__map
+        a.control
+            +icon('pin', 'control__svg')
+            .control__map м. Кожуховская
+                .control__map_grey На карте
+
+
+
+    //- socials
+    .aside__socials
+        .socials
+            each val, index in socials
+                a(href=val target='_blank' class='socials__item')
+                    +icon(index, 'socials__item-svg')

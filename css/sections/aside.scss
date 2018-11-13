@@ -8,6 +8,7 @@ $asideRight: 90px;
 
 .aside {
   position: fixed;
+  z-index: 200;
   height: 100%;
   width: 325px;
   overflow: hidden;

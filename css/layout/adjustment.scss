@@ -35,8 +35,19 @@ body {
   overflow: hidden;
 }
 
-.main {
+.page {
   flex-grow: 1;
+  height: 100vh;
+
+  background-image: url(../images/bg/bg-index.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main {
+  height: 100%;
+  padding-left: 325px;
 }
 
 section {
@@ -65,4 +76,5 @@ button {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  outline: none;
 }

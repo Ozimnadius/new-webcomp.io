@@ -182,11 +182,26 @@ $asideRight: 90px;
 
   &__map {
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     &_grey {
-      opacity: .5;
-      color: $text;
-      text-decoration: underline;
+      position: relative;
+      //opacity: .5;
+      color: rgba($text,.5);
+      //text-decoration: underline;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 108%;
+        height: 1px;
+        display: block;
+        background: linear-gradient(to right, rgba(51, 51, 57, 1) 0%, rgba(51, 51, 57, 1) 75%, rgba(51, 51, 57, 0) 100%);;
+      }
     }
   }
 }

@@ -372,12 +372,35 @@ button {
 
 .control__map {
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .control__map_grey {
-  opacity: .5;
-  color: #ffffff;
-  text-decoration: underline;
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.control__map_grey:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 108%;
+  height: 1px;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#333339), color-stop(75%, #333339), to(rgba(51, 51, 57, 0)));
+  background: -webkit-linear-gradient(left, #333339 0%, #333339 75%, rgba(51, 51, 57, 0) 100%);
+  background: -o-linear-gradient(left, #333339 0%, #333339 75%, rgba(51, 51, 57, 0) 100%);
+  background: linear-gradient(to right, #333339 0%, #333339 75%, rgba(51, 51, 57, 0) 100%);
 }
 
 .socials__item {

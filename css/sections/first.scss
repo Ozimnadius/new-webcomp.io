@@ -282,3 +282,64 @@
     }
   }
 }
+
+.pag {
+  position: fixed;
+  right: vw(100);
+  top: 50%;
+
+  &__arrow {
+    opacity: 0.2;
+    position: absolute;
+    right: calc(100% + 15px);
+    top: 0;
+
+    display: flex;
+    align-items: center;
+
+    &-line {
+      width: vw(753);
+      height: 1px;
+      background: $text;
+    }
+
+    &-triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5.5px 0 5.5px 7px;
+      border-color: transparent transparent transparent $text;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 200px;
+    height: 430px;
+    width: 40px;
+    overflow-y: hidden;
+    margin-top: -200px;
+  }
+
+  &__items {
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate3d(0,0,0);
+  }
+
+  &__item {
+    margin-bottom: 80px;
+    transform: scale(1);
+    transition: .4s;
+
+    color: rgba($text,.3);
+    font-size: 20px;
+    font-weight: 300;
+
+    &.active {
+      transform: scale(1.5);
+      color: $Selective-yellow;
+    }
+  }
+}

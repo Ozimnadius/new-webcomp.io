@@ -300,7 +300,8 @@
     &-line {
       width: vw(753);
       height: 1px;
-      background: $text;
+      background: linear-gradient(to right, rgba($text, 0) 0%, rgba($text,.7) 50%, rgba($text, 1) 100%);
+      //background: $text;
     }
 
     &-triangle {

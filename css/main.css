@@ -772,7 +772,10 @@ button {
 .pag__arrow-line {
   width: 39.21875vw;
   height: 1px;
-  background: #ffffff;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.7)), to(white));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, white 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, white 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, white 100%);
 }
 
 .pag__arrow-triangle {

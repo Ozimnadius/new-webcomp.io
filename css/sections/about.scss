@@ -75,7 +75,7 @@
   &.active {
     .figure__block1 {
       bottom: calc(100% - 1px);
-      transition: 1.0s;
+      transition: 1.5s;
     }
     .figure__block2{
       top: calc(100% - 0px);
@@ -88,7 +88,7 @@
     }
     .figure__block4{
       left: calc(100% + 22px);
-      transition: 2.0s;
+      transition: 1.5s;
     }
   }
 

@@ -947,9 +947,9 @@ button {
 
 .figure.active .figure__block1 {
   bottom: calc(100% - 1px);
-  -webkit-transition: 1.0s;
-  -o-transition: 1.0s;
-  transition: 1.0s;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .figure.active .figure__block2 {
@@ -969,9 +969,9 @@ button {
 
 .figure.active .figure__block4 {
   left: calc(100% + 22px);
-  -webkit-transition: 2.0s;
-  -o-transition: 2.0s;
-  transition: 2.0s;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .figure img {

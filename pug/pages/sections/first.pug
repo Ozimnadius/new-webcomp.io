@@ -1,7 +1,7 @@
 include ../../common/_mixins
 include ../../common/_settings
 
-section.first
+section(id="01" class='first active-page')
 
     //- TITLE
     .first__title
@@ -20,14 +20,7 @@ section.first
             .we
                 .we__title Мы
                 button.we__btn
-                    .btn
-                        .btn__title Заказать сайт
-                        .btn__lines
-                            .btn__line-top
-                            .btn__line-right
-                            .btn__line-bottom
-                            .btn__line-left
-
+                    +btn('Заказать сайт')
     //- TEST
     .first__test
         a(href='/').test

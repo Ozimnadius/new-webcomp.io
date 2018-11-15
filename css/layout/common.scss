@@ -2,3 +2,57 @@
 
 }
 
+.title {
+  font-size: 70px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &_small {
+    font-size: 57px;
+
+    .title__text_small {
+      margin-left: 70px;
+      margin-right: 40px;
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__text {
+
+    &_small {
+      color: $Selective-yellow;
+      font-size: 0.4714285714285714em;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 0.92px;
+      margin-top: 8px;
+      margin-right: 20px;
+      margin-left: 140px;
+    }
+  }
+}
+
+.we {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: transparent;
+    font-size: 323px;
+    font-weight: 100;
+    //background: linear-gradient(45deg, rgba(172,172,173,0.2) 0%,rgba(172,172,173,0.24) 1%,rgba(172,172,173,1) 45%,rgba(172,172,173,1) 55%,rgba(172,172,173,0.2) 100%);
+    background: linear-gradient(45deg, rgba(172,172,173,0.2) 0%,rgba(172,172,173,0.22) 1%,rgba(172,172,173,1) 45%,rgba(172,172,173,1) 55%,rgba(172,172,173,0.2) 100%);
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    margin-right: 30px;
+  }
+
+}

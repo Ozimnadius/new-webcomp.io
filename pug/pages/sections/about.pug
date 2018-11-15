@@ -1,0 +1,47 @@
+include ../../common/_mixins
+include ../../common/_settings
+
+section(id="02").about
+
+    //- TITLE
+    .about__title
+        .title.title_small
+            .title__line
+                .title__text Компания, которая
+            .title__line
+                span.title__text.title__text_small отвечает
+                span.title__text за результат
+
+    //- CONTENT
+    .about__content
+        p Веб студия Web-comp специализируется на профессиональном создании уникальных сайтов на заказ. Команда наших специалистов постоянно следит за появлением новых технологий, которые мы не боимся внедрять в веб проекты, делая их современными и высокотехнологичными.
+        p Мы создаем только продающие сайты - это достигается путём отрисовки дизайна, проработки юзабилити и настройки технической части.
+
+
+    //- IMAGE
+    .about__image
+        .figure
+            .figure__block1
+                img(src='images/content/about1.png').figure__pic
+            .figure__block2
+                img(src='images/content/about2.png').figure__pic
+            .figure__block3
+                img(src='images/content/about3.png').figure__pic
+            .figure__block4
+                img(src='images/content/about4.png').figure__pic
+
+
+        .about__we
+            .we
+                .we__title Мы
+                button.we__btn
+                    +btn('рассчитать стоимость')
+
+
+    //- MENU
+    .about__menu
+        .menu.menu_top
+            each item in menu
+                a(href=item.href).menu__item
+                    .menu__item-container
+                        .menu__item-title= item.title

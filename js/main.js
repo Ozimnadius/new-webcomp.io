@@ -37,7 +37,7 @@
         if (section.classList.contains('about')) {
             setTimeout(function () {
                 figure.classList.add('active');
-            }, 500);
+            }, 1000);
 
         } else {
             figure.classList.remove('active');

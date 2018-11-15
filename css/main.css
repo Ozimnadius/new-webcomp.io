@@ -947,15 +947,31 @@ button {
 
 .figure.active .figure__block1 {
   bottom: calc(100% - 1px);
+  -webkit-transition: 1.0s;
+  -o-transition: 1.0s;
+  transition: 1.0s;
 }
 
 .figure.active .figure__block2 {
   top: calc(100% - 0px);
   right: calc(100% - 22px);
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.figure.active .figure__block3 {
+  bottom: calc(100% + 0px);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .figure.active .figure__block4 {
   left: calc(100% + 22px);
+  -webkit-transition: 2.0s;
+  -o-transition: 2.0s;
+  transition: 2.0s;
 }
 
 .figure img {
@@ -966,41 +982,43 @@ button {
 .figure__block1 {
   position: absolute;
   bottom: calc(100% + 50px);
+  bottom: calc(100% + 2000px);
   right: 100%;
   height: 43.09091vh;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .figure__block2 {
   position: absolute;
   top: calc(100% - 51px);
   right: 100%;
+  right: calc(100% + 2000px);
   height: 57.45455vh;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .figure__block3 {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 2000px);
   left: 100%;
   height: 46.72727vh;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .figure__block4 {
   position: absolute;
   top: 100%;
-  left: 100%;
+  left: calc(100% + 2000px);
   height: 57.72727vh;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

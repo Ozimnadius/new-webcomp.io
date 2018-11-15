@@ -75,13 +75,20 @@
   &.active {
     .figure__block1 {
       bottom: calc(100% - 1px);
+      transition: 1.0s;
     }
     .figure__block2{
       top: calc(100% - 0px);
       right: calc(100% - 22px);
+      transition: 1.5s;
+    }
+    .figure__block3{
+      bottom: calc(100% + 0px);
+      transition: 0.5s;
     }
     .figure__block4{
       left: calc(100% + 22px);
+      transition: 2.0s;
     }
   }
 
@@ -94,32 +101,34 @@
   &__block1 {
     position: absolute;
     bottom: calc(100% + 50px);
+    bottom: calc(100% + 2000px);
     right: 100%;
     height: vh(474);
-    transition: .7s;
+    transition: 0.5s
   }
 
   &__block2 {
     position: absolute;
     top: calc(100% - 51px);
     right: 100%;
+    right: calc(100% + 2000px);
     height: vh(632);
-    transition: .7s;
+    transition: 0.5s
   }
 
   &__block3 {
     position: absolute;
-    bottom: 100%;
+    bottom: calc(100% + 2000px);
     left: 100%;
     height: vh(514);
-    transition: .7s;
+    transition: 0.5s
   }
 
   &__block4 {
     position: absolute;
     top: 100%;
-    left: 100%;
+    left: calc(100% + 2000px);
     height: vh(635);
-    transition: .7s;
+    transition: 0.5s
   }
 }

@@ -70,13 +70,13 @@
 
         if (deltaY > 0) {
             if (nextSection) {
-                scrollToSection(index(sections,nextSection));
+                scrollToSection(index(sections, nextSection));
             } else {
                 inScroll = false;
             }
         } else {
             if (prevSection) {
-                scrollToSection(index(sections,prevSection));
+                scrollToSection(index(sections, prevSection));
             } else {
                 inScroll = false;
             }
@@ -119,6 +119,58 @@
         mat = transform.match(/^matrix\((.+)\)$/);
         return mat ? parseFloat(mat[1].split(', ')[5]) : 0;
     }
+
+    function getCssValuePrefix() {
+        var rtrnVal = '';//default to standard syntax
+        var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
+
+        // Create a temporary DOM object for testing
+        var dom = document.createElement('div');
+
+        for (var i = 0; i < prefixes.length; i++) {
+            // Attempt to set the style
+            dom.style.background = prefixes[i] + 'linear-gradient(#000000, #ffffff)';
+
+            // Detect if the style was successfully set
+            if (dom.style.background) {
+                rtrnVal = prefixes[i];
+            }
+        }
+
+        dom = null;
+        delete dom;
+
+        return rtrnVal;
+    }
+
+    function GetNoun(number, one, two, five) {
+        number = Math.abs(number);
+        number %= 100;
+        if (number >= 5 && number <= 20) {
+            return five;
+        }
+        number %= 10;
+        if (number == 1) {
+            return one;
+        }
+        if (number >= 2 && number <= 4) {
+            return two;
+        }
+        return five;
+    }
+
+
+    let range = document.querySelector('.calc__range');
+    range.addEventListener('input', function () {
+
+        let rangeVal = document.querySelector('.calc__range-val'),
+            rangeTitle = document.querySelector('.calc__range-text');
+
+        rangeVal.innerHTML = this.value;
+        rangeTitle.innerHTML = ' ' + GetNoun(this.value, 'месяц', 'месяца', 'месяцев');
+        this.style.backgroundImage = getCssValuePrefix() + 'linear-gradient(left ,#ffba00 0%,#ffba00 ' + this.value + '%, #352b4d ' + this.value + '%, #352b4d 100%)';
+
+    });
 }());
 
 

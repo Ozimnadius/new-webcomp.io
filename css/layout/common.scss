@@ -56,3 +56,10 @@
   }
 
 }
+
+.proportion {
+  width: 100%;
+  &_1x1 {
+    padding-top: calc( (1/1)*100% );
+  }
+}

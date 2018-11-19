@@ -112,8 +112,8 @@ body {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -300vh, 0);
+  transform: translate3d(0, -300vh, 0);
 }
 
 section {
@@ -245,6 +245,14 @@ input {
   -ms-flex-item-align: end;
   align-self: flex-end;
   margin-right: 30px;
+}
+
+.proportion {
+  width: 100%;
+}
+
+.proportion_1x1 {
+  padding-top: calc( (1/1)*100%);
 }
 
 /*------------------------SECTION-HEADER----------------*/
@@ -1390,6 +1398,94 @@ input {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+/*-----------------SECTION-CATALOG--------------------*/
+.cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+  margin-left: -325px;
+  padding-left: 325px;
+  overflow: hidden;
+  padding-right: 350px;
+}
+
+.cat__title {
+  font-size: 63px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1.81818vh;
+}
+
+.cat__subtitle {
+  color: #ffba00;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.92px;
+  margin-bottom: 6.36364vh;
+}
+
+.cat__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.cat__item {
+  width: 25%;
+  position: relative;
+}
+
+.cat__item:hover .cat__item-pic {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.cat__item-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.cat__item-pic {
+  display: block;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.cat__menu {
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: 325px;
+  right: 7.29167vw;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

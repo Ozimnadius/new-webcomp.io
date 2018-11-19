@@ -133,7 +133,7 @@
       transition: .4s;
 
       &:after {
-        content: url("/images/bg/light.png");
+        content: url("../images/bg/light.png");
         display: block;
         position: absolute;
         left: -7.5px;
@@ -161,7 +161,7 @@
       transition: .4s;
 
       &:after {
-        content: url("/images/bg/light.png");
+        content: url("../images/bg/light.png");
         display: block;
         position: absolute;
         right: -7.5px;

@@ -57,6 +57,240 @@
 
 }
 
+.btn {
+  width: 266px;
+  height: 60px;
+  border: 1px solid rgba($text, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    .btn__line-top {
+      width: 100%;
+    }
+    .btn__line-bottom {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: $text;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.92px;
+    position: relative;
+  }
+
+  &__lines {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+  }
+  &__line {
+    &-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 17%;
+      height: 1px;
+      background-color: rgba($text,.7);
+      transition: .4s;
+
+      &:after {
+        content: url("../images/bg/light.png");
+        display: block;
+        position: absolute;
+        left: -7.5px;
+        top: 50%;
+        margin-top: -7.5px;
+      }
+    }
+
+    &-right {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: rgba($text,.7);
+    }
+
+    &-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 7.5%;
+      height: 1px;
+      background-color: rgba($text,.7);
+      transition: .4s;
+
+      &:after {
+        content: url("../images/bg/light.png");
+        display: block;
+        position: absolute;
+        right: -7.5px;
+        top: 50%;
+        margin-top: -7.5px;
+      }
+    }
+
+    &-left {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($text,.7);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  margin-right: vw(-60);
+  margin-left: vw(-60);
+
+  &_top {
+    .menu__item {
+      padding-top: vh(75);
+      padding-bottom: 0;
+
+      &:after {
+        transform: rotate(-180deg);
+      }
+      &:before {
+        top: initial;
+        bottom: 7px;
+      }
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    padding-bottom: vh(75);
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 100%);
+    }
+    &:before {
+      content: '';
+      display: block;
+
+      width: 5px;
+      height: 5px;
+      border: 1px solid rgba($text,.5);
+      position: absolute;
+      right: -2px;
+      top: 7px;
+
+    }
+
+    &:last-child {
+      &:after,&:before {
+        display: none;
+      }
+    }
+
+    &-container{
+
+    }
+
+    &-title {
+      color: rgba($text,.7);
+      font-size: 19px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    &-value {
+      font-weight: 700;
+    }
+  }
+}
+
+.pag {
+  position: fixed;
+  right: vw(100);
+  top: vh(538);
+  opacity: 1;
+  transition: .4s;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  &__arrow {
+    opacity: 0.2;
+    position: absolute;
+    right: calc(100% + 15px);
+    top: 0;
+
+    display: flex;
+    align-items: center;
+
+    &-line {
+      width: vw(753);
+      height: 1px;
+      background: linear-gradient(to right, rgba($text, 0) 0%, rgba($text,.7) 50%, rgba($text, 1) 100%);
+      //background: $text;
+    }
+
+    &-triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5.5px 0 5.5px 7px;
+      border-color: transparent transparent transparent $text;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 200px;
+    height: 430px;
+    width: 40px;
+    overflow-y: hidden;
+    margin-top: -200px;
+  }
+
+  &__items {
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate3d(0,0,0);
+  }
+
+  &__item {
+    margin-bottom: 80px;
+    transform: scale(1);
+    transition: .4s;
+
+    color: rgba($text,.3);
+    font-size: 20px;
+    font-weight: 300;
+
+    &.active {
+      transform: scale(1.5);
+      color: $Selective-yellow;
+    }
+  }
+}
+
 .proportion {
   width: 100%;
   &_1x1 {

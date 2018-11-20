@@ -8,7 +8,8 @@
         figure = document.querySelector('.figure'),
         screen = 0,
         sectionBottom = document.querySelector('.bottom'),
-        scrollTop = 0;
+        scrollTop = 0,
+        pagination = document.querySelector('.pag');
 
 
     function index(list, item) {
@@ -52,6 +53,12 @@
             document.querySelector('.pag__arrow-line').style.opacity = 1;
         }
 
+        if (section.classList.contains('bottom')) {
+            pagination.classList.add('hidden');
+        } else {
+            pagination.classList.remove('hidden');
+        }
+
         setTimeout(function () {
             inScroll = false;
         }, 500);
@@ -72,13 +79,13 @@
             nextSection = activeSection.nextElementSibling,
             prevSection = activeSection.previousElementSibling;
 
-        if(!activeSection.classList.contains('bottom')) {
+        if (!activeSection.classList.contains('bottom')) {
             e.preventDefault();
         } else {
-            if (deltaY>0) {
+            if (deltaY > 0) {
                 return;
-            } else{
-                if (scrollTop>0) {
+            } else {
+                if (scrollTop > 0) {
                     return;
                 }
             }
@@ -108,7 +115,6 @@
     sectionBottom.addEventListener('scroll', function (e) {
         scrollTop = this.scrollTop;
     });
-
 
 
     $.fn.hyphenate = function () {
@@ -198,7 +204,73 @@
 
     });
 
+
+    let switchButton = document.querySelector('.best__switch-button'),
+        switches = document.querySelectorAll('.best__switch'),
+        tabs = document.querySelectorAll('.best__tab');
+
+    switchButton.addEventListener('click', function (e) {
+
+        let nextSwitch='';
+        for (let i = 0; i < switches.length; i++) {
+            if (!switches[i].classList.contains('active')) {
+                nextSwitch = switches[i];
+            }
+        }
+
+        let id = nextSwitch.dataset.id,
+            activeTab = document.querySelector('.best__tab[data-id="' + id + '"]');
+
+        //Toggle switces
+        for (let i = 0; i < switches.length; i++) {
+            switches[i].classList.remove('active');
+        }
+        nextSwitch.classList.add('active');
+
+        //Toggle tabs
+        for(let i=0;i<tabs.length;i++){
+            tabs[i].classList.remove('active');
+        }
+        activeTab.classList.add('active');
+
+        //Toggle button
+        this.classList.toggle('right');
+
+    });
+
+    window.onload = function () {
+        //initialize swiper when document ready
+        let swiperReviews = new Swiper ('.rev__container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+            speed: 300,
+            slidesPerView: 3,
+            spaceBetween: 8,
+            initialSlide: 1,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            on: {
+                slideChange: function () {
+                    let index = this.activeIndex,
+                        prevSlide = this.slides[index-1],
+                        nextSlide = this.slides[index+1];
+
+                    for (let i=0; i<this.slides.length; i++) {
+                        this.slides[i].classList.remove('prev');
+                        this.slides[i].classList.remove('next');
+                    }
+
+                    prevSlide.classList.add('prev');
+                    nextSlide.classList.add('next');
+                },
+            }
+        })
+    };
+
 }());
+
+
 
 
 

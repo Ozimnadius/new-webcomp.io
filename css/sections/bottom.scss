@@ -1,0 +1,34 @@
+.bottom {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: -325px;
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 325px;
+    right: vw(140);
+  }
+
+  &__wrapper {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/bg/bottom.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    padding-left: 325px;
+    padding-right: 250px;
+    padding-top: vh(300);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+  }
+}

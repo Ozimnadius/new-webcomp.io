@@ -1,6 +1,9 @@
 .first {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-left: -325px;
+  padding-left: 325px;
 
   &__title {
     position: relative;

@@ -112,8 +112,10 @@ body {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
-  -webkit-transform: translate3d(0, -400vh, 0);
-  transform: translate3d(0, -400vh, 0);
+  -webkit-transform: translate3d(0, -500vh, 0);
+  transform: translate3d(0, -500vh, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 section {
@@ -519,6 +521,9 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
+  margin-left: -325px;
+  padding-left: 325px;
 }
 
 .first__title {
@@ -1389,6 +1394,15 @@ input {
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.calc__personal:focus, .calc__personal:active {
+  color: #ffffff;
+  border: 1px solid white;
 }
 
 .calc__button {
@@ -1570,6 +1584,46 @@ input {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+/*-----------------SECTION-BOTTOM--------------------*/
+.bottom {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: -325px;
+  position: relative;
+}
+
+.bottom__menu {
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: 325px;
+  right: 7.29167vw;
+}
+
+.bottom__wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../images/bg/bottom.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  padding-left: 325px;
+  padding-right: 250px;
+  padding-top: 27.27273vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

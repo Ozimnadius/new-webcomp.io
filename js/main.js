@@ -252,17 +252,15 @@
             slideToClickedSlide: true,
             on: {
                 slideChange: function () {
-                    let index = this.activeIndex,
-                        prevSlide = this.slides[index-1],
-                        nextSlide = this.slides[index+1];
+                    let index = this.activeIndex;
+
 
                     for (let i=0; i<this.slides.length; i++) {
-                        this.slides[i].classList.remove('prev');
-                        this.slides[i].classList.remove('next');
+                        this.slides[i].classList.add('inactive');
                     }
 
-                    prevSlide.classList.add('prev');
-                    nextSlide.classList.add('next');
+                    this.slides[index].classList.remove('inactive');
+
                 },
             }
         })

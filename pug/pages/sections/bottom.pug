@@ -45,11 +45,11 @@ section.bottom
                         div(data-id=2).best__tab
                             .table
                                 .table__thead
-                                    each val in tab1.thead
+                                    each val in tab2.thead
                                         div(class= val.width).table__th= val.title
 
                                 .table__tbody
-                                    each val in tab1.tbody
+                                    each val in tab2.tbody
                                         .table__tr
                                             each item in val
                                                 div(class= item.width).table__td= item.title
@@ -82,11 +82,11 @@ section.bottom
                                         img(src= val.img).rev__img-img
 
                                     .rev__middle
-                                        a(href= val.link).rev__link
+                                        a(href= val.link data-fancybox).rev__link
                                             +icon('triangle', 'rev__link-svg')
 
                                     .rev__desc
-                                        .rev__title= val.title
+                                        .rev__item-title= val.title
                                         .rev__text= val.desc
 
                                     .rev__data

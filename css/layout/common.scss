@@ -317,3 +317,8 @@
     border-color: transparent transparent transparent rgba($text, .2);
   }
 }
+
+.tel,.email {
+  opacity: 0.5;
+  font-size: 19px;
+}

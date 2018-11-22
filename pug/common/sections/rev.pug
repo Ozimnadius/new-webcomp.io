@@ -1,0 +1,28 @@
+include ../_mixins
+include ../_settings
+
+.rev
+    .rev__title
+        img(src='images/content/reviews.png').rev__title-img
+
+    .rev__slider
+        .swiper-container.rev__container
+            .swiper-wrapper
+                each val in reviews
+                    .swiper-slide
+                        .rev__item
+
+                            .rev__img
+                                img(src= val.img).rev__img-img
+
+                            .rev__middle
+                                a(href= val.link data-fancybox).rev__link
+                                    +icon('triangle', 'rev__link-svg')
+
+                            .rev__desc
+                                .rev__item-title= val.title
+                                .rev__text= val.desc
+
+                            .rev__data
+                                .rev__price= val.price
+                                .rev__date= val.date

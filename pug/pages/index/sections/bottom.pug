@@ -10,199 +10,137 @@ section.index-bottom
     .index-bottom__wrapper
 
         //- BEST
-        .best
-            .best__row
+        .index__best
+            .best
+                .best__row
 
-                //- LEFT
-                .best__left
-                    //- TITLE
-                    .best__title лучше, чем конкуренты
+                    //- LEFT
+                    .best__left
+                        //- TITLE
+                        .best__title лучше, чем конкуренты
 
-                    //- SWITCHES
-                    .best__switches
-                        a(data-id=1).best__switch.active Создание сайтов
-                        .best__switch-button
-                        a(data-id=2).best__switch Продвижение
+                        //- SWITCHES
+                        .best__switches
+                            a(data-id=1).best__switch.active Создание сайтов
+                            .best__switch-button
+                            a(data-id=2).best__switch Продвижение
 
-                    //- TABS
-                    .best__tabs
-                        div(data-id=1).best__tab.active
-                            .table
-                                .table__thead
-                                    each val in tab1.thead
-                                        div(class= val.width).table__th= val.title
+                        //- TABS
+                        .best__tabs
+                            div(data-id=1).best__tab.active
+                                .table
+                                    .table__thead
+                                        each val in tab1.thead
+                                            div(class= val.width).table__th= val.title
 
-                                .table__tbody
-                                    each val in tab1.tbody
-                                        .table__tr
-                                            each item in val
-                                                div(class= item.width).table__td= item.title
+                                    .table__tbody
+                                        each val in tab1.tbody
+                                            .table__tr
+                                                each item in val
+                                                    div(class= item.width).table__td= item.title
 
-                        div(data-id=2).best__tab
-                            .table
-                                .table__thead
-                                    each val in tab2.thead
-                                        div(class= val.width).table__th= val.title
+                            div(data-id=2).best__tab
+                                .table
+                                    .table__thead
+                                        each val in tab2.thead
+                                            div(class= val.width).table__th= val.title
 
-                                .table__tbody
-                                    each val in tab2.tbody
-                                        .table__tr
-                                            each item in val
-                                                div(class= item.width).table__td= item.title
+                                    .table__tbody
+                                        each val in tab2.tbody
+                                            .table__tr
+                                                each item in val
+                                                    div(class= item.width).table__td= item.title
 
-                //- RIGHT
-                .best__right
-                    .best__percents
-                        .proportion.proportion_1x1
-                        .best__percents-title
-                            .best__percents-text на
-                            .best__percents-value 70%
-                            .best__percents-text лучше
+                    //- RIGHT
+                    .best__right
+                        .best__percents
+                            .proportion.proportion_1x1
+                            .best__percents-title
+                                .best__percents-text на
+                                .best__percents-value 70%
+                                .best__percents-text лучше
 
-                    .best__button
-                        +btn('Заказать сайт')
+                        .best__button
+                            +btn('Заказать сайт')
 
         //- REVIEWS
-        .rev
-            .rev__title
-                img(src='images/content/reviews.png').rev__title-img
-
-            .rev__slider
-                .swiper-container.rev__container
-                    .swiper-wrapper
-                        each val in reviews
-                            .swiper-slide
-                                .rev__item
-
-                                    .rev__img
-                                        img(src= val.img).rev__img-img
-
-                                    .rev__middle
-                                        a(href= val.link data-fancybox).rev__link
-                                            +icon('triangle', 'rev__link-svg')
-
-                                    .rev__desc
-                                        .rev__item-title= val.title
-                                        .rev__text= val.desc
-
-                                    .rev__data
-                                        .rev__price= val.price
-                                        .rev__date= val.date
-
+        .index__rev
+            include ../../../common/sections/rev
         //- BLOG
-        .blog
-            //- LEFT
-            .blog__left
-                .blog__list
-                    .blog__item
-                        .blog__item-date
-                            .blog__item-month 03
-                            .blog__item-year 10
+        .index__blog
+            .blog
+                //- LEFT
+                .blog__left
+                    .blog__list
+                        .blog__item
+                            .blog__item-date
+                                .blog__item-month 03
+                                .blog__item-year 10
 
-                        .blog__item-right
-                            .blog__item-text Конференция Optimization 2018 пройдет 26-27 ноября в кампусе «Сколково»  ...
-                            .blog__item-arrow
-                                .seporator
-                                    .seporator__line
-                                    .seporator__triangle
+                            .blog__item-right
+                                .blog__item-text Конференция Optimization 2018 пройдет 26-27 ноября в кампусе «Сколково»  ...
+                                .blog__item-arrow
+                                    .seporator
+                                        .seporator__line
+                                        .seporator__triangle
 
-                    .blog__item
-                        .blog__item-date
-                            .blog__item-month 16
-                            .blog__item-year 10
+                        .blog__item
+                            .blog__item-date
+                                .blog__item-month 16
+                                .blog__item-year 10
 
-                        .blog__item-right
-                            .blog__item-text Опытные дизайнеры, программисты, верстальщики и специалисты в области ...
-                            .blog__item-arrow
-                                .seporator
-                                    .seporator__line
-                                    .seporator__triangle
+                            .blog__item-right
+                                .blog__item-text Опытные дизайнеры, программисты, верстальщики и специалисты в области ...
+                                .blog__item-arrow
+                                    .seporator
+                                        .seporator__line
+                                        .seporator__triangle
 
 
 
-            //- RIGHT
-            .blog__right
-                .blog__right-top
-                    .blog__title SEO оптимизатор Анатолий Васильев
-                    .blog__img
-                        .blog__img-wrap
-                            img(src='images/content/blogPhoto.jpg').blog__pic
-                .blog__desc
-                    .blog__desc-title Как сэкономить на создании интернет магазина
-                    .blog__content
-                        p При создании сайта или интернет-магазина часто возникает желания сэкономить, особенно когда перед глазами много разны вариантов получения готового интернет-магазина. Разброс цен действительно большой и нужно понимать все особенности и подводные камни в решении этой задачи.
-                        p Работая в Веб индустрии очень давно, на начальных этапах своей деятельности мы прибегали к привлечению специалистов через фриланс в пиковые моменты сезона и в последствии отказались от этого решения, расширив ...
+                //- RIGHT
+                .blog__right
+                    .blog__right-top
+                        .blog__title SEO оптимизатор Анатолий Васильев
+                        .blog__img
+                            .blog__img-wrap
+                                img(src='images/content/blogPhoto.jpg').blog__pic
+                    .blog__desc
+                        .blog__desc-title Как сэкономить на создании интернет магазина
+                        .blog__content
+                            p При создании сайта или интернет-магазина часто возникает желания сэкономить, особенно когда перед глазами много разны вариантов получения готового интернет-магазина. Разброс цен действительно большой и нужно понимать все особенности и подводные камни в решении этой задачи.
+                            p Работая в Веб индустрии очень давно, на начальных этапах своей деятельности мы прибегали к привлечению специалистов через фриланс в пиковые моменты сезона и в последствии отказались от этого решения, расширив ...
 
         //- WORK
-        .work
+        .index__work
+            .work
+                .work__title
+                    img(src='images/content/work/work.png').work__title-img
+                    .work__title-title
+                        .work__title-text.work__title-text_yellow лет
+                        .work__title-text мы разрабатываем
+                        .work__title-text сайты
 
-            .work__title
-                img(src='images/content/work/work.png').work__title-img
-                .work__title-title
-                    .work__title-text.work__title-text_yellow лет
-                    .work__title-text мы разрабатываем
-                    .work__title-text сайты
-
-            .work__items
-                .work__item
-                    .work__item-img
-                        img(src='images/content/work/work1.png').work__item-pic
-                    .work__item-text Бесплатная система управления с понятной системой
-                .work__item
-                    .work__item-img
-                        img(src='images/content/work/work2.png').work__item-pic
-                    .work__item-text Многофункциональное решение под крупные проекты с годовой техническая поддержка в подарок
-                .work__item
-                    .work__item-img
-                        img(src='images/content/work/work3.png').work__item-pic
-                    .work__item-text Решения с большим кол-во готовых шаблонов и высокой скоростью загрузки
+                .work__items
+                    .work__item
+                        .work__item-img
+                            img(src='images/content/work/work1.png').work__item-pic
+                        .work__item-text Бесплатная система управления с понятной системой
+                    .work__item
+                        .work__item-img
+                            img(src='images/content/work/work2.png').work__item-pic
+                        .work__item-text Многофункциональное решение под крупные проекты с годовой техническая поддержка в подарок
+                    .work__item
+                        .work__item-img
+                            img(src='images/content/work/work3.png').work__item-pic
+                        .work__item-text Решения с большим кол-во готовых шаблонов и высокой скоростью загрузки
 
         //- SEND
-        .send
-            .send__title Оставьте заявку
-            .send__sub Получите регистрацию домена на 1 год + 2 месяца хостинга в подарок
-
-            .send__form
-                form(action='#' method='post').form
-                    .form__row
-                        .form__field
-                            input(type='text' name='name' placeholder='Имя').input
-                        .form__field
-                            input(type='tel' name='tel' placeholder='Телефон').input
-                        .form__field
-                            input(type='email' name='email' placeholder='E-mail').input
-                    .form__row
-                        .form__field.form__field_3
-                            textarea(placeholder='Комментарий').input.input_area
-                    button(type='submit').form__submit
-                        +btn('Получить консультацию маркетолога', 'btn_2')
+        .index__send
+            include ../../../common/sections/send
         //- WHY
-        .why
-            .why__img
-                img(src='images/content/why.png').why__img-img
-            .why__title Оставить заявку
-            .why__content
-                p При разработке сайта мы учитываем многочисленные требования поисковых систем Yandex и Google, благодаря чему все сайты, созданные нами, отлично индексируются и обладают всеми возможностями эффективно продвигаться в интернете. Цена на создание сайта демократична и начинается от 49 900 руб.   Подход к каждому новому проекту – индивидуален, мы относимся одинаково внимательно к каждому клиенту, независимо от размера компании и ее бюджета. На начальной стадии работы над проектом мы детально изучаем тематику клиента со всех сторон, оцениваем рентабельность идеи и анализируем конкурентов. Основываясь на полученной информации, мы даем рекомендации, как по разработке, так и по эффективной рекламе в интернете.
-                p После сдачи проекта мы осуществляем раскрутку и поддержку сайта, помогая клиенту привлекать трафик из интернета. Обращайтесь в нашу студию за разработкой веб сайтов под ключ и вы получите команду специалистов, готовых проконсультировать по любому вопросу и оказать всестороннюю поддержку вашему бизнесу во всемирной паутине.
-                p Наша команда состоит из высококвалифицированных кадров, за плечами которых огромный опыт работы в веб индустрии. Несмотря на уже приобретенный опыт, мы держим руку на пульсе новых технологий и постоянно совершенствуем наработанные навыки. Таким образом, вы можете быть уверены, что при сотрудничестве с нами получите современный продукт, который будет выполнять ваши задачи и достигать поставленные цели.   Основные наши направления: создание сайтов под ключ, разработка дизайна, написание контента, продвижение сайта и его раскрутка, работа с социальными сетями, PR-рейтинг, техническая поддержка сайта, регистрация доменных имен, серверное обслуживание, программирование и настройка 1С.
-
-
-        footer.footer
-            .footer__top
-                .footer__title Другие услуги
-                .footer__cols
-                    each val in footer
-                        .footer__col
-                            .footer__items
-                                each item in val
-                                    a(href= item.href).footer__item= item.title
-
-            .footer__bottom
-                .footer__tel
-                    a(href='tel:'+tel1.value).tel= tel1.title
-
-                .footer__tel
-                    a(href='tel:'+tel2.value).tel= tel2.title
-
-                .footer__email
-                    a(href='mailto:'+email.value).email= email.title
+        .index__why
+            include ../../../common/sections/why
+        //- WHY
+        .index__footer
+            include ../../../common/footer

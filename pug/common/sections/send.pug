@@ -1,0 +1,21 @@
+include ../_mixins
+include ../_settings
+
+.send
+    .send__title Оставьте заявку
+    .send__sub Получите регистрацию домена на 1 год + 2 месяца хостинга в подарок
+
+    .send__form
+        form(action='#' method='post').form
+            .form__row
+                .form__field
+                    input(type='text' name='name' placeholder='Имя').input
+                .form__field
+                    input(type='tel' name='tel' placeholder='Телефон').input
+                .form__field
+                    input(type='email' name='email' placeholder='E-mail').input
+            .form__row
+                .form__field.form__field_3
+                    textarea(placeholder='Комментарий').input.input_area
+            button(type='submit').form__submit
+                +btn('Получить консультацию маркетолога', 'btn_2')

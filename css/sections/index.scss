@@ -342,13 +342,34 @@
     }
 
     .footer {
-      margin-left: -325px;
-      margin-right: -250px;
-      padding-right: 250px;
-      padding-left: 250px;
-      position: relative;
+
 
     }
+  }
+
+  &__best {
+    margin-bottom: vh(150);
+  }
+
+  &__rev {
+    margin-bottom: vh(180);
+  }
+
+  &__blog {
+    margin-bottom: vh(170);
+  }
+
+  &__work {
+    margin-bottom: vh(150);
+  }
+
+  &__why {
+    margin-bottom: vh(125);
+  }
+
+  &__footer {
+    margin-left: -325px;
+    margin-right: -250px;
   }
 
 }

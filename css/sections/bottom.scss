@@ -1,0 +1,24 @@
+.bottom {
+  background-image: url(../images/bg/bottom.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  padding-left: 325px;
+  padding-right: 250px;
+  padding-top: vh(220);
+  display: flex;
+  flex-direction: column;
+
+  &__rev {
+    margin-bottom: vh(180);
+  }
+
+  &__why {
+    margin-bottom: vh(125);
+  }
+
+  &__footer {
+    margin-left: -325px;
+    margin-right: -250px;
+  }
+}

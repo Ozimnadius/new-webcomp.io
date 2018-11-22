@@ -1,10 +1,10 @@
-include ../../common/_mixins
-include ../../common/_settings
+include ../../../common/_mixins
+include ../../../common/_settings
 
-section(id="01" class='first active-page')
+section(id="01" class='index-first active-page')
 
     //- TITLE
-    .first__title
+    .index-first__title
         .title
             .title__line
                 .title__text Cоздаем сайты,
@@ -14,15 +14,15 @@ section(id="01" class='first active-page')
 
 
     //- IMAGE
-    .first__image
-        img(src='images/bg/face.png').first__img
-        .first__we
+    .index-first__image
+        img(src='images/bg/face.png').index-first__img
+        .index-first__we
             .we
                 .we__title Мы
                 button.we__btn
                     +btn('Заказать сайт')
     //- TEST
-    .first__test
+    .index-first__test
         a(href='/').test
             .test__percent 15%
             .test__desc
@@ -30,10 +30,5 @@ section(id="01" class='first active-page')
                 .test__text и получите скидку
 
     //- MENU
-    .first__menu
-        .menu
-            each item in menu
-                a(href=item.href).menu__item
-                    .menu__item-container
-                        .menu__item-title= item.title
-                        .menu__item-value= item.val
+    .index-first__menu
+        include ../../../common/menu

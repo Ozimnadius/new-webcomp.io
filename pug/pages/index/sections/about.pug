@@ -1,10 +1,10 @@
-include ../../common/_mixins
-include ../../common/_settings
+include ../../../common/_mixins
+include ../../../common/_settings
 
-section(id="02").about
+section(id="02").index-about
 
     //- TITLE
-    .about__title
+    .index-about__title
         .title.title_small
             .title__line
                 .title__text Компания, которая
@@ -13,13 +13,13 @@ section(id="02").about
                 span.title__text за результат
 
     //- CONTENT
-    .about__content
+    .index-about__content
         p Веб студия Web-comp специализируется на профессиональном создании уникальных сайтов на заказ. Команда наших специалистов постоянно следит за появлением новых технологий, которые мы не боимся внедрять в веб проекты, делая их современными и высокотехнологичными.
         p Мы создаем только продающие сайты - это достигается путём отрисовки дизайна, проработки юзабилити и настройки технической части.
 
 
     //- IMAGE
-    .about__image
+    .index-about__image
         .figure
             .figure__block1
                 img(src='images/content/about1.png').figure__pic
@@ -31,7 +31,7 @@ section(id="02").about
                 img(src='images/content/about4.png').figure__pic
 
 
-        .about__we
+        .index-about__we
             .we
                 .we__title Мы
                 button.we__btn
@@ -39,9 +39,5 @@ section(id="02").about
 
 
     //- MENU
-    .about__menu
-        .menu.menu_top
-            each item in menu
-                a(href=item.href).menu__item
-                    .menu__item-container
-                        .menu__item-title= item.title
+    .index-about__menu
+        include ../../../common/menuTop

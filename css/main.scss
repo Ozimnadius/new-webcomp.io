@@ -30,18 +30,22 @@ $font-size: 17px;
 @import "sections/header";
 /*-----------------SECTION-ASIDE--------------------*/
 @import "sections/aside";
+/*-----------------SECTION-INDEX--------------------*/
+@import "sections/index";
+/*-----------------SECTION-BEST--------------------*/
+@import "sections/best";
+/*-----------------SECTION-REV--------------------*/
+@import "sections/rev";
+/*-----------------SECTION-BLOG--------------------*/
+@import "sections/blog";
+/*-----------------SECTION-WORK--------------------*/
+@import "sections/work";
+/*-----------------SECTION-SEND--------------------*/
+@import "sections/send";
+/*-----------------SECTION-WHY--------------------*/
+@import "sections/why";
 /*-----------------SECTION-FIRST--------------------*/
-@import "sections/first";
-/*-----------------SECTION-ABOUT--------------------*/
-@import "sections/about";
-/*-----------------SECTION-PRICE--------------------*/
-@import "sections/price";
-/*-----------------SECTION-CATALOG--------------------*/
-@import "sections/catalog";
-/*-----------------SECTION-SEO--------------------*/
-@import "sections/seo";
-/*-----------------SECTION-BOTTOM--------------------*/
-@import "sections/bottom";
+@import "sections/site";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

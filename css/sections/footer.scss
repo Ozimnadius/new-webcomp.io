@@ -1,7 +1,19 @@
 .footer {
   position: relative;
   padding-top: 65px;
+  padding-right: 250px;
+  padding-left: 250px;
 
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.2) 40%,rgba(255,255,255,0.2) 60%,rgba(255,255,255,0) 100%);
+  }
 
   &__title {
     color: #f0a900;
@@ -74,6 +86,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    margin-left: -250px;
+    margin-right: -250px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.2) 40%,rgba(255,255,255,0.2) 60%,rgba(255,255,255,0) 100%);
+    }
+
+    padding: 60px 0;
   }
 
   &__tel {

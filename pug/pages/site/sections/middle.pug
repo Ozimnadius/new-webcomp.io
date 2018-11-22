@@ -1,0 +1,47 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.site-middle
+
+    //- develop
+    .site-dev
+        //- logo
+        .site-dev__logo
+            img(src='images/content/dev/devLogo.png').site-dev__img
+
+        //- desc
+        .site-dev__desc
+            .site-dev__desc-item
+                span.site-dev__desc-name Описание:
+                span.site-dev__desc-val  Лидер на рынке электронных книг: Россия, СНГ
+
+            .site-dev__desc-item
+                span.site-dev__desc-name Цель:
+                span.site-dev__desc-val  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
+
+
+        //- swiper
+        .site-dev__swiper
+            .proportion.proportion_1006x591
+            .site-dev__swiper-wrap
+                .swiper-container.site-dev__container
+                    .swiper-wrapper
+                        each val in [1,2,3]
+                            .swiper-slide.site-dev__slide
+                                .proportion.proportion_750x470
+                                .site-dev__slide-img
+                                    img(src='images/content/dev/dev1.jpg').site-dev__slide-pic
+
+                .site-dev__prev
+                    .seporator.seporator_prev
+                        .seporator__triangle
+                        .seporator__line
+
+
+                .site-dev__next
+                    .seporator
+                        .seporator__line
+                        .seporator__triangle
+
+        //- title
+        .site-dev__title Как мы разрабатываем сайты

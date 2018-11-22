@@ -1,4 +1,22 @@
 include _mixins
 include _settings
 
-footer.footer
+footer.footer.footer_second
+    .footer__top
+        .footer__title Другие услуги
+        .footer__cols
+            each val in footer
+                .footer__col
+                    .footer__items
+                        each item in val
+                            a(href= item.href).footer__item= item.title
+
+    .footer__bottom
+        .footer__tel
+            a(href='tel:' + tel1.value).tel= tel1.title
+
+        .footer__tel
+            a(href='tel:' + tel2.value).tel= tel2.title
+
+        .footer__email
+            a(href='mailto:' + email.value).email= email.title

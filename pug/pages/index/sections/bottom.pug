@@ -1,18 +1,13 @@
-include ../../common/_mixins
-include ../../common/_settings
+include ../../../common/_mixins
+include ../../../common/_settings
 
-section.bottom
+section.index-bottom
 
     //- MENU
-    .bottom__menu
-        .menu.menu_top
-            each item in menu
-                a(href=item.href).menu__item
-                    .menu__item-container
-                        .menu__item-title= item.title
+    .index-bottom__menu
+        include ../../../common/menuTop
 
-
-    .bottom__wrapper
+    .index-bottom__wrapper
 
         //- BEST
         .best
@@ -180,7 +175,7 @@ section.bottom
                         .form__field.form__field_3
                             textarea(placeholder='Комментарий').input.input_area
                     button(type='submit').form__submit
-                        +btn('Получить консультацию маркетолога')
+                        +btn('Получить консультацию маркетолога', 'btn_2')
         //- WHY
         .why
             .why__img
@@ -193,8 +188,6 @@ section.bottom
 
 
         footer.footer
-
-
             .footer__top
                 .footer__title Другие услуги
                 .footer__cols

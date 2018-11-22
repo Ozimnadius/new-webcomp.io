@@ -1,0 +1,13 @@
+extends ../main.first.pug
+
+block variables
+    - var title = 'Главная'
+
+block content
+    .index
+        include sections/first
+        include sections/about
+        include sections/price
+        include sections/cat
+        include sections/seo
+        include sections/bottom

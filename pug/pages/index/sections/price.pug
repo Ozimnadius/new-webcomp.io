@@ -1,16 +1,16 @@
-include ../../common/_mixins
-include ../../common/_settings
+include ../../../common/_mixins
+include ../../../common/_settings
 
-section.price
+section.index-price
 
     //-TITLE
-    .price__title Сколько стоит сайт?
+    .index-price__title Сколько стоит сайт?
 
     //-SUBTITLE
-    .price__subtitle on-line калькулятор расчета стоимости
+    .index-price__subtitle on-line калькулятор расчета стоимости
 
     //- CALC
-    .price__calc
+    .index-price__calc
         form(action='#' method='post').calc
             .calc__row
                 .calc__row-title Вид проекта
@@ -120,9 +120,5 @@ section.price
 
 
     //- MENU
-    .price__menu
-        .menu.menu_top
-            each item in menu
-                a(href=item.href).menu__item
-                    .menu__item-container
-                        .menu__item-title= item.title
+    .index-price__menu
+        include ../../../common/menuTop

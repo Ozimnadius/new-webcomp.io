@@ -1,0 +1,9 @@
+include _mixins
+include _settings
+
+.menu
+    each item in menu
+        a(href=item.href).menu__item
+            .menu__item-container
+                .menu__item-title= item.title
+                .menu__item-value= item.val

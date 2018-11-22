@@ -1,0 +1,32 @@
+.why {
+  margin-bottom: vh(125);
+
+  &__img {
+    text-align: right;
+    margin-right: -253px;
+    margin-bottom: vh(85);
+  }
+
+  &__title {
+    font-size: 57px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: vh(50);
+  }
+
+  &__content {
+    padding-right: 70px;
+
+    p {
+      opacity: 0.3;
+      line-height: 25px;
+      text-align: center;
+      margin-bottom: vh(30);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -7,8 +7,9 @@
         inScroll = false,
         figure = document.querySelector('.figure'),
         screen = 0,
-        sectionBottom = document.querySelector('.bottom'),
+        sectionBottom = document.querySelector('.index-bottom'),
         scrollTop = 0,
+        page = document.querySelector('.page'),
         pagination = document.querySelector('.pag');
 
 
@@ -37,7 +38,7 @@
         mainContent.style.transform = 'translate3d(0,' + position + ',0)';
 
 
-        if (section.classList.contains('about')) {
+        if (section.classList.contains('index-about')) {
             setTimeout(function () {
                 figure.classList.add('active');
             }, 1000);
@@ -53,7 +54,7 @@
             document.querySelector('.pag__arrow-line').style.opacity = 1;
         }
 
-        if (section.classList.contains('bottom')) {
+        if (section.classList.contains('index-bottom')) {
             pagination.classList.add('hidden');
         } else {
             pagination.classList.remove('hidden');
@@ -65,56 +66,59 @@
 
     }
 
-    pagItems.addEventListener('click', function (e) {
-        if (e.target.classList.contains('pag__item')) {
-            scrollToSection(index(pagAllItem, e.target));
-        }
-    });
+    if (!page.classList.contains('page_second')) {
 
-    document.addEventListener('wheel', function (e) {
+        pagItems.addEventListener('click', function (e) {
+            if (e.target.classList.contains('pag__item')) {
+                scrollToSection(index(pagAllItem, e.target));
+            }
+        });
+
+        document.addEventListener('wheel', function (e) {
 
 
-        let deltaY = e.deltaY,
-            activeSection = document.querySelector('.active-page'),
-            nextSection = activeSection.nextElementSibling,
-            prevSection = activeSection.previousElementSibling;
+            let deltaY = e.deltaY,
+                activeSection = document.querySelector('.active-page'),
+                nextSection = activeSection.nextElementSibling,
+                prevSection = activeSection.previousElementSibling;
 
-        if (!activeSection.classList.contains('bottom')) {
-            e.preventDefault();
-        } else {
-            if (deltaY > 0) {
-                return;
+            if (!activeSection.classList.contains('index-bottom')) {
+                e.preventDefault();
             } else {
-                if (scrollTop > 0) {
+                if (deltaY > 0) {
                     return;
+                } else {
+                    if (scrollTop > 0) {
+                        return;
+                    }
+                }
+
+            }
+
+            if (inScroll) return;
+
+            inScroll = true;
+
+            if (deltaY > 0) {
+                if (nextSection) {
+                    scrollToSection(index(sections, nextSection));
+                } else {
+                    inScroll = false;
+                }
+            } else {
+                if (prevSection) {
+                    scrollToSection(index(sections, prevSection));
+                } else {
+                    inScroll = false;
                 }
             }
 
-        }
+        });
 
-        if (inScroll) return;
-
-        inScroll = true;
-
-        if (deltaY > 0) {
-            if (nextSection) {
-                scrollToSection(index(sections, nextSection));
-            } else {
-                inScroll = false;
-            }
-        } else {
-            if (prevSection) {
-                scrollToSection(index(sections, prevSection));
-            } else {
-                inScroll = false;
-            }
-        }
-
-    });
-
-    sectionBottom.addEventListener('scroll', function (e) {
-        scrollTop = this.scrollTop;
-    });
+        sectionBottom.addEventListener('scroll', function (e) {
+            scrollTop = this.scrollTop;
+        });
+    }
 
 
     $.fn.hyphenate = function () {
@@ -139,7 +143,6 @@
             $(this).html(text);
         });
     };
-
     $('.about__content').hyphenate();
 
     function getComputedTranslateY(obj) {
@@ -193,54 +196,58 @@
 
 
     let range = document.querySelector('.calc__range');
-    range.addEventListener('input', function () {
+    if (range) {
+        range.addEventListener('input', function () {
 
-        let rangeVal = document.querySelector('.calc__range-val'),
-            rangeTitle = document.querySelector('.calc__range-text');
+            let rangeVal = document.querySelector('.calc__range-val'),
+                rangeTitle = document.querySelector('.calc__range-text');
 
-        rangeVal.innerHTML = this.value;
-        rangeTitle.innerHTML = ' ' + GetNoun(this.value, 'месяц', 'месяца', 'месяцев');
-        this.style.backgroundImage = getCssValuePrefix() + 'linear-gradient(left ,#ffba00 0%,#ffba00 ' + this.value + '%, #352b4d ' + this.value + '%, #352b4d 100%)';
+            rangeVal.innerHTML = this.value;
+            rangeTitle.innerHTML = ' ' + GetNoun(this.value, 'месяц', 'месяца', 'месяцев');
+            this.style.backgroundImage = getCssValuePrefix() + 'linear-gradient(left ,#ffba00 0%,#ffba00 ' + this.value + '%, #352b4d ' + this.value + '%, #352b4d 100%)';
 
-    });
+        });
+    }
 
 
     let switchButton = document.querySelector('.best__switch-button'),
         switches = document.querySelectorAll('.best__switch'),
         tabs = document.querySelectorAll('.best__tab');
 
-    switchButton.addEventListener('click', function (e) {
+    if (switchButton) {
+        switchButton.addEventListener('click', function (e) {
 
-        let nextSwitch='';
-        for (let i = 0; i < switches.length; i++) {
-            if (!switches[i].classList.contains('active')) {
-                nextSwitch = switches[i];
+            let nextSwitch = '';
+            for (let i = 0; i < switches.length; i++) {
+                if (!switches[i].classList.contains('active')) {
+                    nextSwitch = switches[i];
+                }
             }
-        }
 
-        let id = nextSwitch.dataset.id,
-            activeTab = document.querySelector('.best__tab[data-id="' + id + '"]');
+            let id = nextSwitch.dataset.id,
+                activeTab = document.querySelector('.best__tab[data-id="' + id + '"]');
 
-        //Toggle switces
-        for (let i = 0; i < switches.length; i++) {
-            switches[i].classList.remove('active');
-        }
-        nextSwitch.classList.add('active');
+            //Toggle switces
+            for (let i = 0; i < switches.length; i++) {
+                switches[i].classList.remove('active');
+            }
+            nextSwitch.classList.add('active');
 
-        //Toggle tabs
-        for(let i=0;i<tabs.length;i++){
-            tabs[i].classList.remove('active');
-        }
-        activeTab.classList.add('active');
+            //Toggle tabs
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            activeTab.classList.add('active');
 
-        //Toggle button
-        this.classList.toggle('right');
+            //Toggle button
+            this.classList.toggle('right');
 
-    });
+        });
+    }
 
     window.onload = function () {
         //initialize swiper when document ready
-        let swiperReviews = new Swiper ('.rev__container', {
+        let swiperReviews = new Swiper('.rev__container', {
             // Optional parameters
             direction: 'vertical',
             loop: true,
@@ -255,7 +262,7 @@
                     let index = this.activeIndex;
 
 
-                    for (let i=0; i<this.slides.length; i++) {
+                    for (let i = 0; i < this.slides.length; i++) {
                         this.slides[i].classList.add('inactive');
                     }
 
@@ -265,6 +272,17 @@
             }
         })
     };
+
+    var devSwiper = new Swiper ('.site-dev__container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.site-dev__next',
+            prevEl: '.site-dev__prev',
+        },
+    })
 
 }());
 

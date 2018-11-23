@@ -2932,6 +2932,9 @@ input, textarea, select {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .site-cost__line {
@@ -2956,7 +2959,6 @@ input, textarea, select {
 }
 
 .site-cost__switch {
-  width: 25%;
   font-family: "Exo 2";
   text-align: left;
 }

@@ -237,6 +237,7 @@
       &-list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
     &__line {
@@ -257,7 +258,6 @@
       transition: .4s;
     }
     &__switch {
-      width: 25%;
       font-family: "Exo 2";
       text-align: left;
       &.active {

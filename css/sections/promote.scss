@@ -3,7 +3,6 @@
   background: url("../images/bg/promoteBg.jpg") 0 0 no-repeat;
   background-size: cover;
 
-
   &-first {
     padding-left: 325px;
     display: flex;
@@ -62,7 +61,13 @@
         top: 0;
         bottom: -50px;
         width: 1px;
-        background: linear-gradient(to bottom, rgba(#000,0) 0%,rgba(#000,0.2) 30%,rgba(#000,0.2) 70%,rgba(#000,0) 100%);
+        background: linear-gradient(to bottom, rgba(#000, 0) 0%, rgba(#000, 0.2) 30%, rgba(#000, 0.2) 70%, rgba(#000, 0) 100%);
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
       }
     }
 
@@ -71,7 +76,7 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      border-bottom: 1px solid rgba(#000,.2);
+      border-bottom: 1px solid rgba(#000, .2);
 
       &:last-child {
         border-bottom: none;
@@ -86,7 +91,8 @@
     }
 
     &__list {
-      display: flex;  flex-direction: column;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 30px;
     }
 
@@ -107,6 +113,144 @@
       margin-top: auto;
     }
   }
+
+  &-result {
+    margin-left: 325px;
+    padding-top: 100px;
+    background: url(../images/bg/promoteResultBg.jpg) center center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      font-size: 50px;
+      font-weight: 700;
+      text-align: center;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, rgba($text,0) 0%,rgba($text,0.2) 30%,rgba($text,0.2) 70%,rgba($text,0) 100%);
+      }
+    }
+
+    &__desc {
+      margin-bottom: 40px;
+      text-align: center;
+
+      &-item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-name {
+        font-size: 21px;
+        font-weight: 500;
+      }
+
+      &-text {
+        font-size: 21px;
+        font-weight: 200;
+      }
+
+    }
+
+    &__result {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 140px;
+      padding-right: 140px;
+      padding-top: 50px;
+      padding-bottom: 120px;
+      background: url("../images/content/promoteResultImg.png") 0 bottom no-repeat;
+      background-size: cover;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -25px;
+      margin-right: -25px;
+      width: 100%;
+      margin-bottom: 100px;
+    }
+
+    &__item {
+      width: calc(100%/4 - 50px);
+      margin-left: 25px;
+      margin-right: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    &__percent {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 35px;
+      margin-bottom: 30px;
+      width: 100%;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, rgba($text,0) 0%,rgba($text,0.2) 20%,rgba($text,0.2) 80%,rgba($text,0) 100%);
+      }
+
+      &-val {
+        font-size: 100px;
+        font-weight: 300;
+        letter-spacing: -1.67px;
+        line-height: 0.8;
+      }
+      &-type {
+        font-size: 43px;
+        font-weight: 300;
+        letter-spacing: -1.67px;
+      }
+    }
+
+    &__text {
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    &__button {
+      width: 266px;
+      height: 60px;
+      border: 1px solid rgba($text,.7);
+      color: $text;
+      font-family: "Exo 2";
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.67px;
+    }
+
+  }
+
 
   .bottom {
     background: none;

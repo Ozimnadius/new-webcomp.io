@@ -1,0 +1,30 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.promote-result
+
+    //- title
+    .promote-result__title ЛитРес:
+
+    //- desc
+    .promote-result__desc
+        .promote-result__desc-item
+            span.promote-result__desc-name Описание:
+            span.promote-result__desc-text  Лидер на рынке электронных книг: Россия, СНГ
+        .promote-result__desc-item
+            span.promote-result__desc-name Цель:
+            span.promote-result__desc-text  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
+
+    //- result
+    .promote-result__result
+        //- list
+        .promote-result__list
+            each val in promoteResult
+                .promote-result__item
+                    .promote-result__percent
+                        .promote-result__percent-val= val.val
+                        .promote-result__percent-type= val.type
+                    .promote-result__text= val.text
+
+        //- button
+        button.promote-result__button заказать продвижение

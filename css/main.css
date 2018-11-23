@@ -202,7 +202,7 @@ button {
   outline: none;
 }
 
-input, textarea {
+input, textarea, select {
   background-color: transparent;
   border: none;
   outline: none;
@@ -1213,7 +1213,19 @@ input, textarea {
   letter-spacing: 1.67px;
 }
 
-.input {
+.form__button {
+  width: 246px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  font-family: "Exo 2";
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.67px;
+}
+
+.input, .select {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -1222,28 +1234,29 @@ input, textarea {
   font-weight: 300;
 }
 
-.input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
 }
 
-.input:-ms-input-placeholder {
+.input:-ms-input-placeholder, .select:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
 }
 
-.input::-ms-input-placeholder {
+.input::-ms-input-placeholder, .select::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
 }
 
-.input::placeholder {
+.input::placeholder, .select::placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
 }
 
-.input_area {
+.input_area, .select_area {
   height: 121px;
+  resize: none;
 }
 
 .bread {
@@ -2701,8 +2714,8 @@ input, textarea {
   background-image: url(../images/bg/devBG.png);
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 .site-dev__logo {
@@ -2822,6 +2835,217 @@ input, textarea {
 
 .site-dev__next {
   right: -17.5%;
+}
+
+.site-team {
+  background: #000 url("../images/bg/teamBg.png") center center no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.site-team__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.site-team__name, .site-team__text {
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 41.3px;
+}
+
+.site-team__text {
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+
+.site-cost {
+  padding: 100px 235px 100px 210px;
+  background: url("/images/bg/costBg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.site-cost__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.site-cost__sub {
+  opacity: 0.5;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 45.08px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.site-cost__tabs {
+  margin-bottom: 65px;
+}
+
+.site-cost__tab {
+  display: none;
+}
+
+.site-cost__tab.active {
+  display: block;
+}
+
+.site-cost__switches {
+  padding-top: 60px;
+  position: relative;
+}
+
+.site-cost__switches:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -170px;
+  right: -195px;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0.2)), color-stop(70%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.site-cost__switches-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.site-cost__line {
+  width: 100%;
+  position: relative;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.site-cost__subline {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 118px;
+  height: 3px;
+  background-color: #ffba00;
+  border-radius: 3px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.site-cost__switch {
+  width: 25%;
+  font-family: "Exo 2";
+  text-align: left;
+}
+
+.site-cost__switch.active .site-cost__switch-title {
+  color: #ffffff;
+}
+
+.site-cost__switch-num {
+  font-size: 19px;
+  font-weight: 300;
+  color: #ffba00;
+}
+
+.site-cost__switch-title {
+  color: #777777;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.banner {
+  background-image: url(../images/bg/bannerBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 348px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+.banner__title {
+  font-size: 57px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.banner__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.banner__text {
+  font-size: 35px;
+  font-weight: 200;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.banner__text b {
+  font-weight: 700;
+}
+
+.banner__button {
+  width: 206px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.67px;
+  font-family: "Exo 2";
 }
 
 /*-----------------SECTION-BOTTOM--------------------*/

@@ -868,9 +868,22 @@
       }
     }
   }
+
+  &__button {
+    width: 246px;
+    height: 60px;
+    border: 1px solid rgba($text,.7);
+    color: $text;
+    font-family: "Exo 2";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.67px;
+
+  }
 }
 
-.input {
+.input, .select {
   width: 100%;
   border: 1px solid rgba($text,.2);
   text-align: center;
@@ -885,7 +898,12 @@
 
   &_area {
     height: 121px;
+    resize: none;
   }
+}
+
+.select {
+
 }
 
 .bread {

@@ -35,7 +35,7 @@
     {title: 'E – commerce', val: 'от 103 920 Р', href: './site.html'},
     {title: 'Лендинг', val: 'от 63 920 Р', href: './site.html'},
     {title: 'Сайт по тематике', val: 'от 39 920 Р', href: './site.html'},
-    {title: 'Продвижение', val: 'от 79 920 Р', href: './'},
+    {title: 'Продвижение', val: 'от 79 920 Р', href: './promote.html'},
     ]
 
 -
@@ -158,147 +158,222 @@
 
 -
     var tab1 = {
-        thead : [
-        {title:'Предлагаем', width: 'table__wt'},
-        {title:'Мы', width: 'table__ws'},
-        {title:'Другие компании', width: 'table__wth'}
-        ],
-        tbody: [
-            [
-            {title: 'Уникальный дизайн', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Продуманное и понятное ТЗ', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Постоянная поддержка', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Выгодные предложение', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Соотношение цены и качества', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ]
-        ]
+    thead : [
+    {title:'Предлагаем', width: 'table__wt'},
+    {title:'Мы', width: 'table__ws'},
+    {title:'Другие компании', width: 'table__wth'}
+    ],
+    tbody: [
+    [
+    {title: 'Уникальный дизайн', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Продуманное и понятное ТЗ', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Постоянная поддержка', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Выгодные предложение', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Соотношение цены и качества', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ]
+    ]
     }
 -
     var tab2 = {
-        thead : [
-        {title:'Предлагаем', width: 'table__wt'},
-        {title:'Мы', width: 'table__ws'},
-        {title:'Другие компании', width: 'table__wth'}
-        ],
-        tbody: [
-            [
-            {title: 'Уникальный дизайн2', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Продуманное и понятное ТЗ2', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Постоянная поддержка2', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Выгодные предложение2', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ],
-            [
-            {title: 'Соотношение цены и качества2', width: 'table__wt'},
-            {title: '+', width: 'table__ws'},
-            {title: '+', width: 'table__wth'}
-            ]
-        ]
+    thead : [
+    {title:'Предлагаем', width: 'table__wt'},
+    {title:'Мы', width: 'table__ws'},
+    {title:'Другие компании', width: 'table__wth'}
+    ],
+    tbody: [
+    [
+    {title: 'Уникальный дизайн2', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Продуманное и понятное ТЗ2', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Постоянная поддержка2', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Выгодные предложение2', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ],
+    [
+    {title: 'Соотношение цены и качества2', width: 'table__wt'},
+    {title: '+', width: 'table__ws'},
+    {title: '+', width: 'table__wth'}
+    ]
+    ]
     }
 
 -
     var reviews = [
     {
-        title:'Василий иванович',
-        desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
-        price: '359 тыс.',
-        date: '4 дня назад',
-        img: 'images/content/reviews/rev3.jpg',
-        link: 'https://www.youtube.com/watch?v=_PIxlKDS4_8'
+    title:'Василий иванович',
+    desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
+    price: '359 тыс.',
+    date: '4 дня назад',
+    img: 'images/content/reviews/rev3.jpg',
+    link: 'https://www.youtube.com/watch?v=_PIxlKDS4_8'
     },
     {
-        title:'Людмила Васильевна',
-        desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
-        price: '351 тыс.',
-        date: '3 дня назад',
-        img: 'images/content/reviews/rev1.jpg',
-        link: 'https://www.youtube.com/watch?v=Lt6iVgEJ0Ao'
+    title:'Людмила Васильевна',
+    desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
+    price: '351 тыс.',
+    date: '3 дня назад',
+    img: 'images/content/reviews/rev1.jpg',
+    link: 'https://www.youtube.com/watch?v=Lt6iVgEJ0Ao'
     },
     {
-        title:'Васильевна Людмила',
-        desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
-        price: '999 тыс.',
-        date: '2 дня назад',
-        img: 'images/content/reviews/rev2.jpg',
-        link: 'https://www.youtube.com/watch?v=Op2qhMwIC0A'
+    title:'Васильевна Людмила',
+    desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
+    price: '999 тыс.',
+    date: '2 дня назад',
+    img: 'images/content/reviews/rev2.jpg',
+    link: 'https://www.youtube.com/watch?v=Op2qhMwIC0A'
     },
     {
-        title:'Людмила Васильевна',
-        desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
-        price: '351 тыс.',
-        date: '3 дня назад',
-        img: 'images/content/reviews/rev1.jpg',
-        link: 'https://www.youtube.com/watch?v=Lt6iVgEJ0Ao'
+    title:'Людмила Васильевна',
+    desc: 'В 2006 году компания «Сайт НН» разрабатывала для ЗАО «Системы передовых технологий» Интернет-представительство ...',
+    price: '351 тыс.',
+    date: '3 дня назад',
+    img: 'images/content/reviews/rev1.jpg',
+    link: 'https://www.youtube.com/watch?v=Lt6iVgEJ0Ao'
     },
 
     ];
 
 -
     var footer = [
-        [
-            {
-                title: 'SEO продвижение сайта',
-                href: '/'
-            },
-            {
-                title: 'Контекстная реклама',
-                href: '/'
-            }
-        ],
     [
-            {
-                title: 'Размещение на выделенном сервере',
-                href: '/'
-            },
-            {
-                title: 'Продвижение в социальных сетях',
-                href: '/'
-            }
-        ],
+    {
+    title: 'SEO продвижение сайта',
+    href: '/'
+    },
+    {
+    title: 'Контекстная реклама',
+    href: '/'
+    }
+    ],
     [
-            {
-                title: 'Наполнение сайтов',
-                href: '/'
-            },
-            {
-                title: 'Написание контента',
-                href: '/'
-            }
-        ],
+    {
+    title: 'Размещение на выделенном сервере',
+    href: '/'
+    },
+    {
+    title: 'Продвижение в социальных сетях',
+    href: '/'
+    }
+    ],
+    [
+    {
+    title: 'Наполнение сайтов',
+    href: '/'
+    },
+    {
+    title: 'Написание контента',
+    href: '/'
+    }
+    ],
 
     ]
 
 - var tel1 = {title: '+7 (495) 150-45-98', value: '+7(495)150-45-98'}
 - var tel2 = {title: '8 (800) 333-45-98', value: '8(800)333-45-98'}
 - var email = {title: 'info@web-comp.ru', value: 'info@web-comp.ru'}
+
+-
+    var promotePrice = [
+        [
+            {
+                title: 'Продвижение SEO',
+                href: '/',
+                list: [
+                    {title: 'С оплатой за результат', href: '/'},
+                    {title: 'С оплатой за трафик', href: '/'},
+                    {title: 'Продвижение интеренет-магазина', href: '/'},
+                    {title: 'SEO продвижение компании', href: '/'},
+                    {title: 'Продвижение в Яндекс', href: '/'},
+                    {title: 'Продвижение в Google', href: '/'},
+                    {title: 'SEO оптимизация', href: '/'},
+                    {title: 'SEO аудит', href: '/'}
+                ],
+                price: 'от 39 920 Р',
+                dopClass: ''
+            }
+        ],
+        [
+            {
+                title: 'Продвижение по тематике',
+                href: '/',
+                list: [
+                    {title: 'Автозапчасти', href: '/'},
+                    {title: 'Бухгалтерские услуги', href: '/'},
+                    {title: 'Мед. клиника', href: '/'},
+                    {title: 'Недвижимость', href: '/'},
+                    {title: 'Мебельный магазин', href: '/'},
+                    {title: 'Ремонтные услуги', href: '/'},
+                    {title: 'Строительная компания', href: '/'},
+                    {title: 'Другое (15)', href: '/'}
+                    ],
+                price: 'от 39 920 Р',
+                dopClass: ''
+            }
+        ],
+        [
+            {
+                title: 'Контекстная реклама',
+                href: '/',
+                list: [
+                    {title: 'Яндек Директ', href: '/'},
+                    {title: 'Google Advance', href: '/'}
+                ],
+                price: 'от 39 920 Р',
+                dopClass: ''
+            },
+            {
+                title: 'Маркетинговый аудит',
+                href: '/',
+                list: [
+                ],
+                price: 'от 39 920 Р',
+                dopClass: ''
+            }
+        ],
+        [
+            {
+                title: 'Продвижение по тематике',
+                href: '/',
+                list: [
+                    {title: 'Реклама в ВКонтакте', href: '/'},
+                    {title: 'Реклама в Facebook', href: '/'},
+                    {title: 'Реклама в Instagram', href: '/'},
+                    {title: 'Реклама в Youtube', href: '/'},
+                    {title: 'Реклама в MK', href: '/'}
+                ],
+                price: 'от 39 920 Р',
+                dopClass: ''
+            }
+        ]
+    ]

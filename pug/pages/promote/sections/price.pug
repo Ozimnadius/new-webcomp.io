@@ -1,0 +1,19 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.promote-price
+    //- title
+    .promote-price__title Стоимость продвижения сайта
+
+    .promote-price__row
+        each col in promotePrice
+            .promote-price__col
+                each block in col
+                    div(class= block.dopClass).promote-price__block
+                        a(href=block.href).promote-price__block-title= block.title
+                        .promote-price__list
+                            each item in block.list
+                                a(href= item.href).promote-price__item= item.title
+                        .promote-price__price= block.price
+
+

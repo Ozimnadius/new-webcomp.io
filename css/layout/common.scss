@@ -16,6 +16,13 @@
     }
   }
 
+  &_small2 {
+    .title__text_small {
+      margin-left: 60px;
+      margin-right: 20px;
+    }
+  }
+
   &__line {
     display: flex;
     align-items: flex-start;

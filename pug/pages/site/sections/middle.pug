@@ -49,7 +49,18 @@ section.site-middle
 
         //- chart
         .site-dev__chart
-            img(src='images/content/dev/devChart.jpg')
+            //- img
+            //img(src='images/content/dev/devChart.png').site-dev__chart-img
+
+            //-list
+            .site-dev__list
+                each item in siteDev
+                    .site-dev__item
+                      .site-dev__item-day= item.day
+                      .site-dev__item-desc= item.desc
+                      .site-dev__item-arrow
+                          +arrow
+
 
         //- banner
         .site__banner

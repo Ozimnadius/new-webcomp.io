@@ -70,19 +70,27 @@
       right: 110px;
       transform: rotate(45deg);
 
-      &:after,&:before {
+      &:after {
         display: block;
         content: '';
+        position: absolute;
         height: 1px;
         left: 0;
         right: 0;
+        top: 50%;
+        margin-top: -0.5px;
         background: $text;
       }
-      &:after {
-        transform: rotate(0deg);
-      }
       &:before {
-        transform: rotate(90deg);
+        display: block;
+        content: '';
+        position: absolute;
+        width: 1px;
+        left: 50%;
+        margin-left: -0.5px;
+        top: 0;
+        bottom: 0;
+        background: $text;
       }
     }
 

@@ -8,8 +8,15 @@ section.promote-work
         img(src='images/content/promoteWork.png').promote-work__title-img
 
     //- list
-    .promote-work__list
-        .promote-work__item
-            .promote-work__number
-                .promote-work__number-val
-                .promote-work__number-img
+    .promote-work__wrapper
+        .promote-work__list
+            each item in promoteWork
+                .promote-work__item
+                    .promote-work__number
+                        .promote-work__number-val= item.title
+                        img(src=item.src).promote-work__number-img
+
+                    .promote-work__desc
+                        .promote-work__desc-text= item.desc
+                        .promote-work__desc-arrow
+                            +arrow

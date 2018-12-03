@@ -1,0 +1,79 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.promote-edge
+
+    //- title
+    .promote-edge__title Наши преимущества
+
+    //- list
+    .promote-edge__list
+        .promote-edge__row
+            .promote-edge__item
+                .promote-edge__desc
+                    .promote-edge__name
+                        |Лидируем в
+                        br
+                        |SEO-рейтингах
+
+                        .promote-edge__img
+                            +icon('edge1', 'promote-edge__svg')
+
+                    .promote-edge__arrow
+                        +arrow('arrow_black')
+
+            .promote-edge__item
+                .promote-edge__desc
+
+                    .promote-edge__name
+                        | Знаем о продвижении
+                        br
+                        | сайта все
+                        .promote-edge__img
+                            +icon('edge2', 'promote-edge__svg')
+
+                    .promote-edge__arrow
+                        +arrow('arrow_black arrow_prev')
+        .promote-edge__row
+            .promote-edge__item
+
+                .promote-edge__desc
+                    .promote-edge__name
+                        | Даем результат
+                        br
+                        | быстрее
+                        .promote-edge__img
+                            +icon('edge3', 'promote-edge__svg')
+
+                    .promote-edge__arrow
+                        +arrow('arrow_black')
+            .promote-edge__item
+
+                .promote-edge__desc
+                    .promote-edge__name
+                        | Применяем уникальные
+                        br
+                        | технологии
+                        .promote-edge__img
+                            +icon('edge4', 'promote-edge__svg')
+
+                    .promote-edge__arrow
+                        +arrow('arrow_black arrow_prev')
+
+
+    //- content
+    .promote-edge__content
+        .promote-edge__col
+            | Как сэкономить на создании интернет магазина
+            | При создании сайта или интернет-магазина
+            | часто возникает желания сэкономить, особенно
+            | когда перед глазами много разны ...
+        .promote-edge__col
+            | Как сэкономить на создании интернет магазина
+            | При создании сайта или интернет-магазина
+            | часто возникает желания сэкономить, особенно
+            | когда перед глазами много разны ...
+
+    //- button
+    a(href='#').promote-edge__button заказать сайт
+

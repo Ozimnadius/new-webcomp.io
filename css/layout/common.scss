@@ -52,7 +52,7 @@
     font-size: 323px;
     font-weight: 100;
     //background: linear-gradient(45deg, rgba(172,172,173,0.2) 0%,rgba(172,172,173,0.24) 1%,rgba(172,172,173,1) 45%,rgba(172,172,173,1) 55%,rgba(172,172,173,0.2) 100%);
-    background: linear-gradient(45deg, rgba(172,172,173,0.2) 0%,rgba(172,172,173,0.22) 1%,rgba(172,172,173,1) 45%,rgba(172,172,173,1) 55%,rgba(172,172,173,0.2) 100%);
+    background: linear-gradient(45deg, rgba(172, 172, 173, 0.2) 0%, rgba(172, 172, 173, 0.22) 1%, rgba(172, 172, 173, 1) 45%, rgba(172, 172, 173, 1) 55%, rgba(172, 172, 173, 0.2) 100%);
     -webkit-background-clip: text;
     text-transform: uppercase;
   }
@@ -106,7 +106,7 @@
       right: 0;
       width: 17%;
       height: 1px;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
       transition: .4s;
 
       &:after {
@@ -125,7 +125,7 @@
       height: 100%;
       top: 0;
       right: 0;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
     }
 
     &-bottom {
@@ -134,7 +134,7 @@
       left: 0;
       width: 7.5%;
       height: 1px;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
       transition: .4s;
 
       &:after {
@@ -153,10 +153,11 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
     }
   }
 }
+
 .btn3 {
   width: 418px;
   height: 70px;
@@ -202,7 +203,7 @@
       right: 0;
       width: 15%;
       height: 1px;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
       transition: .4s;
 
       &:after {
@@ -221,7 +222,7 @@
       height: 100%;
       top: 0;
       right: 0;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
     }
 
     &-bottomLeft {
@@ -230,7 +231,7 @@
       left: 0;
       width: 32%;
       height: 1px;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
       transition: .4s;
 
       &:after {
@@ -249,7 +250,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
     }
 
     &-topLeft {
@@ -258,7 +259,7 @@
       left: 0;
       width: 27%;
       height: 1px;
-      background-color: rgba($text,.7);
+      background-color: rgba($text, .7);
       transition: .4s;
 
     }
@@ -301,7 +302,7 @@
       width: 1px;
       top: 0;
       bottom: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
     }
     &:before {
       content: '';
@@ -309,7 +310,7 @@
 
       width: 5px;
       height: 5px;
-      border: 1px solid rgba($text,.5);
+      border: 1px solid rgba($text, .5);
       position: absolute;
       right: -2px;
       top: 7px;
@@ -317,17 +318,17 @@
     }
 
     &:last-child {
-      &:after,&:before {
+      &:after, &:before {
         display: none;
       }
     }
 
-    &-container{
+    &-container {
 
     }
 
     &-title {
-      color: rgba($text,.7);
+      color: rgba($text, .7);
       font-size: 19px;
       font-weight: 300;
       text-transform: uppercase;
@@ -362,7 +363,7 @@
     &-line {
       width: vw(753);
       height: 1px;
-      background: linear-gradient(to right, rgba($text, 0) 0%, rgba($text,.7) 50%, rgba($text, 1) 100%);
+      background: linear-gradient(to right, rgba($text, 0) 0%, rgba($text, .7) 50%, rgba($text, 1) 100%);
       //background: $text;
     }
 
@@ -388,7 +389,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 
   &__item {
@@ -396,7 +397,7 @@
     transform: scale(1);
     transition: .4s;
 
-    color: rgba($text,.3);
+    color: rgba($text, .3);
     font-size: 20px;
     font-weight: 300;
 
@@ -410,13 +411,13 @@
 .proportion {
   width: 100%;
   &_1x1 {
-    padding-top: calc( (1/1)*100% );
+    padding-top: calc((1 / 1) * 100%);
   }
   &_1006x591 {
-    padding-top: calc( (591/1006)*100% );
+    padding-top: calc((591 / 1006) * 100%);
   }
   &_750x470 {
-    padding-top: calc( (470/750)*100% );
+    padding-top: calc((470 / 750) * 100%);
   }
 }
 
@@ -430,7 +431,7 @@
     }
     .seporator__triangle {
       border-width: 5.5px 7px 5.5px 0px;
-      border-color: transparent rgba($text, .2) transparent transparent ;
+      border-color: transparent rgba($text, .2) transparent transparent;
     }
   }
 
@@ -453,6 +454,26 @@
   display: flex;
   align-items: center;
 
+  &_black {
+    .arrow__line {
+      background: linear-gradient(to right, rgba(#c2c2c2, 0) 0%, rgba(#c2c2c2, 1) 100%);
+    }
+    .arrow__triangle {
+      border-color: transparent transparent transparent #c2c2c2;
+    }
+  }
+
+  &_prev {
+    .arrow__line {
+      order: 1;
+      background: linear-gradient(to right, rgba(#c2c2c2, 1) 0%, rgba(#c2c2c2, 0) 100%)
+    }
+    .arrow__triangle {
+      border-width: 5.5px 7px 5.5px 0px;
+      border-color: transparent #c2c2c2 transparent transparent;
+    }
+  }
+
   &__line {
     width: 100%;
     height: 1px;
@@ -468,7 +489,7 @@
   }
 }
 
-.tel,.email {
+.tel, .email {
   opacity: 0.5;
   font-size: 19px;
 }
@@ -478,7 +499,7 @@
   align-items: center;
   position: relative;
 
-  &:hover{
+  &:hover {
     &:after {
       transform: translateY(-50%) rotate(180deg);
     }
@@ -507,7 +528,7 @@
     letter-spacing: 0.81px;
   }
   &__text {
-    color: rgba($text,.5);
+    color: rgba($text, .5);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -525,21 +546,20 @@
       bottom: calc(100% - 1px);
       transition: 1.5s;
     }
-    .figure__block2{
+    .figure__block2 {
       top: calc(100% - 0px);
       right: calc(100% - 22px);
       transition: 1.5s;
     }
-    .figure__block3{
+    .figure__block3 {
       bottom: calc(100% + 0px);
       transition: 0.5s;
     }
-    .figure__block4{
+    .figure__block4 {
       left: calc(100% + 22px);
       transition: 1.5s;
     }
   }
-
 
   img {
     max-width: initial;
@@ -598,9 +618,8 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(to right, rgba($text,0.1) 0%,rgba($text,0.3) 30%,rgba($text,0.3) 70%,rgba($text,0.1) 100%);
+      background: linear-gradient(to right, rgba($text, 0.1) 0%, rgba($text, 0.3) 30%, rgba($text, 0.3) 70%, rgba($text, 0.1) 100%);
     }
-
 
     &_bottom {
       margin-bottom: vh(35);
@@ -754,7 +773,7 @@
     height: 1px;
     width: 100%;
     outline: none;
-    background: linear-gradient(left ,$Selective-yellow 0%,$Selective-yellow 12%, #352b4d 12%, #352b4d 100%);
+    background: linear-gradient(left, $Selective-yellow 0%, $Selective-yellow 12%, #352b4d 12%, #352b4d 100%);
 
     &::-moz-range-track {
       -moz-appearance: none;
@@ -762,23 +781,22 @@
       background: transparent;
     }
 
-
-    &::-webkit-slider-thumb{
+    &::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 9px;
       height: 9px;
       border: 1px solid $Selective-yellow;
       background-color: $bg;
       border-radius: 50%;
-      cursor:pointer;
-      transition:.1s;
+      cursor: pointer;
+      transition: .1s;
 
       &:active {
         width: 14px;
         height: 14px;
       }
     }
-    &::-moz-range-thumb{
+    &::-moz-range-thumb {
       -moz-appearance: none;
 
       width: 9px;
@@ -786,8 +804,8 @@
       border: 1px solid $Selective-yellow;
       background-color: $bg;
       border-radius: 50%;
-      cursor:pointer;
-      transition:.1s;
+      cursor: pointer;
+      transition: .1s;
 
       &:active {
         width: 12px;
@@ -808,8 +826,8 @@
       border: 1px solid $Selective-yellow;
       background-color: $bg;
       border-radius: 50%;
-      cursor:pointer;
-      transition:.1s;
+      cursor: pointer;
+      transition: .1s;
 
       &:active {
         width: 12px;
@@ -818,7 +836,7 @@
     }
 
     &-title {
-      color: rgba($text,.3);
+      color: rgba($text, .3);
       font-weight: 300;
       width: 100px;
       min-width: 100px;
@@ -836,14 +854,14 @@
   &__personal {
     width: 100%;
     height: 50px;
-    border: 1px solid rgba($text,.3);
+    border: 1px solid rgba($text, .3);
     text-align: center;
-    color: rgba($text,.3);
+    color: rgba($text, .3);
     transition: .3s;
 
     &:focus, &:active {
       color: $text;
-      border: 1px solid rgba($text,1);
+      border: 1px solid rgba($text, 1);
     }
   }
 
@@ -870,12 +888,12 @@
   }
 
   &__field {
-    width: calc(100%/3 - 30px);
+    width: calc(100% / 3 - 30px);
     margin-right: 15px;
     margin-left: 15px;
 
     &_3 {
-      width: calc(100%/1 - 30px);
+      width: calc(100% / 1 - 30px);
     }
   }
 
@@ -898,7 +916,7 @@
   &__button {
     width: 246px;
     height: 60px;
-    border: 1px solid rgba($text,.7);
+    border: 1px solid rgba($text, .7);
     color: $text;
     font-family: "Exo 2";
     font-size: 13px;
@@ -911,14 +929,14 @@
 
 .input, .select {
   width: 100%;
-  border: 1px solid rgba($text,.2);
+  border: 1px solid rgba($text, .2);
   text-align: center;
   padding: 15px;
-  color: rgba($text,.3);
+  color: rgba($text, .3);
   font-weight: 300;
 
   &::placeholder {
-    color: rgba($text,.3);
+    color: rgba($text, .3);
     font-weight: 300;
   }
 

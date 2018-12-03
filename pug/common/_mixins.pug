@@ -5,8 +5,8 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
     img(src=`images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-mixin arrow()
-    .arrow
+mixin arrow(dopClass)
+    div(class= dopClass).arrow
         .arrow__line
         .arrow__triangle
 

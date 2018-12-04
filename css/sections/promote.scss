@@ -1,10 +1,10 @@
 .promote {
-  margin-left: -325px;
+  //margin-left: -325px;
   background: url("../images/bg/promoteBg.jpg") 0 0 no-repeat;
   background-size: cover;
 
   &-first {
-    padding-left: 325px;
+    //padding-left: 325px;
     padding-bottom: 130px;
     position: relative;
 
@@ -114,7 +114,7 @@
   }
 
   &-price {
-    margin-left: 325px;
+    //margin-left: 325px;
     background-color: $text;
     padding: 100px 65px;
     padding-bottom: 65px;
@@ -200,7 +200,7 @@
   }
 
   &-result {
-    margin-left: 325px;
+    //margin-left: 325px;
     padding-top: 100px;
     background: url(../images/bg/promoteResultBg.jpg) center center no-repeat;
     background-size: cover;
@@ -340,7 +340,7 @@
   &-work {
     padding-top: 120px;
     padding-bottom: 40px;
-    margin-left: 325px;
+    //margin-left: 325px;
 
     &__title {
       display: flex;
@@ -418,7 +418,7 @@
 
   &-edge {
     background: $text;
-    margin-left: 325px;
+    //margin-left: 325px;
     padding: 100px 200px;
     padding-right: 170px;
 
@@ -529,7 +529,7 @@
   }
 
   &-rec {
-    margin-left: 325px;
+    //margin-left: 325px;
     background-color: #f0f0f0;
     padding: 110px 120px;
     padding-bottom: 0;

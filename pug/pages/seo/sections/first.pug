@@ -1,0 +1,25 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.seo-first
+
+    .container
+        //- BREADCRUMBS
+        .seo-first__bread
+            include ../../../common/breadcrumbs
+
+        //- TITLE
+        .seo-first__title
+            |SEO продвижение
+            br
+            |с оплатой за результат
+
+        //- SUBTITLE
+        .seo-first__subtitle
+            | Продвигаем бесплатно пока сайт
+            br
+            | не выйдет в ТОП
+
+        //- BUTTON
+        .seo-first__button
+            +btn('Хочу увеличить продажи')

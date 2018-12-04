@@ -3,93 +3,94 @@ include ../../../common/_settings
 
 section.promote-first
 
-    .promote-first__wrapper
+    .container
+        .promote-first__wrapper
 
 
-        //- BREADCRUMBS
-        .promote-first__bread
-            include ../../../common/breadcrumbs
+            //- BREADCRUMBS
+            .promote-first__bread
+                include ../../../common/breadcrumbs
 
-        //- TITLE
-        .promote-first__title
-            +title('Хотите сайт в топ?', 'мы знаем', 'как это сделать', 'title_small title_small2')
+            //- TITLE
+            .promote-first__title
+                +title('Хотите сайт в топ?', 'мы знаем', 'как это сделать', 'title_small title_small2')
 
-        //- SUBTITLE
-        .promote-first__subtitle
-            | Увеличим Ваши продажи, количество звонков, заявок
-            br
-            | и заказов с сайта за счет роста целевого трафика и вывода Вашего сайта
-            br
-            | в ТОП-10 Яндекса и Google
+            //- SUBTITLE
+            .promote-first__subtitle
+                | Увеличим Ваши продажи, количество звонков, заявок
+                br
+                | и заказов с сайта за счет роста целевого трафика и вывода Вашего сайта
+                br
+                | в ТОП-10 Яндекса и Google
 
-        //- BUTTON
-        .promote-first__button
-            +btn3('Узнать стоимость продвижения')
-
-
+            //- BUTTON
+            .promote-first__button
+                +btn3('Узнать стоимость продвижения')
 
 
-    .promote-first__calc
-        .promote-calc__close
-        .promote-calc__title
-            | сколько стоит
-            br
-            | продвижение вашего сайта
-        .promote-calc__subtitle Выберите способ продвижения
 
-        .promote-calc__form
-            form(action='#' method='post').form
-                .form__row.form__row_2
-                    -
-                        var promo = [
-                        {name: 'Продвижение в Яндекс', checked: true},
-                        {name: 'Продвижение в Google', checked: false},
-                        {name: 'Контекстная реклама в Яндекс', checked: false},
-                        {name: 'Контекстная реклама в Google', checked: false}
-                        ];
 
-                    each val, index in promo
-                        .form__field2
-                            input(type='radio' id='radio'+index name='promo' checked= val.checked).radio
-                            label(for='radio'+index).radio__label= val.name
-                                .radio__fake
+        .promote-first__calc
+            .promote-calc__close
+            .promote-calc__title
+                | сколько стоит
+                br
+                | продвижение вашего сайта
+            .promote-calc__subtitle Выберите способ продвижения
 
-                .form__row.form__row_2
-                    -
-                        var promo = [
-                        {name: 'Реклама в ВКонтакте', checked: false},
-                        {name: 'Реклама в Instagram', checked: true},
-                        {name: 'Реклама в Одноклассники', checked: true},
-                        {name: 'Реклама в Facebook', checked: false}
-                        ];
+            .promote-calc__form
+                form(action='#' method='post').form
+                    .form__row.form__row_2
+                        -
+                            var promo = [
+                            {name: 'Продвижение в Яндекс', checked: true},
+                            {name: 'Продвижение в Google', checked: false},
+                            {name: 'Контекстная реклама в Яндекс', checked: false},
+                            {name: 'Контекстная реклама в Google', checked: false}
+                            ];
 
-                    each val, index in promo
-                        .form__field2
-                            input(type='radio' id='radio' + index name='type' checked= val.checked).radio
-                            label(for='radio' + index).radio__label= val.name
-                                .radio__fake
+                        each val, index in promo
+                            .form__field2
+                                input(type='radio' id='radio'+index name='promo' checked= val.checked).radio
+                                label(for='radio'+index).radio__label= val.name
+                                    .radio__fake
 
-                .form__row
-                    .form__field
-                        input(type='text' name='words' placeholder='Кол-во продвигаемых слов').input
-                    .form__field
-                        select.select
-                            option(disabled=true selected=true) Регион продвижения
-                            option Вариант 1
-                            option Вариант 2
-                            option Вариант 3
-                    .form__field
-                        select.select
-                            option(disabled=true selected=true) Ваша тематика
-                            option Вариант 1
-                            option Вариант 2
-                            option Вариант 3
-                .form__row
-                    .form__field
-                        input(type='text' name='name' placeholder='Имя').input
-                    .form__field
-                        input(type='tel' name='tel' placeholder='Телефон').input
-                    .form__field
-                        input(type='email' name='email' placeholder='E-mail').input
-                .form__submit
-                    +btn('Узнать стоимость')
+                    .form__row.form__row_2
+                        -
+                            var promo = [
+                            {name: 'Реклама в ВКонтакте', checked: false},
+                            {name: 'Реклама в Instagram', checked: true},
+                            {name: 'Реклама в Одноклассники', checked: true},
+                            {name: 'Реклама в Facebook', checked: false}
+                            ];
+
+                        each val, index in promo
+                            .form__field2
+                                input(type='radio' id='radio' + index name='type' checked= val.checked).radio
+                                label(for='radio' + index).radio__label= val.name
+                                    .radio__fake
+
+                    .form__row
+                        .form__field
+                            input(type='text' name='words' placeholder='Кол-во продвигаемых слов').input
+                        .form__field
+                            select.select
+                                option(disabled=true selected=true) Регион продвижения
+                                option Вариант 1
+                                option Вариант 2
+                                option Вариант 3
+                        .form__field
+                            select.select
+                                option(disabled=true selected=true) Ваша тематика
+                                option Вариант 1
+                                option Вариант 2
+                                option Вариант 3
+                    .form__row
+                        .form__field
+                            input(type='text' name='name' placeholder='Имя').input
+                        .form__field
+                            input(type='tel' name='tel' placeholder='Телефон').input
+                        .form__field
+                            input(type='email' name='email' placeholder='E-mail').input
+                    .form__submit
+                        +btn('Узнать стоимость')

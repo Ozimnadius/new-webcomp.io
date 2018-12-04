@@ -74,12 +74,27 @@ body {
 
 .main {
   height: 100%;
-  padding-left: 325px;
+  //padding-left: 325px;
   transition: .4s;
   transform: translate3d(0,-500vh,0);
   transform: translate3d(0,0,0);
 }
 
+.container {
+  width: 100%;
+  padding-left: 325px;
+}
+
+.container2 {
+  width: 100%;
+  padding-left: 325px;
+  padding-right: 250px;
+}
+
+.container3 {
+  width: calc(100% - 325px);
+  margin-left: 325px;
+}
 
 
 .content {
@@ -93,6 +108,12 @@ a {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {

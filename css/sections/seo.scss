@@ -146,6 +146,134 @@
 
   }
 
+  &-cats {
+    background: $text;
+    padding-bottom: 30px;
+
+    &__swiper {
+      margin-bottom: 40px;
+    }
+
+    &__scrollbar {
+      display: flex;
+      justify-content: flex-end;
+      .swiper-scrollbar {
+        width: calc(100%/3);
+        height: 1px;
+      }
+      .swiper-scrollbar-drag {
+        background: #c70541;
+      }
+    }
+  }
+
+  &-cat {
+    padding: 65px 50px;
+    box-sizing: border-box;
+    position: relative;
+    height: auto;
+
+    &__img {
+      height: 45px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+
+      &-img {
+        max-height: 100%;
+      }
+    }
+
+    &__order {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: flex-end;
+
+      &-name {
+        color: rgba($text,.7);
+        font-size: 17px;
+        font-weight: 500;
+        margin-right: 120px;
+      }
+
+      &-val {
+        display: flex;
+        justify-content: space-between;
+        width: 170px;
+      }
+
+
+      &-valFrom {
+        font-size: 30px;
+        font-weight: 700;
+        margin-right: 45px;
+      }
+      &-valTo {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    &__search {
+      display: flex;
+      align-items: flex-end;
+
+      &-name {
+        color: rgba($text,.7);
+        font-size: 17px;
+        font-weight: 500;
+        margin-right: 20px;
+      }
+
+      &-val {
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+      }
+
+      &-valFrom {
+        font-size: 30px;
+        font-weight: 700;
+        margin-right: 40px;
+      }
+      &-valTo {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      &-img {
+        height: 100%;
+      }
+
+      &-title {
+        position: absolute;
+        left: 52%;
+        top: 97px;
+        display: flex;
+      }
+
+      &-from {
+        color: rgba($text,.4);
+        font-size: 13px;
+        font-weight: 500;
+        margin-right: 43px;
+      }
+      &-to {
+        color: rgba($text,.4);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+    }
+  }
+
   .bottom {
     background: none;
     //padding-top: 120px;

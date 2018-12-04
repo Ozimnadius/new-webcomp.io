@@ -1,0 +1,110 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.seo-cats
+    //- swiper
+    .seo-cats__swiper
+        .swiper-container.seo-desc__container
+            .swiper-wrapper
+                -
+                    var list = [
+                        {
+                            src: 'images/content/seo/cats/cat1.png',
+                            order: {
+                                from: 640,
+                                to: 3890
+                            },
+                            search: {
+                                from: '12 %',
+                                to: '79 %'
+                            },
+                            color: '#d4003c'
+                        },
+                        {
+                            src: 'images/content/seo/cats/cat2.png',
+                            order: {
+                                from: 437,
+                                to: 2413
+                            },
+                            search: {
+                                from: '8 %',
+                                to: '89 %'
+                            },
+                            color: '#4369dc'
+                        },
+                        {
+                            src: 'images/content/seo/cats/cat3.png',
+                            order: {
+                                from: 0,
+                                to: 2317
+                            },
+                            search: {
+                                from: '0 %',
+                                to: '72 %'
+                            },
+                            color: '#401d62'
+                        },
+                        {
+                        src: 'images/content/seo/cats/cat1.png',
+                        order: {
+                        from: 640,
+                        to: 3890
+                        },
+                        search: {
+                        from: '12 %',
+                        to: '79 %'
+                        },
+                        color: '#d4003c'
+                        },
+                        {
+                        src: 'images/content/seo/cats/cat2.png',
+                        order: {
+                        from: 437,
+                        to: 2413
+                        },
+                        search: {
+                        from: '8 %',
+                        to: '89 %'
+                        },
+                        color: '#4369dc'
+                        },
+                        {
+                        src: 'images/content/seo/cats/cat3.png',
+                        order: {
+                        from: 0,
+                        to: 2317
+                        },
+                        search: {
+                        from: '0 %',
+                        to: '72 %'
+                        },
+                        color: '#401d62'
+                        }
+                    ];
+                each cat in list
+                    div(style="background:"+cat.color).swiper-slide.seo-cat
+                        .seo-cat__img
+                            img(src= cat.src).seo-cat__img-img
+                        .seo-cat__order
+                            .seo-cat__order-name Заявки на сайте
+                            .seo-cat__order-val
+                                .seo-cat__order-valFrom= cat.order.from
+                                .seo-cat__order-valTo= cat.order.to
+                        .seo-cat__search
+                            .seo-cat__search-name Видимость в поиске
+                            .seo-cat__search-val
+                                .seo-cat__search-valFrom= cat.search.from
+                                .seo-cat__search-valTo= cat.search.to
+                        .seo-cat__line
+                            img(src='images/content/seo/cats/catSvg.svg').seo-cat__line-img
+                            .seo-cat__line-title
+                                .seo-cat__line-from до
+                                .seo-cat__line-to после
+
+    //- scrollbar
+    .seo-cats__scrollbar
+        .swiper-scrollbar
+
+
+
+

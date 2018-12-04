@@ -326,6 +326,17 @@
                 nextEl: '.site-dev__next',
                 prevEl: '.site-dev__prev',
             },
+        });
+
+        let seoCatsSwiper = new Swiper('.seo-desc__container', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 3,
+            spaceBetween: 2,
+            scrollbar: {
+                el: '.seo-cats__scrollbar .swiper-scrollbar',
+                dragSize: 'auto'
+            },
         })
     };
 

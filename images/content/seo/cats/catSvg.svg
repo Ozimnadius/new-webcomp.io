@@ -1,7 +1,1 @@
-<svg width="299" height="304" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-    <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-    <g>
-        <title>Layer 1</title>
-        <line stroke="#ffffff" opacity="0.4" id="svg_1" y2="-0.999991" x2="300.499994" y1="306.000016" x1="-3.499984" fill="none"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299" height="304" viewBox="0 0 299 304"><defs><path id="5vw8a" d="M875.31 2342.989l.699.706-298.316 303.316-.702-.706z"/><clipPath id="5vw8b"><use fill="#fff" xlink:href="#5vw8a"/></clipPath></defs><g><g opacity=".4" transform="translate(-577 -2343)"><use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#5vw8b&quot;)" xlink:href="#5vw8a"/></g></g></svg>

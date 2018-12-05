@@ -1,0 +1,17 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.seo-faq
+    //- title
+    .seo-faq__title Часто задаваемые вопросы
+
+    //- acco
+    .seo-faq__acco
+        each item in seoFaq
+            .seo-faq__item
+                .seo-faq__item-title= item.title
+                .seo-faq__item-wrap
+                    .seo-faq__item-desc= item.desc
+
+
+

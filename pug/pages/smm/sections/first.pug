@@ -10,15 +10,26 @@ section.smm-first
 
         //- TITLE
         .smm-first__title
-            |SEO продвижение
+            | Хотите увеличить продажи
             br
-            |с оплатой за результат
+            | и узнаваемость бренда
 
         //- SUBTITLE
-        .smm-first__subtitle
-            | Продвигаем бесплатно пока сайт
-            br
-            | не выйдет в ТОП
+        .smm-first__subtitle Продвижение в социальных сетях, SMM от 20 000 Р
+
+        //- SOCIALS
+        .smm-first__socials
+            .smm-first__socials-wrap
+                each item in smmSocials
+                    a(href=item.href).smm-first__social
+                        .smm-first__img
+                            img(src=item.src).smm-first__img-img
+                        .smm-first__val= item.title
+                        .smm-first__text
+                            != item.text
+                        .smm-first__arrow
+                            +arrow
+
 
         //- BUTTON
         .smm-first__button

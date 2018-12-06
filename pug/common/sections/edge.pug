@@ -1,0 +1,78 @@
+include ../_mixins
+include ../_settings
+
+.edge
+
+    //- title
+    .edge__title Наши преимущества
+
+    //- list
+    .edge__list
+        .edge__row
+            .edge__item
+                .edge__desc
+                    .edge__name
+                        |Лидируем в
+                        br
+                        |SEO-рейтингах
+
+                        .edge__img
+                            +icon('edge1', 'promote-edge__svg')
+
+                    .edge__arrow
+                        +arrow('arrow_black')
+
+            .edge__item
+                .edge__desc
+
+                    .edge__name
+                        | Знаем о продвижении
+                        br
+                        | сайта все
+                        .edge__img
+                            +icon('edge2', 'promote-edge__svg')
+
+                    .edge__arrow
+                        +arrow('arrow_black arrow_prev')
+        .edge__row
+            .edge__item
+
+                .edge__desc
+                    .edge__name
+                        | Даем результат
+                        br
+                        | быстрее
+                        .edge__img
+                            +icon('edge3', 'promote-edge__svg')
+
+                    .edge__arrow
+                        +arrow('arrow_black')
+            .edge__item
+
+                .edge__desc
+                    .edge__name
+                        | Применяем уникальные
+                        br
+                        | технологии
+                        .edge__img
+                            +icon('edge4', 'promote-edge__svg')
+
+                    .edge__arrow
+                        +arrow('arrow_black arrow_prev')
+
+
+    //- content
+    .edge__content
+        .edge__col
+            | Как сэкономить на создании интернет магазина
+            | При создании сайта или интернет-магазина
+            | часто возникает желания сэкономить, особенно
+            | когда перед глазами много разны ...
+        .edge__col
+            | Как сэкономить на создании интернет магазина
+            | При создании сайта или интернет-магазина
+            | часто возникает желания сэкономить, особенно
+            | когда перед глазами много разны ...
+
+    //- button
+    a(href='#').edge__button заказать сайт

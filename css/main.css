@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------SECTION-MIXINS--------------------*/
 /*------------------------SECTION-FONTS----------------*/
 @font-face {
@@ -4809,6 +4810,95 @@ input, textarea, select {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.smm-price {
+  background: url("../images/bg/smmPriceBg.jpg") 0 -200px no-repeat;
+}
+
+.smm-price__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.smm-price__item {
+  width: calc(100%/3);
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #000000;
+  position: relative;
+}
+
+.smm-price__item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#88888a));
+  background: -webkit-linear-gradient(top, black 0%, #88888a 100%);
+  background: -o-linear-gradient(top, black 0%, #88888a 100%);
+  background: linear-gradient(to bottom, black 0%, #88888a 100%);
+}
+
+.smm-price__title {
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.smm-price__ul {
+  margin-bottom: 40px;
+}
+
+.smm-price__li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.smm-price__li:last-child {
+  margin-bottom: 0;
+}
+
+.smm-price__li:before {
+  content: '—';
+  margin-right: 10px;
+}
+
+.smm-price__bottom {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.smm-price__price {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.smm-price__percent {
+  font-size: 21px;
+  font-weight: 500;
 }
 
 .smm .bottom {

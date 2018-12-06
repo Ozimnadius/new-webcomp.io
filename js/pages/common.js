@@ -82,6 +82,7 @@ function Switches(prop) {
     this.tabs = document.querySelectorAll(prop.tab);
     this.tabSelector = prop.tab;
     this.autoWidth = prop.autoWidth || false;
+    this.scrollbar = prop.scrollbar || true;
 
     let that = this;
 
@@ -96,15 +97,21 @@ function Switches(prop) {
             for (let i = 0; i < that.swsList.length; i++) {
                 that.swsList[i].classList.remove('active');
             }
+
             for (let i = 0; i < that.tabs.length; i++) {
                 that.tabs[i].classList.remove('active');
             }
+
             tab.classList.add('active');
             this.classList.add('active');
-            that.line.style.left = percent + '%';
-            if (that.autoWidth) {
-                let lineWidth = this.offsetWidth + 'px';
-                that.line.style.width = lineWidth;
+
+            if(that.scrollbar) {
+                that.line.style.left = percent + '%';
+
+                if (that.autoWidth) {
+                    let lineWidth = this.offsetWidth + 'px';
+                    that.line.style.width = lineWidth;
+                }
             }
 
         });

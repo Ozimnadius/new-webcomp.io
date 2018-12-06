@@ -3,6 +3,7 @@
 //@prepros-append pages/site.js
 //@prepros-append pages/promote.js
 //@prepros-append pages/seo.js
+//@prepros-append pages/smm.js
 //@prepros-append pages/swiper.js
 
 

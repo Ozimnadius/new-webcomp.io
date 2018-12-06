@@ -146,6 +146,143 @@
     }
   }
 
+  &-str {
+    background: $text;
+    padding: 110px 0;
+
+    &__title {
+      color: $bg;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      padding-left: 110px;
+    }
+
+    &__row {
+      display: flex;
+      margin-left: -100px;
+      margin-right: -100px;
+    }
+
+    &__left {
+      width: calc(39.5% - 200px);
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    &__right {
+      width: calc(60.5% - 200px);
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    &__sws {
+      &-list {
+      }
+    }
+
+    &__sw {
+      padding-left: 110px;
+      color: #686868;
+      font-size: 22px;
+      line-height: 29.58px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid transparent;
+      margin-bottom: 45px;
+      transition: .4s;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        color: #c70541;
+        border-bottom: 1px solid #ffc600;
+      }
+    }
+
+    &__tab {
+      display: none;
+      padding-right: 230px;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 45px;
+      p {
+        color: $bg;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__work {
+      display: flex;
+      align-items: flex-end;
+      padding: 30px 0;
+      position: relative;
+      margin-bottom: 50px;
+
+      &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, rgba(204,204,204,1) 0%,rgba(231,231,231,1) 80%,rgba($text, 0) 100%);
+      }
+
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+
+      &-img {
+        margin-right: 20px;
+      }
+      &-svg {
+        width: 33px;
+        height: 33px;
+        fill: $bg;
+      }
+
+      &-text {
+        color: #c70541;
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+
+    &__button {
+      width: 286px;
+      height: 60px;
+      border: 1px solid rgba(#959595,.7);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: $bg;
+      font-family: "Exo 2";
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+  }
 
   .bottom {
     background: none;

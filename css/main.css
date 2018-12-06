@@ -4841,7 +4841,7 @@ input, textarea, select {
 }
 
 .smm-first__bread {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .smm-first__title {
@@ -4849,7 +4849,7 @@ input, textarea, select {
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .smm-first__subtitle {
@@ -4857,12 +4857,12 @@ input, textarea, select {
   font-size: 33px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 }
 
 .smm-first__socials {
   width: 100%;
-  padding: 0 110px;
+  padding: 0 60px;
   margin-bottom: 65px;
 }
 
@@ -5101,7 +5101,7 @@ input, textarea, select {
   font-size: 19px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .smm-str__desc p:last-child {
@@ -5187,7 +5187,7 @@ input, textarea, select {
   font-weight: 700;
   text-align: center;
   padding-bottom: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -5206,12 +5206,12 @@ input, textarea, select {
 }
 
 .smm-res__sub {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .smm-res__sub-item {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 21px;
   line-height: 30px;
 }

@@ -5197,6 +5197,30 @@ input, textarea, select {
   text-transform: uppercase;
 }
 
+.smm-calc {
+  background: url("/images/bg/smmCalc.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding-top: 85px;
+  padding-bottom: 115px;
+  padding-left: 220px;
+  padding-right: 220px;
+}
+
+.smm-calc__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.smm-calc__sub {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
 .smm .bottom {
   background: none;
 }

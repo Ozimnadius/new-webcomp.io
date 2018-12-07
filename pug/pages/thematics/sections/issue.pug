@@ -1,0 +1,16 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.theme-iss
+
+    //- title
+    .theme-iss__title Тематики сайтов которые мы продвигаем
+
+    //- list
+    .theme-iss__list
+        each col in themeIssue
+            .theme-iss__col
+                each item in col
+                    .theme-iss__item= item
+
+    button.theme-iss__button показать еще

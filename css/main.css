@@ -5351,6 +5351,121 @@ input, textarea, select {
   background: none;
 }
 
+/*-----------------SECTION-THEME--------------------*/
+.theme {
+  background: url("../images/bg/promoteBg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.theme-first {
+  padding-top: 230px;
+  padding-bottom: 225px;
+  background: url(../images/bg/themeBg.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.theme-first__bread {
+  margin-bottom: 180px;
+}
+
+.theme-first__title {
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.theme-first__subtitle {
+  color: #a4a4a4;
+  font-size: 33px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.theme-first__socials {
+  width: 100%;
+  padding: 0 60px;
+  margin-bottom: 65px;
+}
+
+.theme-first__socials-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.theme-first__social {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.theme-first__img {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.theme-first__val {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.theme-first__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.theme-first__arrow {
+  width: 175px;
+}
+
+.theme-first .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.theme .bottom {
+  background: none;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   position: relative;

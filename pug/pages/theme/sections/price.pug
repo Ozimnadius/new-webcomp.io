@@ -1,0 +1,16 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.smm-price
+
+    //- list
+    .smm-price__list
+        each item in smmPrice
+            .smm-price__item
+                .smm-price__title= item.title
+                ul.smm-price__ul
+                    each li in item.list
+                        li.smm-price__li= li
+                .smm-price__bottom
+                    .smm-price__price= item.price
+                    .smm-price__percent= item.percent

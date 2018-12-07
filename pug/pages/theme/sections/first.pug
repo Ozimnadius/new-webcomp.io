@@ -1,0 +1,25 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.theme-first
+
+    .container
+        //- BREADCRUMBS
+        .theme-first__bread
+            include ../../../common/breadcrumbs
+
+        //- TITLE
+        .theme-first__title
+            | Мы создадим продающий сайт
+            br
+            | по вашей тематике
+
+        //- SUBTITLE
+        .theme-first__subtitle
+            |Комплексный подход к проектированию прототипов и программной
+            br
+            |разработке, учитывающий особенности Вашего бизнеса
+
+        //- BUTTON
+        .theme-first__button
+            +btn3('Узнать стоимость продвижения')

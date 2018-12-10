@@ -466,11 +466,11 @@
   &_prev {
     .arrow__line {
       order: 1;
-      background: linear-gradient(to right, rgba(#c2c2c2, 1) 0%, rgba(#c2c2c2, 0) 100%)
+      background: linear-gradient(to right, rgba(#c2c2c2, 0.3) 0%, rgba(#c2c2c2, 0) 100%)
     }
     .arrow__triangle {
       border-width: 5.5px 7px 5.5px 0px;
-      border-color: transparent #c2c2c2 transparent transparent;
+      border-color: transparent rgba($text, .3) transparent transparent;
     }
   }
 

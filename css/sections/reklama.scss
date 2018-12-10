@@ -3,10 +3,11 @@
   background-size: cover;
 
   &-first {
-    padding-top: 265px;
+    padding-top: 250px;
     padding-bottom: 200px;
     background: url(../images/bg/rekBg.jpg) 0 0 no-repeat;
     background-size: cover;
+    overflow: hidden;
 
     .container {
       display: flex;
@@ -15,7 +16,7 @@
     }
 
     &__bread {
-      margin-bottom: 180px;
+      margin-bottom: 105px;
     }
 
     &__title {
@@ -23,7 +24,7 @@
       font-weight: 300;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 30px;
     }
 
     &__subtitle {
@@ -31,10 +32,179 @@
       font-size: 33px;
       font-weight: 300;
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 65px;
     }
 
+    &__middle {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 55px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-title {
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: -0.19px;
+        margin-bottom: 14px;
+      }
+
+      &-arrow {
+        width: 280px;
+        margin-bottom: 10px;
+      }
+
+      &-desc {
+        display: flex;
+        align-items: center;
+      }
+      &-svg {
+        width: 29px;
+        height: 29px;
+        fill: $Selective-yellow;
+        margin-right: 25px;
+        &_2 {
+          margin-right: 0;
+          margin-left: 25px;
+        }
+      }
+
+      &-text {
+        font-weight: 300;
+        line-height: 1;
+      }
+      &-val {
+        font-size: 39px;
+      }
+      &-type {
+        font-size: 31px;
+      }
+    }
+
+    &__button {
+      position: relative;
+
+      &:after,&:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        left: 50%;
+        background-color: rgba($text,.5);
+      }
+
+      &:before {
+        height: 130px;
+        bottom: 100%;
+      }
+      &:after {
+        height: 1000px;
+        top: 100%;
+      }
+
+      &-squad {
+        position: absolute;
+        bottom: calc(100% + 130px);
+        left: 50%;
+        margin-left: -3px;
+        width: 7px;
+        height: 7px;
+        border: 1px solid rgba($text,.5);
+      }
+
+      .btn3 {
+        width: 339px;
+        height: 70px;
+      }
+    }
+
+
   }
+
+  &-desc {
+    background-color: $text;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 110px;
+    padding-right: 640px;
+    position: relative;
+    border-bottom: 1px solid #acadbf;
+
+    &__title {
+      color: $bg;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    &__block {
+      margin-bottom: 70px;
+    }
+
+    &__content{
+      color: $bg;
+
+      ul {
+        li {
+          color: #505050;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &__button {
+      width: 346px;
+      height: 51px;
+      border: 1px solid rgba($bg,.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: $bg;
+      font-family: "Exo 2";
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      position: absolute;
+      top: 220px;
+      right: 0;
+      width: 384px;
+    }
+
+    &__item {
+      padding: 55px 50px 55px 13px;
+      border-bottom: 1px solid rgba($bg,.5);
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &-img {
+        margin-right: 30px;
+        min-width: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-text {
+        color: $bg;
+        font-size: 19px;
+        font-weight: 400;
+      }
+    }
+  }
+
 
   .bottom {
     background: none;

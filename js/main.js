@@ -5,6 +5,7 @@
 //@prepros-append pages/seo.js
 //@prepros-append pages/smm.js
 //@prepros-append pages/theme.js
+//@prepros-append pages/reklama.js
 //@prepros-append pages/swiper.js
 
 

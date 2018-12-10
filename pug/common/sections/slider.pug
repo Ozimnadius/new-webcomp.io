@@ -1,0 +1,106 @@
+include ../_mixins
+include ../_settings
+
+
+.slider
+    //- container
+    .swiper-container.slider__container
+        .swiper-wrapper
+            -
+                var list = [
+                {
+                src: 'images/content/seo/cats/cat1.png',
+                order: {
+                from: 640,
+                to: 3890
+                },
+                search: {
+                from: '12 %',
+                to: '79 %'
+                },
+                color: '#d4003c'
+                },
+                {
+                src: 'images/content/seo/cats/cat2.png',
+                order: {
+                from: 437,
+                to: 2413
+                },
+                search: {
+                from: '8 %',
+                to: '89 %'
+                },
+                color: '#4369dc'
+                },
+                {
+                src: 'images/content/seo/cats/cat3.png',
+                order: {
+                from: 0,
+                to: 2317
+                },
+                search: {
+                from: '0 %',
+                to: '72 %'
+                },
+                color: '#401d62'
+                },
+                {
+                src: 'images/content/seo/cats/cat1.png',
+                order: {
+                from: 640,
+                to: 3890
+                },
+                search: {
+                from: '12 %',
+                to: '79 %'
+                },
+                color: '#d4003c'
+                },
+                {
+                src: 'images/content/seo/cats/cat2.png',
+                order: {
+                from: 437,
+                to: 2413
+                },
+                search: {
+                from: '8 %',
+                to: '89 %'
+                },
+                color: '#4369dc'
+                },
+                {
+                src: 'images/content/seo/cats/cat3.png',
+                order: {
+                from: 0,
+                to: 2317
+                },
+                search: {
+                from: '0 %',
+                to: '72 %'
+                },
+                color: '#401d62'
+                }
+                ];
+            each cat in list
+                div(style="background:" + cat.color).swiper-slide.slide
+                    .slide__img
+                        img(src= cat.src).slide__img-img
+                    .slide__order
+                        .slide__order-name Заявки на сайте
+                        .slide__order-val
+                            .slide__order-valFrom= cat.order.from
+                            .slide__order-valTo= cat.order.to
+                    .slide__search
+                        .slide__search-name Видимость в поиске
+                        .slide__search-val
+                            .slide__search-valFrom= cat.search.from
+                            .slide__search-valTo= cat.search.to
+                    .slide__line
+                        img(src='images/content/seo/cats/catSvg.svg').slide__line-img
+                        .slide__line-title
+                            .slide__line-from до
+                            .slide__line-to после
+
+    //- scrollbar
+    .slider__scrollbar
+        .swiper-scrollbar

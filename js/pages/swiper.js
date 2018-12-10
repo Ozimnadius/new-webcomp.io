@@ -36,14 +36,25 @@ window.onload = function () {
         },
     });
 
-    let seoCatsSwiper = new Swiper('.seo-desc__container', {
+    let seoCatsSwiper = new Swiper('.slider__container', {
         // Optional parameters
         direction: 'horizontal',
         slidesPerView: 3,
         spaceBetween: 2,
         scrollbar: {
-            el: '.seo-cats__scrollbar .swiper-scrollbar',
+            el: '.slider__scrollbar .swiper-scrollbar',
             dragSize: 'auto'
         },
-    })
+    });
+
+    let slider2Swiper = new Swiper('.slider2__container', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 3,
+        spaceBetween: 2,
+        scrollbar: {
+            el: '.slider2__scrollbar .swiper-scrollbar',
+            dragSize: 'auto'
+        },
+    });
 };

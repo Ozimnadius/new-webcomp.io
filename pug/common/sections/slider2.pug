@@ -1,0 +1,79 @@
+include ../_mixins
+include ../_settings
+
+
+.slider2
+    //- container
+    .swiper-container.slider2__container
+        .swiper-wrapper
+            -
+                var list = [
+                {
+                src: 'images/content/seo/cats/cat1.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#ffc000'
+                },
+                {
+                src: 'images/content/seo/cats/cat2.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#4a0163'
+                },
+                {
+                src: 'images/content/seo/cats/cat3.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#010f63'
+                },
+                {
+                src: 'images/content/seo/cats/cat1.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#ffc000'
+                },
+                {
+                src: 'images/content/seo/cats/cat2.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#4a0163'
+                },
+                {
+                src: 'images/content/seo/cats/cat3.png',
+                cost: {
+                from: '1 300 Р',
+                to: '342 Р'
+                },
+                color: '#010f63'
+                }
+                ];
+            each cat in list
+                div(style="background:" + cat.color).swiper-slide.slide2
+                    .slide2__img
+                        img(src= cat.src).slide2__img-img
+                    .slide2__cost
+                        .slide2__cost-name
+                            | Стоимость
+                            br
+                            | привлечения
+                            br
+                            | лида
+                    .slide2__line
+                        img(src='images/content/seo/cats/catSvg.svg').slide2__line-img
+                        .slide2__line-title
+                            .slide2__line-from= cat.cost.from
+                            .slide2__line-to= cat.cost.to
+
+    //- scrollbar
+    .slider2__scrollbar
+        .swiper-scrollbar

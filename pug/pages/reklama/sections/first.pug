@@ -1,0 +1,25 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.rek-first
+
+    .container
+        //- BREADCRUMBS
+        .rek-first__bread
+            include ../../../common/breadcrumbs
+
+        //- TITLE
+        .rek-first__title
+            | Мы создадим продающий сайт
+            br
+            | по вашей тематике
+
+        //- SUBTITLE
+        .rek-first__subtitle
+            |Комплексный подход к проектированию прототипов и программной
+            br
+            |разработке, учитывающий особенности Вашего бизнеса
+
+        //- BUTTON
+        .rek-first__button
+            +btn3('Хочу увеличить продажи')

@@ -703,8 +703,16 @@ input, textarea, select {
   padding-top: calc((591 / 1006) * 100%);
 }
 
+.proportion_1214x685 {
+  padding-top: calc((685 / 1214) * 100%);
+}
+
 .proportion_750x470 {
   padding-top: calc((470 / 750) * 100%);
+}
+
+.proportion_944x593 {
+  padding-top: calc((593 / 944) * 100%);
 }
 
 .seporator {
@@ -6613,6 +6621,139 @@ input, textarea, select {
   color: rgba(255, 255, 255, 0.4);
   font-size: 13px;
   font-weight: 500;
+}
+
+/*-----------------SECTION-PORTFOLIO--------------------*/
+.port {
+  background: url("../images/bg/promoteBg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.port-first {
+  padding-top: 250px;
+  padding-bottom: 560px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.port-first .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.port-lap {
+  background: url("/images/bg/portBg.jpg") 0 0 no-repeat;
+}
+
+.port-lap .container3 {
+  padding: 0 175px;
+  padding-top: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.port-lap__bread {
+  margin-bottom: 40px;
+}
+
+.port-lap__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.port-lap__wrap {
+  background-image: url(../images/bg/laptop.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.port-lap__container {
+  position: absolute;
+  top: 2.5%;
+  left: 11%;
+  right: 11%;
+}
+
+.port-lap__drug {
+  width: 60px;
+  position: absolute;
+  right: -30px;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  background: url("/images/bg/beforeAfterRound.png") center center no-repeat;
+}
+
+.port-lap__before, .port-lap__after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.port-lap__before {
+  z-index: 20;
+  right: 50%;
+  text-align: left;
+  border-right: 1px dashed #c70541;
+}
+
+.port-lap__before-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.port-lap__after {
+  z-index: 10;
+  text-align: right;
+  overflow: hidden;
+}
+
+.port-lap__img {
+  width: auto;
+  max-width: initial;
+  height: 100%;
+}
+
+.port .bottom {
+  background: none;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

@@ -57,4 +57,26 @@ window.onload = function () {
             dragSize: 'auto'
         },
     });
+
+    let portSliderSwiper = new Swiper('.port-slider__container', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        loop: true,
+        spaceBetween: 20,
+        pagination: {
+            el: '.port-slider__pagination',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    '<span class="swiper-pagination-seporator"></span>' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
+
+        navigation: {
+            nextEl: '.port-slider__next',
+            prevEl: '.port-slider__prev',
+        },
+    });
 };

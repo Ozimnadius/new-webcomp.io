@@ -1,0 +1,33 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section(style='background: #ffffff;').port-slider
+
+    .port-slider__top
+        .port-slider__title
+            | Яркие
+            br
+            | баннеры
+        .port-slider__desc
+            | Акценты позволяют выделить важную
+            br
+            | информацию и оставить положительные
+            br
+            | эмоции от использования сайта
+        .port-slider__nav
+            .port-slider__prev
+                +arrow('arrow_prev arrow_black')
+            .port-slider__pagination
+            .port-slider__next
+                +arrow('arrow_black')
+
+    .port-slider__slider
+        .swiper-container.port-slider__container
+            .swiper-wrapper
+                each val in [1,2,3]
+                    .swiper-slide.port-slider__slide
+                        img(src='images/content/portfolio/slider/slide'+val+'.jpg').port-slider__img
+                each val in [1,2,3]
+                    .swiper-slide.port-slider__slide
+                        img(src='images/content/portfolio/slider/slide' + val + '.jpg').port-slider__img
+    div(style='background: #FFBA00;').port-slider__bottom

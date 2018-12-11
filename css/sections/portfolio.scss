@@ -95,14 +95,14 @@
   }
 
   &-desc {
-    background: #363471;
+    //background: #363471;
     margin-top: -175px;
     padding: 0 180px;
     padding-top: 225px;
     padding-bottom: 150px;
 
     &__logo {
-      margin-bottom: 65px;
+      margin-bottom: 55px;
       text-align: center;
     }
 
@@ -120,7 +120,7 @@
       font-size: 19px;
       font-weight: 300;
       line-height: 31px;
-      margin-bottom: 125px;
+      margin-bottom: 100px;
       text-align: center;
     }
 
@@ -169,6 +169,114 @@
         font-size: 21px;
         font-weight: 500;
       }
+    }
+  }
+
+  &-slider {
+    padding-right: 100px;
+    padding-left: 110px;
+    padding-top: 115px;
+    position: relative;
+
+    &__top {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -50px;
+      margin-right: -50px;
+    }
+
+    &__title {
+      color: $bg;
+      font-size: 60px;
+      font-weight: 500;
+      line-height: 75px;
+      text-transform: uppercase;
+      width: calc(26.5% - 100px);
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    &__desc {
+      color: #010101;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 50px;
+      width: calc(50% - 100px);
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    &__nav {
+      width: calc(23.5% - 65px);
+      margin-left: 15px;
+      margin-right: 50px;
+      padding-top: 100px;
+      display: flex;
+      align-items: center;
+    }
+    &__prev, &__next {
+      min-width: 90px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &__pagination {
+      display: flex;
+      height: 158px;
+      color: rgba($bg,.3);
+      font-size: 60px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 40px;
+
+      .swiper-pagination-current {
+        color: #c70541;
+        min-width: 38px;
+        text-align: right;
+      }
+
+      .swiper-pagination-seporator {
+        min-width: 1px;
+        width: 1px;
+        height: 100%;
+        background-color: rgba($bg,.3);
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      .swiper-pagination-total {
+        margin-top: 30px;
+        min-width: 38px;
+        text-align: left;
+      }
+
+    }
+
+    &__slider {
+      margin-right: -100px;
+      position: relative;
+      z-index: 20;
+    }
+    &__container {
+      padding-bottom: 60px;
+    }
+    &__slide {
+      width: auto;
+      height: 445px;
+      overflow: hidden;
+      box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    &__img {
+      display: block;
+    }
+
+    &__bottom {
+      height: 340px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 

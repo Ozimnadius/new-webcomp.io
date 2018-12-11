@@ -3,7 +3,7 @@
   background-size: cover;
 
   &-lap {
-    background: url("../images/bg/portBg.jpg") 0 0 no-repeat;
+
     .container3 {
       padding: 0 175px;
       padding-top: 250px;
@@ -11,10 +11,6 @@
       flex-direction: column;
       align-items: center;
     }
-
-
-
-
 
     &__bread {
       margin-bottom: 40px;
@@ -107,7 +103,7 @@
     }
 
     &__title {
-      color: rgba($text,.8);
+      color: rgba($text, .8);
       font-size: 33px;
       font-weight: 300;
       line-height: 48.56px;
@@ -116,7 +112,7 @@
     }
 
     &__sub {
-      color: rgba($text,.8);
+      color: rgba($text, .8);
       font-size: 19px;
       font-weight: 300;
       line-height: 31px;
@@ -151,7 +147,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.2) 20%,rgba(255,255,255,0.2) 80%,rgba(255,255,255,0) 100%);
+          background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0) 100%);
         }
       }
 
@@ -165,7 +161,7 @@
 
       &-text {
         text-align: center;
-        color: rgba($text,.5);
+        color: rgba($text, .5);
         font-size: 21px;
         font-weight: 500;
       }
@@ -214,6 +210,7 @@
       display: flex;
       align-items: center;
     }
+
     &__prev, &__next {
       min-width: 90px;
       cursor: pointer;
@@ -223,7 +220,7 @@
     &__pagination {
       display: flex;
       height: 158px;
-      color: rgba($bg,.3);
+      color: rgba($bg, .3);
       font-size: 60px;
       font-weight: 500;
       text-transform: uppercase;
@@ -239,7 +236,7 @@
         min-width: 1px;
         width: 1px;
         height: 100%;
-        background-color: rgba($bg,.3);
+        background-color: rgba($bg, .3);
         margin-left: 12px;
         margin-right: 12px;
       }
@@ -257,18 +254,21 @@
       position: relative;
       z-index: 20;
     }
+
     &__container {
       padding-bottom: 60px;
     }
+
     &__slide {
       width: auto;
       height: 445px;
       overflow: hidden;
-      box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 7px 30px 0px rgba(0, 0, 0, 0.3);
     }
 
     &__img {
       display: block;
+      height: 100%;
     }
 
     &__bottom {
@@ -277,6 +277,123 @@
       left: 0;
       right: 0;
       bottom: 0;
+    }
+  }
+
+  &-icons {
+    padding: 60px 100px 130px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__title {
+      text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+      color: $bg;
+      font-size: 60px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-right: 115px;
+    }
+  }
+
+  &-proj {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__left {
+      width: 63.7%;
+      position: relative;
+      box-shadow: -2px 34px 100px rgba(0, 0, 0, 0.72);
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+
+      &-img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &__right {
+      width: 36.3%;
+    }
+
+    &__title {
+      text-shadow: 0 2px 0 rgba(255, 255, 255, 0.5);
+      color: $bg;
+      font-size: 60px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 110px;
+      padding-top: 100px;
+    }
+
+    &__list {
+      padding: 130px 120px 130px 85px;
+    }
+
+    &__item {
+
+      &-line {
+        background: linear-gradient(to right, rgba(200, 8, 67, 1) 0%, rgba(200, 8, 67, 0) 100%);
+        position: absolute;
+        right: 15px;
+        width: 590px;
+        bottom: 0;
+        height: 1px;
+      }
+
+      &-title {
+        color: $bg;
+        font-size: 27px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      &-desc {
+        color: $bg;
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 31px;
+      }
+    }
+
+    &__recom {
+      padding: 135px 120px 70px 85px;
+
+      &-title {
+        color: $text;
+        font-size: 27px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      &-line {
+        background: linear-gradient(to right, rgba(#898991, 1) 0%, rgba(#898991, 0) 100%);
+        position: absolute;
+        right: 15px;
+        width: 570px;
+        bottom: 0;
+        height: 1px;
+      }
+
+      &-desc {
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 31px;
+      }
     }
   }
 

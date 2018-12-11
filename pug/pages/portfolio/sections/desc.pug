@@ -1,0 +1,29 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.port-desc
+    //- logo
+    .port-desc__logo
+        img(src='images/content/portfolio/logo.png').port-desc__logo-img
+
+    //- title
+    .port-desc__title
+        |Разработка сайта в минималистичном  стиле, но с удобным
+        br
+        |функционалом по выбору осветительной продукции.
+
+    //- sub
+    .port-desc__sub
+        |Разработка интеграции со складами 5ти поставщиков с удобным функционалом
+        br
+        |корректировки каталоги и сверкой товаров по наличию и ценам.
+
+    //- list
+    .port-desc__list
+        each item in portDesc
+            .port-desc__item
+                .port-desc__item-title
+                    span.port-desc__item-val= item.val
+                    if item.type
+                        span.port-desc__item-type= ' '+item.type
+                .port-desc__item-text= item.text

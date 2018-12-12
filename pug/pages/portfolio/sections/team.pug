@@ -1,0 +1,27 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section(style='background: #ffffff;').port-team
+
+    //- title
+    .port-team__title
+        | Команда
+        br
+        | проекта
+
+    //- image
+    .port-team__img
+        img(src='images/content/portfolio/team.png').port-team__img-img
+
+    //- list
+    .port-team__list
+        each col in portTeam
+            .port-team__col
+                each item in col
+                    .port-team__item
+                        .port-team__item-title= item.title
+                        .port-team__item-prof= item.prof
+
+
+
+

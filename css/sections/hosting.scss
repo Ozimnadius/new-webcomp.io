@@ -5,12 +5,8 @@
   &-tarifs {
     position: relative;
     padding-top: 180px;
+    margin-bottom: 115px;
 
-    &__logo {
-      position: absolute;
-      top: 40%;
-      left: 30%;
-    }
 
     &__list {
       position: absolute;
@@ -25,7 +21,7 @@
 
       &:nth-child(1) {
         top: 0;
-        left:33.4%;
+        left: 33.4%;
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -33,9 +29,11 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
         .host-tarifs__title {
           font-size: 47px;
         }
+
         .host-tarifs__sub {
           font-size: 15px;
         }
@@ -43,7 +41,7 @@
 
       &:nth-child(2) {
         top: 10.8%;
-        left:11.8%;
+        left: 11.8%;
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -51,9 +49,11 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
         .host-tarifs__title {
           font-size: 67px;
         }
+
         .host-tarifs__sub {
           font-size: 21px;
         }
@@ -61,7 +61,7 @@
 
       &:nth-child(3) {
         top: 34%;
-        left:2.5%;
+        left: 2.5%;
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -70,10 +70,12 @@
           left: 16px;
           top: 134px;
         }
+
         .host-tarifs__title {
           font-size: 67px;
           line-height: 60px;
         }
+
         .host-tarifs__sub {
           font-size: 21px;
         }
@@ -81,7 +83,7 @@
 
       &:nth-child(4) {
         bottom: 0;
-        left:39%;
+        left: 39%;
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -91,16 +93,18 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
         .host-tarifs__title {
           font-size: 67px;
           line-height: 60px;
         }
+
         .host-tarifs__sub {
           font-size: 21px;
         }
       }
 
-      &:nth-child(5){
+      &:nth-child(5) {
         bottom: 7%;
         right: 0;
 
@@ -112,10 +116,12 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
         .host-tarifs__title {
           font-size: 67px;
           line-height: 60px;
         }
+
         .host-tarifs__sub {
           font-size: 21px;
         }
@@ -135,7 +141,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to right, rgba(158,158,165,1) 0%,rgba(158,158,165,0) 100%);
+        background: linear-gradient(to right, rgba(158, 158, 165, 1) 0%, rgba(158, 158, 165, 0) 100%);
       }
     }
 
@@ -144,6 +150,7 @@
       font-weight: 300;
       text-transform: uppercase;
     }
+
     &__sub {
       color: #79797f;
       letter-spacing: 1.43px;
@@ -151,8 +158,77 @@
     }
   }
 
+  &-cont {
+    padding: 0 430px 0 170px;
+    margin-bottom: 160px;
+
+    p {
+      color: rgba($text, .6);
+    }
+  }
+
+  &-chars {
+
+    &__title {
+      padding: 0 220px;
+      margin-bottom: 130px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+
+      &-left {
+        margin-right: 30px;
+      }
+
+      &-right {
+        font-size: 57px;
+        font-weight: 300;
+        line-height: 64.2px;
+        text-transform: uppercase;
+        &_y {
+          color: #f5ad00;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -130px;
+      padding-right: 120px;
+    }
+    &__col {
+      width: calc(100%/3);
+      padding: 0 80px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.2) 100%);;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &__li {
+      color: rgba($text,.5);
+      font-size: 19px;
+      font-weight: 300;
+    }
+  }
+
   .bottom {
     background: none;
-    padding-top: 130px;
+    padding-top: 155px;
   }
 }

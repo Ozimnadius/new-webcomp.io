@@ -1,0 +1,20 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.host-chars
+    .host-chars__title
+        .host-chars__title-left
+            img(src='images/content/hosting/title.png').host-chars__title-img
+        .host-chars__title-right
+            span.host-chars__title-right_y лет
+            br
+            | не единого разрыва,
+            br
+            | без сбоев и потери данных
+
+    .host-chars__list
+        each col in hostChars
+            .host-chars__col.content
+                ul.host-chars__ul
+                    each li in col
+                        li.host-chars__li= li

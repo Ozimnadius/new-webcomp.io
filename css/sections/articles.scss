@@ -11,17 +11,18 @@
     flex-wrap: wrap;
     margin-right: -60px;
     margin-left: -60px;
+    margin-bottom: 40px;
   }
 
 
   &__item {
-    display: block;
     width: calc(50% - 120px);
     margin-left: 60px;
     margin-right: 60px;
     display: flex;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
+    position: relative;
   }
 
   &__date {
@@ -73,7 +74,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       padding-right: 45px;
     }
   }
@@ -111,6 +112,13 @@
       content: url("../images/icons/time2.svg");
       margin-right: 5px;
     }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    width: 220px;
   }
 
   &__more {

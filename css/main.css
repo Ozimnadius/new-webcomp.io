@@ -7460,7 +7460,7 @@ input, textarea, select {
   text-align: right;
   color: #1f1f1f;
   opacity: .5;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
 }
 
 .news-them {
@@ -7604,10 +7604,10 @@ input, textarea, select {
   flex-wrap: wrap;
   margin-right: -60px;
   margin-left: -60px;
+  margin-bottom: 40px;
 }
 
 .articles__item {
-  display: block;
   width: calc(50% - 120px);
   margin-left: 60px;
   margin-right: 60px;
@@ -7617,7 +7617,8 @@ input, textarea, select {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 80px;
+  position: relative;
 }
 
 .articles__date {
@@ -7683,7 +7684,6 @@ input, textarea, select {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 20px;
   padding-right: 45px;
 }
 
@@ -7724,6 +7724,13 @@ input, textarea, select {
 .articles__time:before {
   content: url("../images/icons/time2.svg");
   margin-right: 5px;
+}
+
+.articles__arrow {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 220px;
 }
 
 .articles__more {

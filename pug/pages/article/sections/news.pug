@@ -1,0 +1,23 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.art-news
+    .art-news__title Смотрите также
+    .art-news__arts
+        .articles
+            .articles__list
+                each item in articleNews
+                    a(href='./article.html').articles__item
+                        .articles__date
+                            .articles__day= item.date.day
+                            .articles__month= item.date.month
+                        .articles__img
+                            img(src=item.src).articles__img-img
+                        .articles__desc
+                            .articles__text= item.desc
+                            .articles__desc-bottom
+                                .articles__thematic Создание сайтов
+                                .articles__view= item.view
+                                .articles__time= item.time
+                            .articles__arrow
+                                +arrow()

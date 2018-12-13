@@ -8197,9 +8197,23 @@ input, textarea, select {
   background-position: -230px 0;
 }
 
+.art-news {
+  padding-top: 110px;
+  padding-right: 280px;
+  padding-left: 30px;
+}
+
+.art-news__title {
+  font-size: 57px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 110px;
+}
+
 .art .bottom {
   background: none;
-  padding-top: 130px;
+  padding-top: 25px;
 }
 
 .comments__title {

@@ -58,6 +58,6 @@ section.art-desc
                 .art-desc__cats-title Категории
                 .art-desc__cats-list
                     each cat in articleCats
-                        .art-desc__cat
+                        a(href='./news.html').art-desc__cat
                             span.art-desc__cat-title= cat.title
                             span.art-desc__cat-count= ' ('+cat.count+')'

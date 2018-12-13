@@ -1,0 +1,130 @@
+.articles {
+
+  &__hidden {
+    height: 0;
+    overflow: hidden;
+    transition: .4s;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -60px;
+    margin-left: -60px;
+  }
+
+
+  &__item {
+    display: block;
+    width: calc(50% - 120px);
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+
+  &__date {
+    min-width: 105px;
+    margin-right: 30px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 150px;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0) 100%);
+      transform: rotate(-34deg);
+    }
+  }
+
+  &__day {
+    font-size: 52px;
+    font-weight: 100;
+    margin-bottom: 7px;
+  }
+
+  &__month {
+    color: $Selective-yellow;
+    font-size: 28px;
+    font-weight: 300;
+    padding-left: 79px;
+  }
+
+  &__img {
+    min-width: 96px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+
+  &__desc {
+
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-right: 45px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    line-height: 29px;
+    margin-bottom: 10px;
+    padding-right: 45px;
+  }
+
+  &__thematic {
+    color: #c70541;
+    font-size: 13px;
+  }
+
+  &__view {
+    color: $Selective-yellow;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: url("../images/icons/eye.svg");
+      margin-right: 5px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__time {
+    color: $Selective-yellow;
+    font-size: 13px;
+
+    &:before {
+      content: url("../images/icons/time2.svg");
+      margin-right: 5px;
+    }
+  }
+
+  &__more {
+    display: block;
+    margin: 0 auto;
+    width: 206px;
+    height: 60px;
+    border: 1px solid rgba($text,.2);
+    text-align: center;
+    color: $text;
+    font-family: "Exo 2";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+}

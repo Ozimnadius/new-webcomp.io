@@ -1,0 +1,8 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.news-them
+    each item in newsThematics
+        a(href='./').news-them__item
+            span.news-them__title= item.title
+            span.news-them__count= ' ('+item.count+')'

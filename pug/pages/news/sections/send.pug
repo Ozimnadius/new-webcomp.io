@@ -1,0 +1,14 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.news-send
+    .container3
+        .news-send__title Хотите сайт в  топ?
+        .news-send__sub
+            | Подпишитесь на рассылку и получайте практические советы
+            br
+            | по продвижению сайта
+        form(action='#' method='post').news-send__form
+            input(type='email' name='email' placeholder='E-mail').news-send__input
+            button.news-send__submit
+                +arrow('arrow_white')

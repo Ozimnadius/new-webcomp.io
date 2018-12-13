@@ -1,0 +1,13 @@
+extends ../main.second.pug
+
+block variables
+    - var title = 'SMM Продвижение'
+
+block content
+    .news
+        .container3
+            .news__title Блог
+            include sections/thematics
+            include sections/articles
+        include sections/send
+        include sections/bottom

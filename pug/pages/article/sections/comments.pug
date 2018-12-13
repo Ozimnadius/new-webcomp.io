@@ -1,0 +1,42 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.art-comments
+    .comments
+        .comments__title
+            span.comments__title-name Комментарии
+            span.comments__title-count  123
+
+        form(action='#' method='post').comments__form
+            .comments__user
+                .comments__user-img
+                    img(src='images/content/article/default.jpg').comments__user-pic
+                .comments__user-info
+                    .comments__user-name Астафьев Андрей
+                    .comments__user-date 10 сентябрь
+            textarea(placeholder='Напишите комментарий').comments__input
+            button(type='submit').comments__submit Отправить
+
+        .comments__list
+            each comment in articleComments
+                .comment
+                    .comment__top
+                        .comment__user
+                            .comment__user-img
+                                img(src=comment.src).comment__user-pic
+                            .comment__user-info
+                                .comment__user-name= comment.name
+                                .comment__user-date= comment.date
+                        .comment__like
+                            +icon('like', 'comment__like-svg')
+                            .comment__like-count 2
+
+                    .comment__text= comment.text
+                    a(href='#').comment__feed
+                        .comment__feed-title Ответить
+                        +icon('feed', 'comment__feed-svg')
+
+        button.comments__more показать все
+
+
+

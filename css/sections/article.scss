@@ -339,6 +339,12 @@
     background-color: $text;
     padding: 100px 520px 110px 110px;
   }
+  
+  &-send {
+    .banner-send {
+      background-position: -230px 0;
+    }
+  }
 
   .bottom {
     background: none;

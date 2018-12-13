@@ -8414,6 +8414,16 @@ input, textarea, select {
   fill: #ee2e54;
 }
 
+/*-----------------SECTION-CONTACTS--------------------*/
+.art {
+  background: url("../images/bg/articleBg.jpg") 0 0 no-repeat;
+}
+
+.art .bottom {
+  background: none;
+  padding-top: 25px;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   position: relative;

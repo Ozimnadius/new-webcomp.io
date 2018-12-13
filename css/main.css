@@ -7449,18 +7449,16 @@ input, textarea, select {
 /*-----------------SECTION-NEWS--------------------*/
 .news {
   background: url("../images/bg/newsBg.jpg") 0 0 no-repeat;
-  padding-top: 200px;
+  padding-top: 520px;
 }
 
 .news__title {
   font-size: 191px;
   font-weight: 300;
   text-transform: uppercase;
-  padding-right: 260px;
   text-align: right;
   color: #1f1f1f;
   opacity: .5;
-  margin-bottom: 90px;
 }
 
 .news-them {

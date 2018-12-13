@@ -79,4 +79,15 @@ window.onload = function () {
             prevEl: '.port-slider__prev',
         },
     });
+
+    let articleSwiper = new Swiper('.art-desc__swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.art-desc__next',
+            prevEl: '.art-desc__prev',
+        }
+    });
 };

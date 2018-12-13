@@ -486,6 +486,16 @@
     }
   }
 
+  &_red {
+    .arrow__line {
+      background: linear-gradient(to right, rgba(#c70541, 0) 0%, rgba(#c70541, 1) 100%);
+    }
+
+    .arrow__triangle {
+      border-color: transparent transparent transparent #c70541;
+    }
+  }
+
   &_prev {
     transform: rotate(180deg);
   }

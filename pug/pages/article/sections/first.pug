@@ -1,0 +1,35 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.art-first
+
+    //- BREADCRUMBS
+    .art-first__bread
+        include ../../../common/breadcrumbs
+
+    //- NAVIGATION
+    .art-first__nav
+        .art-first__date
+            .art-first__day 03
+            .art-first__month 10
+        .art-first__desc
+            .art-first__title
+                | Быстрый способ поднять
+                br
+                | конверсии на сайте
+            .art-first__info
+                .art-first__thematic Создание сайтов
+                .art-first__view
+                    +icon('eye', 'art-first__view-svg')
+                    .art-first__view-text 321 тыс.
+                .art-first__time
+                    +icon('time2', 'art-first__time-svg')
+                    .art-first__time-text 7 мин.
+                .art-first__comment
+                    +icon('comment', 'art-first__comment-svg')
+                    .art-first__comment-text 7 мин.
+            .art-first__arrows
+                a(href='./article.html').art-first__arrow
+                    +arrow('arrow_white arrow_prev')
+                a(href='./article.html').art-first__arrow
+                    +arrow('arrow_white')

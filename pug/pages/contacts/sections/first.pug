@@ -1,0 +1,21 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.contacts-first
+
+    .contacts-first__addr 109382, г. Москва, ул. Нижние Поля, 3
+
+    .contacts-first__list
+        each item in contactsList
+            a(href=item.href).contacts-first__item= item.val
+
+    .contacts-first__pins
+        button(type='button').contacts-first__pin
+            +icon('tel', 'contacts-first__pin-svg')
+            .contacts-first__pin-title Заказать звонок
+        button(type='button').contacts-first__pin
+            +icon('question', 'contacts-first__pin-svg')
+            .contacts-first__pin-title Задать вопрос
+        a(href='#').contacts-first__pin
+            +icon('pin', 'contacts-first__pin-svg')
+            .contacts-first__pin-title м. Марьино

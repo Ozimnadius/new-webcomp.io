@@ -1,0 +1,12 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.contacts-map
+    .contacts-map__container
+        button(type='button').contacts-map__button показать на карте
+
+    .contacts-map__map
+        button(type='button').contacts-map__close
+        .contacts-map__wrap
+            iframe(src="https://snazzymaps.com/embed/120408" width="100%" height="100%" style="border:none;")
+

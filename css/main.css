@@ -8415,13 +8415,224 @@ input, textarea, select {
 }
 
 /*-----------------SECTION-CONTACTS--------------------*/
-.art {
-  background: url("../images/bg/articleBg.jpg") 0 0 no-repeat;
+.contacts {
+  background: url("../images/bg/contactsBg.jpg") 0 0 no-repeat;
+  background-size: cover;
 }
 
-.art .bottom {
+.contacts-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 490px;
+  padding-left: 130px;
+  padding-right: 360px;
+}
+
+.contacts-first__addr {
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.contacts-first__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.contacts-first__list:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0.3)), color-stop(70%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.contacts-first__item {
+  font-size: 35px;
+  font-weight: 300;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.contacts-first__item:last-child {
+  margin-right: 0;
+}
+
+.contacts-first__item:last-child:after {
+  display: none;
+}
+
+.contacts-first__item:after {
+  content: '/';
+  margin-left: 25px;
+  color: #ffb900;
+}
+
+.contacts-first__pins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contacts-first__pin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.contacts-first__pin:last-child {
+  margin-right: 0;
+}
+
+.contacts-first__pin-svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffb400;
+  margin-right: 10px;
+}
+
+.contacts-first__pin-title {
+  color: #ffffff;
+  font-family: "Exo 2";
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.contacts-map__container {
+  padding-left: 130px;
+  padding-right: 360px;
+  margin-bottom: 110px;
+}
+
+.contacts-map__button {
+  width: 206px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: "Exo 2";
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+}
+
+.contacts-map__map {
+  position: relative;
+}
+
+.contacts-map__map:before {
+  opacity: 1;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  content: '';
+  display: block;
+  margin-right: 220px;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, rgba(255, 255, 255, 0.3)), color-stop(70%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.contacts-map__map-content {
+  height: 100%;
+}
+
+.contacts-map__map.open:before {
+  opacity: 0;
+}
+
+.contacts-map__map.open .contacts-map__close {
+  display: block;
+}
+
+.contacts-map__map.open .contacts-map__wrap {
+  height: 880px;
+}
+
+.contacts-map__wrap {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  position: relative;
+}
+
+.contacts-map__close {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 20px);
+  right: 240px;
+  width: 76px;
+  height: 76px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.contacts-map__close:after, .contacts-map__close:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  left: 50%;
+  margin-left: -17.5px;
+  background-color: #ffffff;
+}
+
+.contacts-map__close:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.contacts-map__close:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.contacts .bottom {
   background: none;
-  padding-top: 25px;
+  padding-top: 110px;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

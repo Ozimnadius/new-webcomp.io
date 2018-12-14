@@ -8635,6 +8635,11 @@ input, textarea, select {
   padding-top: 110px;
 }
 
+/*-----------------SECTION-TEST--------------------*/
+.test .pag {
+  display: none;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   position: relative;

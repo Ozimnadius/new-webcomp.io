@@ -22,8 +22,9 @@ html(lang="ru")
     body
         .wrapper
 
-            //- heeader
-            //header.header
+            if (headerOn)
+                //- heeader
+                include ../common/header
 
             //- pages
             .page
@@ -35,8 +36,9 @@ html(lang="ru")
                 main.main
                     block content
 
-                //- pagination
-                include ../common/pagination
+                if (!pagOff)
+                    //- pagination
+                    include ../common/pagination
 
             //- footer
             //footer.footer

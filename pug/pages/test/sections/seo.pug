@@ -1,0 +1,29 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.index-seo
+
+    //- TITLE
+    .index-seo__title
+        .title.title_small
+            .title__line
+                .title__text Хотите сайт в топе?
+            .title__line
+                span.title__text.title__text_small мы знаем
+                span.title__text как это сделать
+
+    //- ITEMS
+    form(action='#' method='#').index-seo__form
+        .index-seo__items
+            each val, index in seo
+                .index-seo__item
+                    label.index-seo__label
+                        input(type='radio' name='seo' value='seo'+index checked=val.checked).index-seo__input
+                        .index-seo__item-title= val.title
+        .index-seo__button
+            button(type='submit').index-seo__submit
+                +btn('заказать продвижение')
+
+    //- MENU
+    .index-seo__menu
+        include ../../../common/menuTop

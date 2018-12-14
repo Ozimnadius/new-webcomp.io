@@ -1,0 +1,38 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section(id="02").index-about
+
+    //- TITLE
+    .index-about__title
+        +title('Компания, которая', 'отвечает', 'за результат', 'title_small')
+
+    //- CONTENT
+    .index-about__content
+        p Веб студия Web-comp специализируется на профессиональном создании уникальных сайтов на заказ. Команда наших специалистов постоянно следит за появлением новых технологий, которые мы не боимся внедрять в веб проекты, делая их современными и высокотехнологичными.
+        p Мы создаем только продающие сайты - это достигается путём отрисовки дизайна, проработки юзабилити и настройки технической части.
+
+
+    //- IMAGE
+    .index-about__image
+        .figure
+            .figure__block1
+                img(src='images/content/about1.png').figure__pic
+            .figure__block2
+                img(src='images/content/about2.png').figure__pic
+            .figure__block3
+                img(src='images/content/about3.png').figure__pic
+            .figure__block4
+                img(src='images/content/about4.png').figure__pic
+
+
+        .index-about__we
+            .we
+                .we__title Мы
+                button.we__btn
+                    +btn('рассчитать стоимость')
+
+
+    //- MENU
+    .index-about__menu
+        include ../../../common/menuTop

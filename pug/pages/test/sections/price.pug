@@ -1,0 +1,124 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.index-price
+
+    //-TITLE
+    .index-price__title Сколько стоит сайт?
+
+    //-SUBTITLE
+    .index-price__subtitle on-line калькулятор расчета стоимости
+
+    //- CALC
+    .index-price__calc
+        form(action='#' method='post').calc
+            .calc__row
+                .calc__row-title Вид проекта
+                .calc__fields
+                        -
+                            var type = [
+                            {name: 'Корпоративный сайт', checked: true},
+                            {name: 'Сайт-визитка', checked: false},
+                            {name: 'Интернет магазин', checked: false},
+                            {name: 'Лендинг', checked: false}
+                            ];
+
+                        each val, index in type
+                            .calc__field
+                                input(type='radio' id='radio'+index name='type' checked= val.checked).calc__radio
+                                label(for='radio'+index).calc__label= val.name
+                                    .calc__radio-fake
+
+
+            .calc__row
+                .calc__row-title требуется
+                .calc__fields
+                        -
+                            var needs = [
+                            {name: 'Уникальный дизайн', checked: false},
+                            {name: 'Адаптивная верстка', checked: true},
+                            {name: 'Продвижение', checked: true},
+                            {name: 'Лендинг', checked: false}
+                            ];
+
+                        each val, index in needs
+                            .calc__field
+                                input(type='checkbox' id='checkbox'+index name='needs' checked= val.checked).calc__checkbox
+                                label(for='checkbox'+index).calc__label= val.name
+                                    .calc__checkbox-fake
+
+
+            .calc__row
+                .calc__row-title Наполнение
+                .calc__fields
+                        -
+                            var fill = {
+                            pages: {name: 'Кол-во стр:', val: 0},
+                            products: {name: 'Кол-во товаров:', val: 0},
+                            words: {name: 'Кол-во слов:', val: 130},
+                            photos: {name: 'Кол-во фото:', val: 0}
+                            };
+
+                        each val,index in fill
+                            .calc__field
+                                label.calc__label
+                                    .calc__label-title= val.name
+                                    input(type='text' name=index value=val.val).calc__input
+
+
+
+
+            .calc__row
+                .calc__row-title.calc__row-title_white Срочность
+                .calc__fields
+                        .calc__field.calc__field_2
+                            label.calc__label.calc__label_middle
+                                input(type='range' name='range' min=1 max=100 value='12').calc__range
+                                .calc__range-title
+                                    span.calc__range-val 12
+                                    span.calc__range-text  месяцев
+
+                        .calc__field
+                            input(type='checkbox' id='urgency1' name='urgency').calc__checkbox
+                            label(for='urgency1').calc__label У нас есть фир. стиль
+                                .calc__checkbox-fake
+
+                        .calc__field
+                            input(type='checkbox' id='urgency2' name='urgency').calc__checkbox
+                            label(for='urgency2').calc__label Хочу домен в подарок
+                                .calc__checkbox-fake
+
+
+
+
+            .calc__row.calc__row_bottom
+                .calc__fields.calc__fields_2
+                    -
+                        var personals = {
+                            name: {
+                                type: 'text',
+                                placeholder: 'Имя'
+                            },
+                            tel:{
+                                type: 'tel',
+                                placeholder: 'Телефон'
+                            },
+                            email: {
+                                type: 'email',
+                                placeholder: 'E-mail'
+                            }
+                        };
+                    each val, index in personals
+                        .calc__field2
+                            input(type=val.type name=index  placeholder=val.placeholder).calc__personal
+
+
+
+            .calc__button
+                button(type='submit')
+                    +btn('Рассчитать стоимость')
+
+
+    //- MENU
+    .index-price__menu
+        include ../../../common/menuTop

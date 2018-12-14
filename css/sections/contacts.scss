@@ -1,4 +1,4 @@
-.contacts {
+.conts {
   background: url("../images/bg/contactsBg.jpg") 0 0 no-repeat;
   background-size: cover;
 
@@ -131,10 +131,10 @@
         &:before {
           opacity: 0;
         }
-        .contacts-map__close {
+        .conts-map__close {
           display: block;
         }
-        .contacts-map__wrap {
+        .conts-map__wrap {
           height: 880px;
         }
       }

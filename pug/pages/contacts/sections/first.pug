@@ -1,21 +1,21 @@
 include ../../../common/_mixins
 include ../../../common/_settings
 
-section.contacts-first
+section.conts-first
 
-    .contacts-first__addr 109382, г. Москва, ул. Нижние Поля, 3
+    .conts-first__addr 109382, г. Москва, ул. Нижние Поля, 3
 
-    .contacts-first__list
+    .conts-first__list
         each item in contactsList
-            a(href=item.href).contacts-first__item= item.val
+            a(href=item.href).conts-first__item= item.val
 
-    .contacts-first__pins
-        button(type='button').contacts-first__pin
-            +icon('tel', 'contacts-first__pin-svg')
-            .contacts-first__pin-title Заказать звонок
-        button(type='button').contacts-first__pin
-            +icon('question', 'contacts-first__pin-svg')
-            .contacts-first__pin-title Задать вопрос
-        a(href='#').contacts-first__pin
-            +icon('pin', 'contacts-first__pin-svg')
-            .contacts-first__pin-title м. Марьино
+    .conts-first__pins
+        button(type='button').conts-first__pin
+            +icon('tel', 'conts-first__pin-svg')
+            .conts-first__pin-title Заказать звонок
+        button(type='button').conts-first__pin
+            +icon('question', 'conts-first__pin-svg')
+            .conts-first__pin-title Задать вопрос
+        a(href='#').conts-first__pin
+            +icon('pin', 'conts-first__pin-svg')
+            .conts-first__pin-title м. Марьино

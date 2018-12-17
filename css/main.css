@@ -8977,7 +8977,7 @@ input, textarea, select {
 /*-----------------SECTION-COMPANY--------------------*/
 .comp-rew {
   margin-left: -325px;
-  background: url("/images/bg/companyRewardsBg.jpg") 0 0 no-repeat;
+  background: url("../images/bg/companyRewardsBg.jpg") 0 0 no-repeat;
   background-size: cover;
   padding-left: 325px;
   padding-top: 150px;
@@ -9011,8 +9011,8 @@ input, textarea, select {
 }
 
 .comp-rew__title-sep {
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   border: 3px solid #ffffff;
   opacity: 0.5;
   margin: 0 15px;

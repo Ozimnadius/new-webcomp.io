@@ -90,4 +90,37 @@ window.onload = function () {
             prevEl: '.art-desc__prev',
         }
     });
+
+    let testingSwiper = new Swiper('.testing__swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 1,
+        simulateTouch: false,
+        navigation: {
+            nextEl: '.testing__slide-next',
+            prevEl: '.testing__slide-prev',
+        },
+        pagination: {
+            el: '.testing__pag .swiper-pagination',
+            type: 'progressbar',
+        },
+        on: {
+            init: function () {
+                let activeIndex = this.activeIndex+1,
+                    allSlides = this.slides.length,
+                    percents = document.querySelector('.testing__pag-percents');
+
+                percents.innerHTML = (activeIndex/allSlides)*100 + ' %';
+                // debugger;
+                // console.log('swiper initialized');
+            },
+            slideChange: function () {
+                let activeIndex = this.activeIndex+1,
+                    allSlides = this.slides.length,
+                    percents = document.querySelector('.testing__pag-percents');
+
+                percents.innerHTML = (activeIndex/allSlides)*100 + ' %';
+            }
+        },
+    });
 };

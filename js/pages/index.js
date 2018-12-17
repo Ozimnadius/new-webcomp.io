@@ -61,7 +61,8 @@
 
     }
 
-    if (!page.classList.contains('page_second')) {
+    if (!page.classList.contains('page_second') && pagItems) {
+
 
         pagItems.addEventListener('click', function (e) {
             if (e.target.classList.contains('pag__item')) {

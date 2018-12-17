@@ -7,6 +7,7 @@
   font-weight: 300;
   text-transform: uppercase;
 
+
   &_small {
     font-size: 57px;
 
@@ -20,6 +21,16 @@
     .title__text_small {
       margin-left: 60px;
       margin-right: 20px;
+    }
+  }
+
+  &_big {
+    font-size: 105px;
+
+    .title__text_small {
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-left: 200px;
     }
   }
 

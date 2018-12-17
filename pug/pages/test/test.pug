@@ -6,6 +6,69 @@ block variables
     - var headerOn = true
 
 block content
-    .test
+    .testing
         .container3
+            //- START
+            .testing-start
+                //- title
+                .testing-start__title
+                   .testing-start__title-left
+                       +title('Пройдите тест', 'получите', 'скидку', 'title_big')
+                   .testing-start__title-right
+                       .testing-start__percents
+                           .testing-start__percents-val 15
+                           .testing-start__percents-type %
+
+                //- subtitle
+                .testing-start__subtitle
+                    | Узнайте, на сколько хорошо вы знакомы с интернет-маркетингом
+                    br
+                    | чтобы начать бизнес в сети самостоятельно
+
+                //- start
+                button.testing-start__button
+                    +btn('Начать тест')
+
+            // -SLIDER
+            .testing-slider
+                form(action='#' method='post').testing__form.form
+                    .swiper-container.testing__swiper
+                        .swiper-wrapper.testing__wrapper
+                            each slide in [1,2,3,4,5,]
+                                .swiper-slide
+                                    .testing__number= slide
+                                    .testing__slide
+                                        .testing__slide-title
+                                            | Какой тип сайта больше подойдёт для
+                                            br
+                                            | продвижения услуг компании?
+
+                                        .testing__fields
+                                            each row in testingList
+                                                .testing__row
+                                                    each item in row
+                                                        .testing__field
+                                                            label.testing__radio
+                                                                input(type='radio' name='type' checked= item.check).testing__radio-input
+                                                                .testing__radio-label= item.title
+                                                                    .testing__radio-fake
+
+
+                                        .testing__buttons
+                                            if slide>1
+                                                .testing__slide-prev
+                                                    +btn('Предыдущий вопрос')
+                                            .testing__slide-next
+                                                +btn('Следующий вопрос')
+                        .testing__pag
+                            .swiper-pagination
+                            .testing__pag-bottom
+                                .testing__pag-percents 0 %
+                                .testing__pag-title
+                                    span.testing__peg-text Ваша скидка
+                                    span.testing__pag-perc  15 %
+
+
+
+
 

@@ -9,6 +9,7 @@
 //@prepros-append pages/portfolio.js
 //@prepros-append pages/articles.js
 //@prepros-append pages/map.js
+//@prepros-append pages/test.js
 //@prepros-append pages/swiper.js
 
 

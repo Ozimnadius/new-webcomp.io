@@ -7,7 +7,7 @@
   }
 
   &-start {
-    opacity: 0;
+    padding-top: 100px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,7 +19,14 @@
     align-items: center;
     justify-content: center;
     padding-right: 250px;
+    opacity: 0;
+    visibility: hidden;
     transition: .4s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &__title {
       display: flex;
@@ -67,6 +74,14 @@
     right: 0;
     top: 0;
     bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__form {

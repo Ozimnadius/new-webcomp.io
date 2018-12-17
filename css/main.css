@@ -8656,7 +8656,7 @@ input, textarea, select {
 }
 
 .testing-start {
-  opacity: 0;
+  padding-top: 100px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -8676,9 +8676,16 @@ input, textarea, select {
   -ms-flex-pack: center;
   justify-content: center;
   padding-right: 250px;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
+}
+
+.testing-start.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .testing-start__title {
@@ -8732,6 +8739,16 @@ input, textarea, select {
   right: 0;
   top: 0;
   bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.testing-slider.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .testing__form {

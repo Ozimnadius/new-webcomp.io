@@ -1,0 +1,30 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.comp-rew
+
+    //- TITLE
+    .comp-rew__title
+        .comp-rew__title-text web
+        .comp-rew__title-sep
+        .comp-rew__title-text.comp-rew__title-text_y comp
+
+    //- DESC
+    .comp-rew__desc
+        | Мы единственная студия,которая
+        br
+        | объединила в себе самые важные
+        br
+        | для клиента аспекты работы
+        br
+        | в интернет пространстве.
+
+    //- LIST
+    .comp-rew__list
+        each item in compRew
+            .comp-rew__item
+                .comp-rew__item-title
+                    .comp-rew__item-val= item.val
+                    if item.type
+                        .comp-rew__item-type= item.type
+                .comp-rew__item-text!= item.text

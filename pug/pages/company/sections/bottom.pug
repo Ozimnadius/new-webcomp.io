@@ -6,6 +6,60 @@ section.index-bottom
 
     .index-bottom__wrapper
 
+        //- BEST
+        .index__best
+            .best
+                .best__row
+
+                    //- LEFT
+                    .best__left
+                        //- TITLE
+                        .best__title лучше, чем конкуренты
+
+                        //- SWITCHES
+                        .best__switches
+                            a(data-id=1).best__switch.active Создание сайтов
+                            .best__switch-button
+                            a(data-id=2).best__switch Продвижение
+
+                        //- TABS
+                        .best__tabs
+                            div(data-id=1).best__tab.active
+                                .table
+                                    .table__thead
+                                        each val in tab1.thead
+                                            div(class= val.width).table__th= val.title
+
+                                    .table__tbody
+                                        each val in tab1.tbody
+                                            .table__tr
+                                                each item in val
+                                                    div(class= item.width).table__td= item.title
+
+                            div(data-id=2).best__tab
+                                .table
+                                    .table__thead
+                                        each val in tab2.thead
+                                            div(class= val.width).table__th= val.title
+
+                                    .table__tbody
+                                        each val in tab2.tbody
+                                            .table__tr
+                                                each item in val
+                                                    div(class= item.width).table__td= item.title
+
+                    //- RIGHT
+                    .best__right
+                        .best__percents
+                            .proportion.proportion_1x1
+                            .best__percents-title
+                                .best__percents-text на
+                                .best__percents-value 70%
+                                .best__percents-text лучше
+
+                        .best__button
+                            +btn('Заказать сайт')
+
         //- REVIEWS
         .index__rev
             include ../../../common/sections/rev

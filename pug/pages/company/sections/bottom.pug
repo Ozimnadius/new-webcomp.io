@@ -1,136 +1,49 @@
 include ../../../common/_mixins
 include ../../../common/_settings
 
-section.index-bottom
+section.index-bottom.comp-bottom
 
 
     .index-bottom__wrapper
 
-        //- BEST
-        .index__best
-            .best
-                .best__row
+        //- VACANCY
+        .comp-vac
+            .comp-vac__title
+                | Мы растем, у нас все больше
+                br
+                | проектов и направлений
 
-                    //- LEFT
-                    .best__left
-                        //- TITLE
-                        .best__title лучше, чем конкуренты
+            .comp-vac__sub
+                |Команда активно расширяется. Поэтому мы находимся в постоянных поисках
+                br
+                |новых людей, способных сделать нас еще круче.
 
-                        //- SWITCHES
-                        .best__switches
-                            a(data-id=1).best__switch.active Создание сайтов
-                            .best__switch-button
-                            a(data-id=2).best__switch Продвижение
-
-                        //- TABS
-                        .best__tabs
-                            div(data-id=1).best__tab.active
-                                .table
-                                    .table__thead
-                                        each val in tab1.thead
-                                            div(class= val.width).table__th= val.title
-
-                                    .table__tbody
-                                        each val in tab1.tbody
-                                            .table__tr
-                                                each item in val
-                                                    div(class= item.width).table__td= item.title
-
-                            div(data-id=2).best__tab
-                                .table
-                                    .table__thead
-                                        each val in tab2.thead
-                                            div(class= val.width).table__th= val.title
-
-                                    .table__tbody
-                                        each val in tab2.tbody
-                                            .table__tr
-                                                each item in val
-                                                    div(class= item.width).table__td= item.title
-
-                    //- RIGHT
-                    .best__right
-                        .best__percents
-                            .proportion.proportion_1x1
-                            .best__percents-title
-                                .best__percents-text на
-                                .best__percents-value 70%
-                                .best__percents-text лучше
-
-                        .best__button
-                            +btn('Заказать сайт')
-
+            .comp-vac__list
+                .comp-vac__item
+                    .comp-vac__to Чтобы было вкусно смотреть
+                    .comp-vac__prof Дизайнер в digital подразделение
+                    .comp-vac__content
+                        p(style='text-transform: uppercase;') Москва       /      Полная занятость, полный день       /      Опыт работы:1-3 года
+                        p Мы ищем дизайнера, который будет работать с клиентами на поддержке. Новый боец не должен терять концентрации и готов делать большой объем задач в короткие сроки.
+                        h4 Дизайнер, которого мы ищем, будет:
+                        ul
+                            li работать в паре с арт-директором и развивать дизайн-концепцию на digital носители;
+                            li разрабатывать дизайн-макеты посадочных страниц, баннеров и создавать key visuals;
+                            li отвечать за дизайн-системы топовых клиентов;
+                            li участвовать в создании промо-сайтов и лендингов.
+                .comp-vac__item
+                    .comp-vac__to Чтобы было больше денег
+                    .comp-vac__prof Специалист по работе с новыми клиентами
+                    .comp-vac__content
+                        p Человек, способный силой рук поднять телефонную трубку или ответить на email нового клиента. Силой мысли привлечь крутой проект и составить коммерческое предложение. Клиентофил, клиентоман, или просто менеджер по работе с новыми клиентами.
+                .comp-vac__item
+                    .comp-vac__to Чтобы был выше рейтинг
+                    .comp-vac__prof Программист PHP
+                    .comp-vac__content
+                        p Это возможность продолжить свою карьеру и прокачаться в профессиональной команде разработки сайтов лидирующей компании отрасли. На сегодняшний день мы занимаем второе место среди двухсот лучших разработчиков сайтов по версии Рейтинга Рунета.
         //- REVIEWS
         .index__rev
             include ../../../common/sections/rev
-        //- BLOG
-        .index__blog
-            .blog
-                //- LEFT
-                .blog__left
-                    .blog__list
-                        .blog__item
-                            .blog__item-date
-                                .blog__item-month 03
-                                .blog__item-year 10
-
-                            .blog__item-right
-                                .blog__item-text Конференция Optimization 2018 пройдет 26-27 ноября в кампусе «Сколково»  ...
-                                .blog__item-arrow
-                                    .seporator
-                                        .seporator__line
-                                        .seporator__triangle
-
-                        .blog__item
-                            .blog__item-date
-                                .blog__item-month 16
-                                .blog__item-year 10
-
-                            .blog__item-right
-                                .blog__item-text Опытные дизайнеры, программисты, верстальщики и специалисты в области ...
-                                .blog__item-arrow
-                                    .seporator
-                                        .seporator__line
-                                        .seporator__triangle
-
-
-
-                //- RIGHT
-                .blog__right
-                    .blog__right-top
-                        .blog__title SEO оптимизатор Анатолий Васильев
-                        .blog__img
-                            .blog__img-wrap
-                                img(src='images/content/blogPhoto.jpg').blog__pic
-                    .blog__desc
-                        .blog__desc-title Как сэкономить на создании интернет магазина
-                        .blog__content
-                            p При создании сайта или интернет-магазина часто возникает желания сэкономить, особенно когда перед глазами много разны вариантов получения готового интернет-магазина. Разброс цен действительно большой и нужно понимать все особенности и подводные камни в решении этой задачи.
-                            p Работая в Веб индустрии очень давно, на начальных этапах своей деятельности мы прибегали к привлечению специалистов через фриланс в пиковые моменты сезона и в последствии отказались от этого решения, расширив ...
-
-        //- WORK
-        .index__work
-            .work
-                .work__title
-                    img(src='images/content/work/work.png').work__title-img
-                    .work__title-title
-                        .work__title-text.work__title-text_yellow лет
-                        .work__title-text мы разрабатываем
-                        .work__title-text сайты
-
-                .work__items
-                    .work__item
-                        .work__item-img
-                            img(src='images/content/work/work1.png').work__item-pic
-                        .work__item-text Бесплатная система управления с понятной системой
-                    .work__item
-                        .work__item-img
-                            img(src='images/content/work/work2.png').work__item-pic
-                        .work__item-text Многофункциональное решение под крупные проекты с годовой техническая поддержка в подарок
-                    .work__item
-                        .work__item-img
-                            img(src='images/content/work/work3.png').work__item-pic
-                        .work__item-text Решения с большим кол-во готовых шаблонов и высокой скоростью загрузки
 
         //- SEND
         .index__send

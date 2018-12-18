@@ -9401,6 +9401,74 @@ input, textarea, select {
   display: none;
 }
 
+.comp-vac {
+  margin-bottom: 230px;
+}
+
+.comp-vac__title {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 90px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.comp-vac__sub {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.comp-vac__item {
+  padding: 60px 140px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.comp-vac__item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comp-vac__to {
+  color: #ffba00;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.comp-vac__prof {
+  font-size: 23px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.comp-vac__content {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.comp-vac__content p {
+  margin-bottom: 30px;
+}
+
+.comp-vac__content h4 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.comp-vac__content ul li:before {
+  content: '— ';
+}
+
+.comp .index-bottom__wrapper {
+  background: url(../images/bg/promoteBg.jpg) 0 bottom no-repeat;
+  background-size: cover;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   position: relative;

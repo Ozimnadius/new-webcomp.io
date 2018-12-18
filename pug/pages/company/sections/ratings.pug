@@ -1,0 +1,30 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.comp-rait
+
+    //- TITLE
+    .comp-rait__title Рейтинги
+
+    //- TEXT
+    .comp-rait__text
+        | Ключевые рейтинговые агентства рунета
+        br
+        |уже пять лет стабильно ставят нас среди
+        br
+        |лидеров различных рейтингов, дизайна,
+        br
+        |рекламы и веб-разработки.
+
+    //- LIST
+    .comp-rait__list
+        .comp-rait__list-wrap
+            each item in compRait
+                .comp-rait__item
+                    .comp-rait__item-top
+                        .comp-rait__item-title= item.title
+                            span.comp-rait__item-title_s -е
+                        .comp-rait__item-place место
+                    .comp-rait__item-text!= item.text
+        .comp-rait__arrow
+            +arrow

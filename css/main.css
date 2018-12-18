@@ -9270,6 +9270,80 @@ input, textarea, select {
   text-align: center;
 }
 
+.comp-work {
+  margin-left: -325px;
+  padding-left: 325px;
+  background: #000000 url("../images/bg/compWorkBg.jpg") center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-right: 200px;
+}
+
+.comp-work__title {
+  font-size: 70px;
+  padding-top: 40px;
+  background: url("../images/content/company/work/we.png") right 0 no-repeat;
+  margin-bottom: 12.72727vh;
+}
+
+.comp-work__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.comp-work__line2 {
+  margin-top: 45px;
+  text-align: right;
+}
+
+.comp-work__1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: .8;
+}
+
+.comp-work__2 {
+  color: #ffba00;
+  font-size: 0.471em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.92px;
+  margin-right: 0.571em;
+}
+
+.comp-work__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.comp-work__item {
+  width: calc(100%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
   position: relative;

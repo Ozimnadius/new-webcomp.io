@@ -1,0 +1,20 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.comp-work
+
+    //- TITLE
+    .comp-work__title
+        .comp-work__line
+            .comp-work__1 работаем с хорошими
+        .comp-work__line
+            .comp-work__2 компаниями
+            .comp-work__1 из России
+        .comp-work__line2
+            .comp-work__1 из России
+
+    //- LIST
+    .comp-work__list
+        each i in [1,2,3,4,5,6]
+            .comp-work__item
+                img(src='images/content/company/work/img'+i+'.png').comp-work__img

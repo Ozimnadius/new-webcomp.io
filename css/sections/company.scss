@@ -272,4 +272,62 @@
 
     }
   }
+
+  &-work {
+    @include container;
+    background: #000000 url("../images/bg/compWorkBg.jpg") center center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 200px;
+
+
+    &__title {
+      font-size: 70px;
+      padding-top: 40px;
+      background: url("../images/content/company/work/we.png") right 0 no-repeat;
+      margin-bottom: vh(140);
+    }
+
+    &__line {
+      display: flex;
+      margin-bottom: 25px;
+    }
+
+    &__line2 {
+      margin-top: 45px;
+      text-align: right;
+    }
+
+    &__1 {
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: .8;
+    }
+
+    &__2 {
+      color: $Selective-yellow;
+      font-size: 0.471em;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.92px;
+      margin-right: 0.571em;
+    }
+
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc(100%/3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+  }
 }

@@ -1,0 +1,21 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.comp-tech
+    .comp-tech__title
+        | В проектах мы
+        br
+        | применяем
+        br
+        | особый подход,
+        br
+        | основанный
+        br
+        | на стратегии
+        br
+        | и инновации
+
+    .comp-tech__list
+        each i in [1,2,3,4,5]
+            .comp-tech__item
+                img(src='images/content/company/tech/img'+i+'.png').comp-tech__img

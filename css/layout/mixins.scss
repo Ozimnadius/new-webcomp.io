@@ -58,13 +58,33 @@ $vw: 1920;
         height: 1px;
         position: absolute;
         left: 0;
-        top: 50%;
-        margin-top: -1px;
+        top: 9px;
         background: $Selective-yellow;
       }
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+
+      ul {
+        padding-top: 20px;
+        li {
+          padding-left: 20px;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border: 1px solid $Selective-yellow;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            background-color: transparent;
+          }
+        }
       }
     }
   }

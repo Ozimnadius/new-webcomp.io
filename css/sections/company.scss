@@ -1,3 +1,8 @@
+@mixin container {
+  margin-left: -325px;
+  padding-left: 325px;
+}
+
 .comp {
 
   &-first {
@@ -5,10 +10,9 @@
   }
 
   &-rew {
-    margin-left: -325px;
+    @include container;
     background: url("../images/bg/companyRewardsBg.jpg") 0 0 no-repeat;
     background-size: cover;
-    padding-left: 325px;
     padding-top: 150px;
 
     display: flex;
@@ -103,5 +107,65 @@
       }
     }
 
+  }
+
+
+  &-stand {
+    @include container;
+    background: url("../images/bg/companyStandartsBg.jpg") center center no-repeat;
+    background-size: cover;
+    padding-right: 280px;
+    padding-top: vh(283);
+
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+
+    &__title {
+      color: $text;
+      font-size: 70px;
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: vh(120);
+
+      &-big {
+        font-size: 1.8285em;
+        margin-bottom: 13px;
+      }
+
+      &-line {
+        display: flex;
+        padding-left: 1.54285em;
+      }
+
+      &-small{
+        font-size: 0.471em;
+        color: $Selective-yellow;
+        margin-right: 1.06em;
+      }
+      &-text {
+        line-height: 0.75;
+      }
+
+
+    }
+
+    &__desc {
+      margin-left: -80px;
+      margin-right: -80px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__col {
+      width: calc(50% - 160px);
+      margin-left: 80px;
+      margin-right: 80px;
+
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 50px;
+    }
   }
 }

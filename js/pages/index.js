@@ -78,50 +78,54 @@
             });
         }
 
-        document.addEventListener('wheel', function (e) {
+        if (sections.length > 1) {
+            document.addEventListener('wheel', function (e) {
 
 
-            let deltaY = e.deltaY,
-                activeSection = document.querySelector('.active-page'),
-                nextSection = activeSection.nextElementSibling,
-                prevSection = activeSection.previousElementSibling;
+                let deltaY = e.deltaY,
+                    activeSection = document.querySelector('.active-page'),
+                    nextSection = activeSection.nextElementSibling,
+                    prevSection = activeSection.previousElementSibling;
 
-            if (!activeSection.classList.contains('index-bottom')) {
-                e.preventDefault();
-            } else {
-                if (deltaY > 0) {
-                    return;
+                if (!activeSection.classList.contains('index-bottom')) {
+                    e.preventDefault();
                 } else {
-                    if (scrollTop > 0) {
+                    if (deltaY > 0) {
                         return;
+                    } else {
+                        if (scrollTop > 0) {
+                            return;
+                        }
+                    }
+
+                }
+
+                if (inScroll) return;
+
+                inScroll = true;
+
+                if (deltaY > 0) {
+                    if (nextSection) {
+                        scrollToSection(index(sections, nextSection));
+                    } else {
+                        inScroll = false;
+                    }
+                } else {
+                    if (prevSection) {
+                        scrollToSection(index(sections, prevSection));
+                    } else {
+                        inScroll = false;
                     }
                 }
 
+            });
+
+            if (sectionBottom) {
+                sectionBottom.addEventListener('scroll', function (e) {
+                    scrollTop = this.scrollTop;
+                });
             }
-
-            if (inScroll) return;
-
-            inScroll = true;
-
-            if (deltaY > 0) {
-                if (nextSection) {
-                    scrollToSection(index(sections, nextSection));
-                } else {
-                    inScroll = false;
-                }
-            } else {
-                if (prevSection) {
-                    scrollToSection(index(sections, prevSection));
-                } else {
-                    inScroll = false;
-                }
-            }
-
-        });
-
-        sectionBottom.addEventListener('scroll', function (e) {
-            scrollTop = this.scrollTop;
-        });
+        }
     }
 
     $('.index-about__content').hyphenate();

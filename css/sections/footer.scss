@@ -76,6 +76,11 @@
     font-weight: 300;
     margin-bottom: 25px;
     text-align: center;
+    transition: .4s;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &:last-child {
       margin-bottom: 0;

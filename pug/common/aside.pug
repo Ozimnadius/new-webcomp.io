@@ -31,12 +31,15 @@ aside.aside
 
     //- search
     .aside__search
-        .search
-            button.search__btn
+        form(action='#' method='post' autocomplete="off").search
+            button(type='button').search__btn
                 .search__btn-line
                 .search__btn-round
+            .search__field
+                input(type='text' name='search' placeholder='Введите текст').search__input
 
-
+            .search__autocomplete
+                .autocomplete
 
     //- controls
     .aside__controls

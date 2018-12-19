@@ -34,12 +34,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -749,8 +755,7 @@
                   <div class="index__blog">
                     <div class="blog">
                       <div class="blog__left">
-                        <div class="blog__list">
-                          <div class="blog__item">
+                        <div class="blog__list"><a class="blog__item" href="./news.html">
                             <div class="blog__item-date">
                               <div class="blog__item-month">03</div>
                               <div class="blog__item-year">10</div>
@@ -763,9 +768,7 @@
                                   <div class="seporator__triangle"></div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="blog__item">
+                            </div></a><a class="blog__item" href="./news.html">
                             <div class="blog__item-date">
                               <div class="blog__item-month">16</div>
                               <div class="blog__item-year">10</div>
@@ -778,9 +781,7 @@
                                   <div class="seporator__triangle"></div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
+                            </div></a></div>
                       </div>
                       <div class="blog__right">
                         <div class="blog__right-top">

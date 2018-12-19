@@ -56,12 +56,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -277,7 +283,7 @@
                       </div>
                       <div class="banner__right">
                         <div class="banner__text">Готовые решение под вашу<br>тематику от<b> 20 000 Р</b></div>
-                        <button class="banner__button">заказать сайт</button>
+                        <button class="banner__button button">заказать сайт</button>
                       </div>
                     </div>
                   </div>
@@ -336,7 +342,7 @@
                           </div>
                         </div>
                         <div class="form__submit">
-                          <button class="form__button">Следующий шаг</button>
+                          <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
                       </form>
                     </div>
@@ -385,7 +391,7 @@
                           </div>
                         </div>
                         <div class="form__submit">
-                          <button class="form__button">Следующий шаг</button>
+                          <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
                       </form>
                     </div>
@@ -434,7 +440,7 @@
                           </div>
                         </div>
                         <div class="form__submit">
-                          <button class="form__button">Следующий шаг</button>
+                          <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
                       </form>
                     </div>
@@ -483,7 +489,7 @@
                           </div>
                         </div>
                         <div class="form__submit">
-                          <button class="form__button">Следующий шаг</button>
+                          <button class="form__submit-button button" type="submit">Завершить</button>
                         </div>
                       </form>
                     </div>

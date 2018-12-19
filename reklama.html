@@ -56,12 +56,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -188,7 +194,7 @@
                     </ul>
                   </div>
                 </div>
-                <button class="rek-desc__button">Получить прогноз по бюджету</button>
+                <button class="rek-desc__button button button_red">Получить прогноз по бюджету</button>
                 <div class="rek-desc__list">
                   <div class="rek-desc__item">
                     <div class="rek-desc__item-img"><img class="rek-first__item-pic" src="images/content/reklama/desc/rekDesc1.png"></div>
@@ -581,7 +587,7 @@
                     <div class="rek-bud__check-title">Привлекательные <br> объявления</div>
                   </div>
                 </div>
-                <button class="rek-bud__button">Узнайте стоимость клиента</button>
+                <button class="rek-bud__button button">Узнайте стоимость клиента</button>
               </section>
             </div>
             <section class="rek-bottom">

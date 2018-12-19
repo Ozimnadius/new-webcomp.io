@@ -56,12 +56,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -308,7 +314,7 @@
                       <div class="promote-result__text">Прибль за 9 месяцев</div>
                     </div>
                   </div>
-                  <button class="promote-result__button">заказать продвижение</button>
+                  <button class="promote-result__button button">заказать продвижение</button>
                 </div>
               </section>
               <section class="promote-work">
@@ -468,29 +474,49 @@
                       часто возникает желания сэкономить, особенно
                       когда перед глазами много разны ...
                     </div>
-                  </div><a class="edge__button" href="#">заказать сайт</a>
+                  </div><a class="edge__button button button_red" href="#">заказать сайт</a>
                 </div>
               </section>
               <section class="promote-rec">
                 <div class="promote-rec__title">Рекомендации наших клиентов</div>
                 <div class="promote-rec__list"><a class="promote-rec__item" href="/" download>
-                    <div class="promote-rec__img"><img class="promote-rec__pic" src="images/content/promote/recImg.svg">
+                    <div class="promote-rec__img">
+                                    <svg class="promote-rec__pic">
+                                      <use xlink:href="images/icons/sprite.svg#recImg"></use>
+                                    </svg>
+                      <!--img(src='images/content/promote/recImg.svg').promote-rec__pic-->
                       <div class="promote-rec__logo"><img class="promote-rec__logo-img" src="images/content/promote/recLogo.png"></div>
                     </div>
                     <div class="promote-rec__name">Рекомендательное письмо</div></a><a class="promote-rec__item" href="/" download>
-                    <div class="promote-rec__img"><img class="promote-rec__pic" src="images/content/promote/recImg.svg">
+                    <div class="promote-rec__img">
+                                    <svg class="promote-rec__pic">
+                                      <use xlink:href="images/icons/sprite.svg#recImg"></use>
+                                    </svg>
+                      <!--img(src='images/content/promote/recImg.svg').promote-rec__pic-->
                       <div class="promote-rec__logo"><img class="promote-rec__logo-img" src="images/content/promote/recLogo.png"></div>
                     </div>
                     <div class="promote-rec__name">Рекомендательное письмо</div></a><a class="promote-rec__item" href="/" download>
-                    <div class="promote-rec__img"><img class="promote-rec__pic" src="images/content/promote/recImg.svg">
+                    <div class="promote-rec__img">
+                                    <svg class="promote-rec__pic">
+                                      <use xlink:href="images/icons/sprite.svg#recImg"></use>
+                                    </svg>
+                      <!--img(src='images/content/promote/recImg.svg').promote-rec__pic-->
                       <div class="promote-rec__logo"><img class="promote-rec__logo-img" src="images/content/promote/recLogo.png"></div>
                     </div>
                     <div class="promote-rec__name">Рекомендательное письмо</div></a><a class="promote-rec__item" href="/" download>
-                    <div class="promote-rec__img"><img class="promote-rec__pic" src="images/content/promote/recImg.svg">
+                    <div class="promote-rec__img">
+                                    <svg class="promote-rec__pic">
+                                      <use xlink:href="images/icons/sprite.svg#recImg"></use>
+                                    </svg>
+                      <!--img(src='images/content/promote/recImg.svg').promote-rec__pic-->
                       <div class="promote-rec__logo"><img class="promote-rec__logo-img" src="images/content/promote/recLogo.png"></div>
                     </div>
                     <div class="promote-rec__name">Рекомендательное письмо</div></a><a class="promote-rec__item" href="/" download>
-                    <div class="promote-rec__img"><img class="promote-rec__pic" src="images/content/promote/recImg.svg">
+                    <div class="promote-rec__img">
+                                    <svg class="promote-rec__pic">
+                                      <use xlink:href="images/icons/sprite.svg#recImg"></use>
+                                    </svg>
+                      <!--img(src='images/content/promote/recImg.svg').promote-rec__pic-->
                       <div class="promote-rec__logo"><img class="promote-rec__logo-img" src="images/content/promote/recLogo.png"></div>
                     </div>
                     <div class="promote-rec__name">Рекомендательное письмо</div></a>

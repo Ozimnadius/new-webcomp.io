@@ -56,12 +56,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -560,7 +566,7 @@
                       часто возникает желания сэкономить, особенно
                       когда перед глазами много разны ...
                     </div>
-                  </div><a class="edge__button" href="#">заказать сайт</a>
+                  </div><a class="edge__button button button_red" href="#">заказать сайт</a>
                 </div>
               </section>
             </div>

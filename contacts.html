@@ -56,12 +56,18 @@
             </nav>
           </div>
           <div class="aside__search">
-            <div class="search">
-              <button class="search__btn">
+            <form class="search" action="#" method="post" autocomplete="off">
+              <button class="search__btn" type="button">
                 <div class="search__btn-line"></div>
                 <div class="search__btn-round"></div>
               </button>
-            </div>
+              <div class="search__field">
+                <input class="search__input" type="text" name="search" placeholder="Введите текст">
+              </div>
+              <div class="search__autocomplete">
+                <div class="autocomplete"></div>
+              </div>
+            </form>
           </div>
           <div class="aside__controls">
             <div class="controls"><a class="control" href="">
@@ -124,7 +130,7 @@
               </section>
               <section class="conts-map">
                 <div class="conts-map__container">
-                  <button class="conts-map__button" type="button">показать на карте</button>
+                  <button class="conts-map__button button" type="button">показать на карте</button>
                 </div>
                 <div class="conts-map__map">
                   <button class="conts-map__close" type="button"></button>

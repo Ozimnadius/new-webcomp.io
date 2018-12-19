@@ -35,6 +35,44 @@
   &__item {
     width: 25%;
     display: flex;
+
+
+    
+    &:hover {
+      .edge__name {
+        color: #c31e1e;
+      }
+      .promote-edge__svg{
+        fill: #c31e1e;
+      }
+      .edge__arrow {
+        .arrow {
+          margin-right: -100px;
+
+          &_black {
+            .arrow__line {
+              background: linear-gradient(to right, rgba(#333, 0) 0%, rgba(#333, 1) 100%);
+            }
+
+            .arrow__triangle {
+              border-color: transparent transparent transparent rgba(#333, 1) !important;
+            }
+          }
+
+
+        }
+      }
+      &:nth-child(even) {
+        .edge__arrow {
+          .arrow {
+            margin-left: -100px;
+            margin-right: 0;
+
+          }
+        }
+      }
+    }
+    
   }
 
 
@@ -56,6 +94,7 @@
     max-width: 36px;
     max-height: 36px;
     fill: rgba($bg,.8);
+    transition: .4s;
   }
 
   &__name {
@@ -65,6 +104,7 @@
     margin-bottom: 25px;
     position: relative;
     padding-left: 51px;
+    transition: .4s;
   }
 
   &__arrow {

@@ -10,6 +10,7 @@
 //@prepros-append pages/articles.js
 //@prepros-append pages/map.js
 //@prepros-append pages/test.js
+//@prepros-append pages/aside.js
 //@prepros-append pages/swiper.js
 
 

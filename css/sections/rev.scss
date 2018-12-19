@@ -20,6 +20,20 @@
     align-items: center;
     flex-wrap: wrap;
     height: 100%;
+
+    &:hover {
+      .rev__link {
+        border: 1px solid $Selective-yellow;
+
+        &-svg {
+          fill: $Selective-yellow;
+        }
+      }
+      .rev__text {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+    }
   }
 
   &__img {
@@ -59,11 +73,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .4s;
 
     &-svg {
       height: 28px;
       fill: rgba(#ebebeb,.5);
       margin-left: 6px;
+      transition: .4s;
     }
   }
 
@@ -83,6 +99,7 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 25px;
+    transition: .4s;
   }
 
   &__data {

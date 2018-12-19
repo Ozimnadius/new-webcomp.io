@@ -11,7 +11,8 @@ section.promote-rec
         each item in [1,2,3,4,5]
             a(href='/' download=true).promote-rec__item
                 .promote-rec__img
-                    img(src='images/content/promote/recImg.svg').promote-rec__pic
+                    +icon('recImg', 'promote-rec__pic')
+                    //img(src='images/content/promote/recImg.svg').promote-rec__pic
                     .promote-rec__logo
                         img(src='images/content/promote/recLogo.png').promote-rec__logo-img
                 .promote-rec__name Рекомендательное письмо

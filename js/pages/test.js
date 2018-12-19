@@ -5,6 +5,7 @@
 
     if (startButton) {
         startButton.addEventListener('click', function (e) {
+            document.querySelector('.testing').classList.add('active');
             startLayer.classList.remove('active');
             formLayer.classList.add('active');
         })

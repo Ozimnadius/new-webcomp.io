@@ -88,6 +88,67 @@ $vw: 1920;
       }
     }
   }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+
+    thead {
+      position: relative;
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, rgba(#c70541,0) 0%,rgba(#c70541,1) 30%,rgba(#c70541,1) 70%,rgba(#c70541,0) 100%);
+      }
+    }
+
+    th {
+      color: #c70541;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+
+    tbody {
+
+      tr {
+        position: relative;
+
+        &:first-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(to right, rgba($bg,0) 0%,rgba($bg,0.3) 30%,rgba($bg,0.3) 70%,rgba($bg,0) 100%);
+        }
+      }
+
+    }
+
+    td {
+      width: 20%;
+
+      color: $bg;
+      font-size: 21px;
+      font-weight: 300;
+      padding: 20px 0;
+    }
+  }
+
 }
 
 @mixin headers() {

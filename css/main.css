@@ -221,6 +221,64 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.content table thead {
+  position: relative;
+}
+
+.content table thead:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(199, 5, 65, 0)), color-stop(30%, #c70541), color-stop(70%, #c70541), to(rgba(199, 5, 65, 0)));
+  background: -webkit-linear-gradient(left, rgba(199, 5, 65, 0) 0%, #c70541 30%, #c70541 70%, rgba(199, 5, 65, 0) 100%);
+  background: -o-linear-gradient(left, rgba(199, 5, 65, 0) 0%, #c70541 30%, #c70541 70%, rgba(199, 5, 65, 0) 100%);
+  background: linear-gradient(to right, rgba(199, 5, 65, 0) 0%, #c70541 30%, #c70541 70%, rgba(199, 5, 65, 0) 100%);
+}
+
+.content table th {
+  color: #c70541;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.content table tbody tr {
+  position: relative;
+}
+
+.content table tbody tr:first-child:after {
+  display: none;
+}
+
+.content table tbody tr:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(30%, rgba(0, 0, 0, 0.3)), color-stop(70%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+.content table td {
+  width: 20%;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 300;
+  padding: 20px 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -8096,6 +8154,11 @@ input, textarea, select {
 }
 
 .art-desc__slide-img {
+  position: absolute;
+  top: 5px;
+  bottom: 15px;
+  left: 5px;
+  right: 5px;
   border-radius: 50%;
   overflow: hidden;
   -webkit-box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.6);
@@ -9675,6 +9738,13 @@ input, textarea, select {
 
 .text-desc__left {
   width: calc(64% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.text-desc__bottom {
+  margin-top: 100px;
+  width: calc(100% - 80px);
   margin-left: 40px;
   margin-right: 40px;
 }

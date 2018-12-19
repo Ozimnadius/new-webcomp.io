@@ -232,6 +232,11 @@
       box-sizing: border-box;
 
       &-img {
+        position: absolute;
+        top: 5px;
+        bottom: 15px;
+        left: 5px;
+        right: 5px;
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.6);

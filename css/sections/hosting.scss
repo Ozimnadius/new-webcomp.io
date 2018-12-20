@@ -60,7 +60,7 @@
       }
 
       &:nth-child(3) {
-        top: 34%;
+        top: 44%;
         left: 2.5%;
 
         .host-tarifs__tag {
@@ -68,7 +68,7 @@
           padding-bottom: 12px;
           position: absolute;
           left: 16px;
-          top: 134px;
+          top: 45px;
         }
 
         .host-tarifs__title {
@@ -105,8 +105,15 @@
       }
 
       &:nth-child(5) {
-        bottom: 7%;
+        bottom: 14%;
         right: 0;
+
+        .host-tarifs__glow {
+          left: -35px;
+          right: 35px;
+          top: 5px;
+          bottom: -5px;
+        }
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -127,6 +134,39 @@
         }
       }
 
+      &:hover {
+        .host-tarifs__glow {
+          transform: scale(1.1);
+        }
+      }
+
+    }
+
+    &__img {
+      position: relative;
+
+      &-img {
+        position: relative;
+        z-index: 20;
+      }
+    }
+
+    &__glow {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(1);
+      transition: .4s;
+
+      &-img {
+        max-width: initial;
+      }
     }
 
     &__tag {

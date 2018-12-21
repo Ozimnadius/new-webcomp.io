@@ -110,7 +110,15 @@
       background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 20%,rgba(255,255,255,0.3) 80%,rgba(255,255,255,0) 100%);
     }
     &:before {
-
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 30;
+      left: 0;
+      right: 0;
+      height: 57px;
+      bottom: 0;
+      background: rgba($bg,.3);
     }
   }
 

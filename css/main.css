@@ -10464,6 +10464,18 @@ input, textarea, select {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.3) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
+.timer__count:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  right: 0;
+  height: 57px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .timer__col {
   padding: 0 50px;
   position: relative;
@@ -10507,9 +10519,8 @@ input, textarea, select {
   top: calc(100% - 130px);
   height: 100%;
   left: 0;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
+  -webkit-transform: translate3d(0, 0%, 0);
+  transform: translate3d(0, 0%, 0);
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;

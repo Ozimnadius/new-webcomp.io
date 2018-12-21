@@ -1091,6 +1091,15 @@
     height: 121px;
     resize: none;
   }
+
+  &.error {
+    border: 1px solid #ec2327;
+
+    &::placeholder {
+      color: #ff0000;
+    }
+
+  }
 }
 
 .select {

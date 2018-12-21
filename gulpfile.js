@@ -31,6 +31,7 @@ const vendorJs = [
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     'node_modules/swiper/dist/js/swiper.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/jquery-validation/dist/jquery.validate.js',
 ];
 
 

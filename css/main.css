@@ -7818,6 +7818,10 @@ input, textarea, select {
   transform: scale(1.1);
 }
 
+.host-tarifs__item:hover .host-tarifs__title {
+  color: #ffba00;
+}
+
 .host-tarifs__img {
   position: relative;
 }
@@ -7872,6 +7876,9 @@ input, textarea, select {
   background: -webkit-linear-gradient(left, #9e9ea5 0%, rgba(158, 158, 165, 0) 100%);
   background: -o-linear-gradient(left, #9e9ea5 0%, rgba(158, 158, 165, 0) 100%);
   background: linear-gradient(to right, #9e9ea5 0%, rgba(158, 158, 165, 0) 100%);
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 
 .host-tarifs__title {
@@ -7879,6 +7886,9 @@ input, textarea, select {
   font-weight: 300;
   text-transform: uppercase;
   white-space: nowrap;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 
 .host-tarifs__title_y {

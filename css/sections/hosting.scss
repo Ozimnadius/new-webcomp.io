@@ -134,124 +134,15 @@
         }
       }
 
-      //&:nth-child(1) {
-      //  top: 0;
-      //  left: 33.4%;
-      //
-      //  .host-tarifs__tag {
-      //    padding-right: 50px;
-      //    right: calc(100% - 30px);
-      //    top: 50%;
-      //    transform: translateY(-50%);
-      //  }
-      //
-      //  .host-tarifs__title {
-      //    font-size: 47px;
-      //  }
-      //
-      //  .host-tarifs__sub {
-      //    font-size: 15px;
-      //  }
-      //}
-      //
-      //&:nth-child(2) {
-      //  top: 10.8%;
-      //  left: 11.8%;
-      //
-      //  .host-tarifs__tag {
-      //    padding-right: 50px;
-      //    right: calc(100% - 25px);
-      //    top: 50%;
-      //    transform: translateY(-50%);
-      //  }
-      //
-      //  .host-tarifs__title {
-      //    font-size: 67px;
-      //  }
-      //
-      //  .host-tarifs__sub {
-      //    font-size: 21px;
-      //  }
-      //}
-      //
-      //&:nth-child(3) {
-      //  top: 44%;
-      //  left: 2.5%;
-      //
-      //  .host-tarifs__tag {
-      //    padding-right: 50px;
-      //    padding-bottom: 12px;
-      //    position: absolute;
-      //    left: 16px;
-      //    top: 45px;
-      //  }
-      //
-      //  .host-tarifs__title {
-      //    font-size: 67px;
-      //    line-height: 60px;
-      //  }
-      //
-      //  .host-tarifs__sub {
-      //    font-size: 21px;
-      //  }
-      //}
-      //
-      //&:nth-child(4) {
-      //  bottom: 0;
-      //  left: 39%;
-      //
-      //  .host-tarifs__tag {
-      //    padding-right: 50px;
-      //    padding-bottom: 12px;
-      //    position: absolute;
-      //    right: calc(100% - 25px);
-      //    top: 50%;
-      //    transform: translateY(-50%);
-      //  }
-      //
-      //  .host-tarifs__title {
-      //    font-size: 67px;
-      //    line-height: 60px;
-      //  }
-      //
-      //  .host-tarifs__sub {
-      //    font-size: 21px;
-      //  }
-      //}
-      //
-      //&:nth-child(5) {
-      //  bottom: 14%;
-      //  right: 0;
-      //
-      //  .host-tarifs__glow {
-      //    left: -35px;
-      //    right: 35px;
-      //    top: 5px;
-      //    bottom: -5px;
-      //  }
-      //
-      //  .host-tarifs__tag {
-      //    padding-right: 50px;
-      //    padding-bottom: 12px;
-      //    position: absolute;
-      //    right: calc(100% - 25px);
-      //    top: 50%;
-      //    transform: translateY(-50%);
-      //  }
-      //
-      //  .host-tarifs__title {
-      //    font-size: 67px;
-      //    line-height: 60px;
-      //  }
-      //
-      //  .host-tarifs__sub {
-      //    font-size: 21px;
-      //  }
-      //}
 
       &:hover {
+
         .host-tarifs__glow {
           transform: scale(1.1);
+        }
+
+        .host-tarifs__title {
+          color: $Selective-yellow;
         }
       }
 
@@ -297,6 +188,7 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(to right, rgba(158, 158, 165, 1) 0%, rgba(158, 158, 165, 0) 100%);
+        transition: .4s;
       }
     }
 
@@ -305,6 +197,7 @@
       font-weight: 300;
       text-transform: uppercase;
       white-space: nowrap;
+      transition: .4s;
 
       &_y {
         color: $Selective-yellow;

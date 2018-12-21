@@ -7689,12 +7689,12 @@ input, textarea, select {
   position: absolute;
 }
 
-.host-tarifs__item:nth-child(1) {
+.host-tarifs__item_0 {
   top: 0;
   left: 33.4%;
 }
 
-.host-tarifs__item:nth-child(1) .host-tarifs__tag {
+.host-tarifs__item_0 .host-tarifs__tag {
   padding-right: 50px;
   right: calc(100% - 30px);
   top: 50%;
@@ -7703,20 +7703,20 @@ input, textarea, select {
   transform: translateY(-50%);
 }
 
-.host-tarifs__item:nth-child(1) .host-tarifs__title {
+.host-tarifs__item_0 .host-tarifs__title {
   font-size: 47px;
 }
 
-.host-tarifs__item:nth-child(1) .host-tarifs__sub {
+.host-tarifs__item_0 .host-tarifs__sub {
   font-size: 15px;
 }
 
-.host-tarifs__item:nth-child(2) {
+.host-tarifs__item_1 {
   top: 10.8%;
   left: 11.8%;
 }
 
-.host-tarifs__item:nth-child(2) .host-tarifs__tag {
+.host-tarifs__item_1 .host-tarifs__tag {
   padding-right: 50px;
   right: calc(100% - 25px);
   top: 50%;
@@ -7725,20 +7725,20 @@ input, textarea, select {
   transform: translateY(-50%);
 }
 
-.host-tarifs__item:nth-child(2) .host-tarifs__title {
+.host-tarifs__item_1 .host-tarifs__title {
   font-size: 67px;
 }
 
-.host-tarifs__item:nth-child(2) .host-tarifs__sub {
+.host-tarifs__item_1 .host-tarifs__sub {
   font-size: 21px;
 }
 
-.host-tarifs__item:nth-child(3) {
+.host-tarifs__item_2 {
   top: 44%;
   left: 2.5%;
 }
 
-.host-tarifs__item:nth-child(3) .host-tarifs__tag {
+.host-tarifs__item_2 .host-tarifs__tag {
   padding-right: 50px;
   padding-bottom: 12px;
   position: absolute;
@@ -7746,21 +7746,21 @@ input, textarea, select {
   top: 45px;
 }
 
-.host-tarifs__item:nth-child(3) .host-tarifs__title {
+.host-tarifs__item_2 .host-tarifs__title {
   font-size: 67px;
   line-height: 60px;
 }
 
-.host-tarifs__item:nth-child(3) .host-tarifs__sub {
+.host-tarifs__item_2 .host-tarifs__sub {
   font-size: 21px;
 }
 
-.host-tarifs__item:nth-child(4) {
+.host-tarifs__item_3 {
   bottom: 0;
   left: 39%;
 }
 
-.host-tarifs__item:nth-child(4) .host-tarifs__tag {
+.host-tarifs__item_3 .host-tarifs__tag {
   padding-right: 50px;
   padding-bottom: 12px;
   position: absolute;
@@ -7771,28 +7771,28 @@ input, textarea, select {
   transform: translateY(-50%);
 }
 
-.host-tarifs__item:nth-child(4) .host-tarifs__title {
+.host-tarifs__item_3 .host-tarifs__title {
   font-size: 67px;
   line-height: 60px;
 }
 
-.host-tarifs__item:nth-child(4) .host-tarifs__sub {
+.host-tarifs__item_3 .host-tarifs__sub {
   font-size: 21px;
 }
 
-.host-tarifs__item:nth-child(5) {
+.host-tarifs__item_4 {
   bottom: 14%;
   right: 0;
 }
 
-.host-tarifs__item:nth-child(5) .host-tarifs__glow {
+.host-tarifs__item_4 .host-tarifs__glow {
   left: -35px;
   right: 35px;
   top: 5px;
   bottom: -5px;
 }
 
-.host-tarifs__item:nth-child(5) .host-tarifs__tag {
+.host-tarifs__item_4 .host-tarifs__tag {
   padding-right: 50px;
   padding-bottom: 12px;
   position: absolute;
@@ -7803,12 +7803,12 @@ input, textarea, select {
   transform: translateY(-50%);
 }
 
-.host-tarifs__item:nth-child(5) .host-tarifs__title {
+.host-tarifs__item_4 .host-tarifs__title {
   font-size: 67px;
   line-height: 60px;
 }
 
-.host-tarifs__item:nth-child(5) .host-tarifs__sub {
+.host-tarifs__item_4 .host-tarifs__sub {
   font-size: 21px;
 }
 
@@ -7878,6 +7878,11 @@ input, textarea, select {
   line-height: 1;
   font-weight: 300;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.host-tarifs__title_y {
+  color: #ffba00;
 }
 
 .host-tarifs__sub {
@@ -7966,6 +7971,67 @@ input, textarea, select {
 .host .bottom {
   background: none;
   padding-top: 155px;
+}
+
+.hosting {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hosting__planet {
+  position: relative;
+  margin-bottom: 30px;
+  left: initial;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  margin-left: 260px;
+}
+
+.hosting__planet.host-tarifs__item_2 .host-tarifs__tag {
+  left: -260px;
+}
+
+.hosting__planet.host-tarifs__item_2 .host-tarifs__tag:after {
+  width: 148px;
+  left: initial;
+  right: 0;
+}
+
+.hosting__content {
+  width: 100%;
+  margin-bottom: 85px;
+}
+
+.hosting__content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hosting__content table th {
+  opacity: 0.3;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 79.8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hosting__content table td {
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 45px;
+  text-align: center;
 }
 
 /*-----------------SECTION-BANNER-SEND--------------------*/

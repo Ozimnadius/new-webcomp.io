@@ -3,59 +3,63 @@
     const popup = document.querySelector('.popup'),
         popupClose = document.querySelector('.popup__close'),
         popupWrapper = popup.querySelector('.popup__wrapper'),
-        callorderOpen = document.querySelector('.callorderOpen');
+        callorderOpenAll = document.querySelectorAll('.callorderOpen');
 
-    if (callorderOpen) {
-        callorderOpen.addEventListener('click', function (e) {
+    if (callorderOpenAll) {
+        for (let i =0; i<callorderOpenAll.length; i++) {
+            let callorderOpen = callorderOpenAll[i];
 
-            let data = {
-              action: 'callorderForm'
-            };
+            callorderOpen.addEventListener('click', function (e) {
 
-            $.ajax({
-                dataType: "json",
-                type: "POST",
-                url: 'php/ajax.php',
-                data: data,
-                success: function (result) {
-                    if (result.status) {
+                let data = {
+                    action: 'callorderForm'
+                };
 
-                        popupWrapper.innerHTML = result.html;
-                        popup.classList.add('active');
-                        $(document.querySelector('.callorder .form')).validate(
-                            {
-                                rules: {
-                                    name: "required",
-                                    tel: "required",
-                                    email: "required"
-                                },
-                                messages: {
-                                    name: "Введите ваше Имя",
-                                    tel: "Введите ваш  Телефон",
-                                    email: "Введите ваш Email"
-                                },
+                $.ajax({
+                    dataType: "json",
+                    type: "POST",
+                    url: 'php/ajax.php',
+                    data: data,
+                    success: function (result) {
+                        if (result.status) {
 
-                                submitHandler: function(form) {
-                                    getTimerForm();
-                                },
-                                invalidHandler: function(event, validator) {
-                                    // debugger;
-                                },
-                                errorPlacement: function(error, element) {
-                                    element[0].placeholder = error[0].innerText;
+                            popupWrapper.innerHTML = result.html;
+                            popup.classList.add('active');
+                            $(document.querySelector('.callorder .form')).validate(
+                                {
+                                    rules: {
+                                        name: "required",
+                                        tel: "required",
+                                        email: "required"
+                                    },
+                                    messages: {
+                                        name: "Введите ваше Имя",
+                                        tel: "Введите ваш  Телефон",
+                                        email: "Введите ваш Email"
+                                    },
+
+                                    submitHandler: function (form) {
+                                        getTimerForm();
+                                    },
+                                    invalidHandler: function (event, validator) {
+                                        // debugger;
+                                    },
+                                    errorPlacement: function (error, element) {
+                                        element[0].placeholder = error[0].innerText;
+                                    }
                                 }
-                            }
-                        );
+                            );
 
-                    } else {
+                        } else {
+                            alert('Что-то пошло не так, попробуйте еще раз!!!');
+                        }
+                    },
+                    error: function (result) {
                         alert('Что-то пошло не так, попробуйте еще раз!!!');
                     }
-                },
-                error: function (result) {
-                    alert('Что-то пошло не так, попробуйте еще раз!!!');
-                }
+                });
             });
-        });
+        }
     }
 
     function getTimerForm(){
@@ -95,6 +99,42 @@
             popup.classList.remove('active');
         }
     });
+
+    const tarifs = document.querySelectorAll('.host-tarifs__item');
+
+    if (tarifs) {
+        for (let i =0; i<tarifs.length; i++) {
+
+            tarifs[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+
+                let data = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    action: 'tarifForm'
+                };
+
+                $.ajax({
+                    dataType: "json",
+                    type: "POST",
+                    url: 'php/ajax.php',
+                    data: data,
+                    success: function (result) {
+                        if (result.status) {
+                            popupWrapper.innerHTML = result.html;
+                            popup.classList.add('active');
+                        } else {
+                            alert('Что-то пошло не так, попробуйте еще раз!!!');
+                        }
+                    },
+                    error: function (result) {
+                        alert('Что-то пошло не так, попробуйте еще раз!!!');
+                    }
+                });
+            })
+        }
+    }
 
 
 }());

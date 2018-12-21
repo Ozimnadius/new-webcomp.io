@@ -4,8 +4,8 @@ include ../../../common/_settings
 section.host-tarifs
     .proportion.proportion_1558x787
     .host-tarifs__list
-        each item in hostTarifs
-            a(href='#').host-tarifs__item
+        each item, indx in hostTarifs
+            a(href='#' data-name=item.tarif data-id=indx class='host-tarifs__item_'+indx).host-tarifs__item
                 .host-tarifs__img
                     img(src= item.src).host-tarifs__img-img
                     .host-tarifs__glow

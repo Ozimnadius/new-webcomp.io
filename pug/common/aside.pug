@@ -45,7 +45,7 @@ aside.aside
     .aside__controls
         .controls
             each val, index in controls
-                a(href=val.href class='control')
+                button(type='button').control.callorderOpen
                     +icon(index, 'control__svg')
                     .control__title= val.title
 

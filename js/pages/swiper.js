@@ -1,5 +1,5 @@
 window.onload = function () {
-    //initialize swiper when document ready
+    // initialize swiper when document ready
     let swiperReviews = new Swiper('.rev__container', {
         // Optional parameters
         direction: 'vertical',

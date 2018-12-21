@@ -26,6 +26,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'tarifForm':
+        echo json_encode(array(
+            'status' => true,
+            'html' => tarifForm($data['id'], $data['name'])
+        ));
+        exit();
+        break;
     default:
         echo json_encode(array(
             'status' => false,
@@ -186,6 +193,62 @@ function timerForm()
             </div>
         </div>
 
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function tarifForm($id, $name)
+{
+    ob_start();
+    ?>
+    <div class="hosting">
+        <div class="hosting__planet host-tarifs__item_<?=$id?>">
+            <div class="host-tarifs__img">
+                <img class="host-tarifs__img-img" src="images/content/hosting/tarifs/img<?=$id+1?>.png">
+                <div class="host-tarifs__glow">
+                    <img class="host-tarifs__glow-img" src="images/content/hosting/tarifs/glow<?=$id+1?>.png">
+                </div>
+            </div>
+            <div class="host-tarifs__tag">
+                <div class="host-tarifs__title">Тариф <span class="host-tarifs__title_y">«<?=$name?>»</span></div>
+            </div>
+        </div>
+        <div class="hosting__content">
+            <table>
+                <thead>
+                <tr>
+                    <th>Место на SSD диске</th>
+                    <th>Количество доменов</th>
+                    <th>Базы MySQL</th>
+                    <th>Посетителей сайта</th>
+                    <th>Цена</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1 Гб</td>
+                    <td>1 домен</td>
+                    <td>Неограничено</td>
+                    <td>Неограничено</td>
+                    <td>190 Р</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="hosting__button callorderOpen">
+            <div class="btn">
+                <div class="btn__title">заказать</div>
+                <div class="btn__lines">
+                    <div class="btn__line-top"></div>
+                    <div class="btn__line-right"></div>
+                    <div class="btn__line-bottom"></div>
+                    <div class="btn__line-left"></div>
+                </div>
+            </div>
+        </button>
     </div>
     <?
     $html = ob_get_contents();

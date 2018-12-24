@@ -109,13 +109,13 @@
         <main class="main">
           <div class="theme">
             <section class="theme-first">
-              <div class="container">
+              <div class="container promote-first__wrapper">
                 <div class="theme-first__bread">
                   <div class="bread"><a class="bread__item" href="./">Главная</a><a class="bread__item" href="./">Продвижение</a><a class="bread__item active">Контекстная реклама</a></div>
                 </div>
                 <div class="theme-first__title">Мы создадим продающий сайт<br>по вашей тематике</div>
                 <div class="theme-first__subtitle">Комплексный подход к проектированию прототипов и программной<br>разработке, учитывающий особенности Вашего бизнеса</div>
-                <div class="theme-first__button">
+                <button class="theme-first__button promote-first__button" type="button">
                                     <div class="btn3">
                                       <div class="btn3__title">Узнать стоимость продвижения</div>
                                       <div class="btn3__lines">
@@ -126,6 +126,110 @@
                                         <div class="btn3__line-topLeft"></div>
                                       </div>
                                     </div>
+                </button>
+              </div>
+              <div class="promote-first__calc">
+                <div class="promote-calc__close"></div>
+                <div class="promote-calc__title">сколько стоит<br>продвижение вашего сайта</div>
+                <div class="promote-calc__subtitle">Выберите способ продвижения</div>
+                <div class="promote-calc__form">
+                  <form class="form" action="#" method="post">
+                    <div class="form__row form__row_2">
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio0" name="promo" checked>
+                        <label class="check__label" for="radio0">Продвижение в Яндекс
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio1" name="promo">
+                        <label class="check__label" for="radio1">Продвижение в Google
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio2" name="promo">
+                        <label class="check__label" for="radio2">Контекстная реклама в Яндекс
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio3" name="promo">
+                        <label class="check__label" for="radio3">Контекстная реклама в Google
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__row form__row_2">
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio4" name="promo">
+                        <label class="check__label" for="radio4">Реклама в ВКонтакте
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio5" name="promo">
+                        <label class="check__label" for="radio5">Реклама в Instagram
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio6" name="promo">
+                        <label class="check__label" for="radio6">Реклама в Одноклассники
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                      <div class="form__field2">
+                        <input class="check" type="radio" id="radio7" name="promo">
+                        <label class="check__label" for="radio7">Реклама в Facebook
+                          <div class="check__fake"></div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <input class="input" type="text" name="words" placeholder="Кол-во продвигаемых слов">
+                      </div>
+                      <div class="form__field">
+                        <select class="select">
+                          <option disabled selected>Регион продвижения</option>
+                          <option>Вариант 1</option>
+                          <option>Вариант 2</option>
+                          <option>Вариант 3</option>
+                        </select>
+                      </div>
+                      <div class="form__field">
+                        <select class="select">
+                          <option disabled selected>Ваша тематика</option>
+                          <option>Вариант 1</option>
+                          <option>Вариант 2</option>
+                          <option>Вариант 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__field">
+                        <input class="input" type="text" name="name" placeholder="Имя">
+                      </div>
+                      <div class="form__field">
+                        <input class="input" type="tel" name="tel" placeholder="Телефон">
+                      </div>
+                      <div class="form__field">
+                        <input class="input" type="email" name="email" placeholder="E-mail">
+                      </div>
+                    </div>
+                    <div class="form__submit">
+                                        <div class="btn">
+                                          <div class="btn__title">Узнать стоимость</div>
+                                          <div class="btn__lines">
+                                            <div class="btn__line-top"></div>
+                                            <div class="btn__line-right"></div>
+                                            <div class="btn__line-bottom"></div>
+                                            <div class="btn__line-left"></div>
+                                          </div>
+                                        </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </section>
@@ -178,7 +282,7 @@
                     <div class="theme-iss__item">Зоотовары</div>
                   </div>
                 </div>
-                <button class="theme-iss__button">показать еще</button>
+                <!--button.theme-iss__button показать еще-->
               </section>
               <section class="theme-cats">
                 <div class="theme-cats__list"><a class="theme-cats__item" href="./" style="background:#66696c;">

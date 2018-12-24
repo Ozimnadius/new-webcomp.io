@@ -846,10 +846,10 @@
 
   &__input {
     width: 43px;
-    color: rgba($text, .3);
+    color: rgba($text, 1);
     font-size: 17px;
     line-height: 1;
-    border-left: 1px solid rgba($text, .3);
+    border: 1px solid rgba($text, .3);
     text-align: center;
     padding: 0 5px;
   }
@@ -949,6 +949,15 @@
     &:focus, &:active {
       color: $text;
       border: 1px solid rgba($text, 1);
+    }
+
+    &.error {
+      border: 1px solid #ec2327;
+
+      &::placeholder {
+        color: #ff0000;
+      }
+
     }
   }
 
@@ -1210,6 +1219,7 @@
     display: flex;
     align-items: center;
     margin-right: 9px;
+    transition: .4s;
 
     &:last-child {
       margin-right: 0;
@@ -1226,6 +1236,10 @@
       border: 1px solid $text;
       opacity: 0.5;
       margin-left: 9px;
+    }
+
+    &:hover {
+      color: rgba($text,1);
     }
 
     &.active {

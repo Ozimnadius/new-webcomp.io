@@ -174,3 +174,47 @@
     line-height: 1;
   }
 }
+
+.push {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    color: $Selective-yellow;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.92px;
+    margin-bottom: 85px;
+  }
+
+  &__list {
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 31px;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px solid rgba($text,.2);
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

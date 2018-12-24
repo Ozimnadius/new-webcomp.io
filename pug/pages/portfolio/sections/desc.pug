@@ -21,9 +21,9 @@ section(style='background: #363471;').port-desc
     //- list
     .port-desc__list
         each item in portDesc
-            .port-desc__item
+            .port-desc__item.number
                 .port-desc__item-title
-                    span.port-desc__item-val= item.val
+                    span(data-from=0 data-to=item.val).number__val.port-desc__item-val 0
                     if item.type
                         span.port-desc__item-type= ' '+item.type
                 .port-desc__item-text= item.text

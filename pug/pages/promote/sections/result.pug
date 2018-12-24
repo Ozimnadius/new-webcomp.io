@@ -18,11 +18,11 @@ section.promote-result
     //- result
     .promote-result__result
         //- list
-        .promote-result__list
+        .promote-result__list.numbers
             each val in promoteResult
-                .promote-result__item
+                .promote-result__item.number
                     .promote-result__percent
-                        .promote-result__percent-val= val.val
+                        div(data-from=0 data-to=val.val).number__val.promote-result__percent-val 0
                         .promote-result__percent-type= val.type
                     .promote-result__text= val.text
 

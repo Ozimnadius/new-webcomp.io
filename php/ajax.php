@@ -33,6 +33,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'pushForm':
+        echo json_encode(array(
+            'status' => true,
+            'html' => pushForm($data['seo'])
+        ));
+        exit();
+        break;
     default:
         echo json_encode(array(
             'status' => false,
@@ -249,6 +256,45 @@ function tarifForm($id, $name)
                 </div>
             </div>
         </button>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function pushForm($name)
+{
+    ob_start();
+    ?>
+    <div class="push">
+        <form action="#" method="post" class="push__form">
+            <div class="push__title">
+                Мы эффективно продвинули
+            </div>
+            <div class="push__subtitle">
+                более 10 сайтов по <?=$name?>. Если вы хотите:
+            </div>
+            <div class="push__list">
+                <div class="push__item">Выявить слабые стороны своего проекта</div>
+                <div class="push__item">Увеличить свою клиентскую базу</div>
+                <div class="push__item">Продавать товары и услуги в целевой аудитории</div>
+                <div class="push__item">Увеличить узнаваемость бренда в соц.сетях</div>
+                <div class="push__item">Привлечь клиентов с оплатой за переход</div>
+            </div>
+            <button type="submit" class="push__button">
+                <div class="btn">
+                    <div class="btn__title">рассчитать стоимость</div>
+                    <div class="btn__lines">
+                        <div class="btn__line-top"></div>
+                        <div class="btn__line-right"></div>
+                        <div class="btn__line-bottom"></div>
+                        <div class="btn__line-left"></div>
+                    </div>
+                </div>
+            </button>
+
+        </form>
     </div>
     <?
     $html = ob_get_contents();

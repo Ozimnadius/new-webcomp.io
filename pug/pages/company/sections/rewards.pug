@@ -22,9 +22,9 @@ section.comp-rew
     //- LIST
     .comp-rew__list
         each item in compRew
-            .comp-rew__item
+            .comp-rew__item.number
                 .comp-rew__item-title
-                    .comp-rew__item-val= item.val
+                    div(data-from=0 data-to=item.val).number__val.comp-rew__item-val= item.val
                     if item.type
                         .comp-rew__item-type= item.type
                 .comp-rew__item-text!= item.text

@@ -18,10 +18,11 @@ section.index-seo
             each val, index in seo
                 .index-seo__item
                     label.index-seo__label
-                        input(type='radio' name='seo' value='seo'+index checked=val.checked).index-seo__input
+                        input(type='radio' name='seo' value=val.title.toLowerCase() checked=val.checked).index-seo__input
                         .index-seo__item-title= val.title
         .index-seo__button
-            button(type='submit').index-seo__submit
+            input(type='hidden' name='action' value='pushForm')
+            button(type='submit').index-seo__submit.pushOpen
                 +btn('заказать продвижение')
 
     //- MENU

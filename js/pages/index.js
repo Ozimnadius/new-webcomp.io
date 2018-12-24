@@ -46,6 +46,21 @@
             }
         }
 
+        if (section.classList.contains('comp-rew')) {
+            for (let i = 0; i < numberAll.length; i++) {
+                let number = numberAll[i],
+                    val = number.querySelector('.number__val'),
+                    from = parseInt(val.dataset.from),
+                    to = parseInt(val.dataset.to);
+
+                if (number.classList.contains('active')) {
+                    continue;
+                }
+
+                number.classList.add('active');
+                counting(val, from, to, 2000);
+            }
+        }
 
         if (pagItems) {
             if (sectionIndex === 3) {
@@ -179,4 +194,11 @@
 
         });
     }
+
+
+    let calcForm = document.querySelector('.calc');
+    if (calcForm) {
+
+    }
+
 }());

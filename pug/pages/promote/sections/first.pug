@@ -51,24 +51,24 @@ section.promote-first
 
                         each val, index in promo
                             .form__field2
-                                input(type='radio' id='radio'+index name='promo' checked= val.checked).radio
-                                label(for='radio'+index).radio__label= val.name
-                                    .radio__fake
+                                input(type='radio' id='radio'+index name='promo' checked= val.checked).check
+                                label(for='radio'+index).check__label= val.name
+                                    .check__fake
 
                     .form__row.form__row_2
                         -
                             var promo = [
                             {name: 'Реклама в ВКонтакте', checked: false},
-                            {name: 'Реклама в Instagram', checked: true},
-                            {name: 'Реклама в Одноклассники', checked: true},
+                            {name: 'Реклама в Instagram', checked: false},
+                            {name: 'Реклама в Одноклассники', checked: false},
                             {name: 'Реклама в Facebook', checked: false}
                             ];
 
                         each val, index in promo
                             .form__field2
-                                input(type='radio' id='radio' + index name='type' checked= val.checked).radio
-                                label(for='radio' + index).radio__label= val.name
-                                    .radio__fake
+                                input(type='radio' id='radio' + (index+4) name='promo' checked= val.checked).check
+                                label(for='radio' + (index+4)).check__label= val.name
+                                    .check__fake
 
                     .form__row
                         .form__field

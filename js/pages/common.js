@@ -105,7 +105,7 @@ function Switches(prop) {
             tab.classList.add('active');
             this.classList.add('active');
 
-            if(that.scrollbar) {
+            if (that.scrollbar) {
                 that.line.style.left = percent + '%';
 
                 if (that.autoWidth) {
@@ -118,19 +118,18 @@ function Switches(prop) {
     }
 }
 
-
-
-
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;
     /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function(e) {
+    inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
-        if (!val) { return false;}
+        if (!val) {
+            return false;
+        }
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
         a = document.createElement("DIV");
@@ -150,7 +149,7 @@ function autocomplete(inp, arr) {
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
-                b.addEventListener("click", function(e) {
+                b.addEventListener("click", function (e) {
                     /*insert the value for the autocomplete text field:*/
                     inp.value = this.getElementsByTagName("input")[0].value;
                     /*close the list of autocompleted values,
@@ -162,7 +161,7 @@ function autocomplete(inp, arr) {
         }
     });
     /*execute a function presses a key on the keyboard:*/
-    inp.addEventListener("keydown", function(e) {
+    inp.addEventListener("keydown", function (e) {
         var x = document.getElementById(this.id + "autocomplete-list");
         if (x) x = x.getElementsByTagName("div");
         if (e.keyCode == 40) {
@@ -186,6 +185,7 @@ function autocomplete(inp, arr) {
             }
         }
     });
+
     function addActive(x) {
         /*a function to classify an item as "active":*/
         if (!x) return false;
@@ -196,12 +196,14 @@ function autocomplete(inp, arr) {
         /*add class "autocomplete-active":*/
         x[currentFocus].classList.add("autocomplete-active");
     }
+
     function removeActive(x) {
         /*a function to remove the "active" class from all autocomplete items:*/
         for (var i = 0; i < x.length; i++) {
             x[i].classList.remove("autocomplete-active");
         }
     }
+
     function closeAllLists(elmnt) {
         /*close all autocomplete lists in the document,
         except the one passed as an argument:*/
@@ -212,8 +214,87 @@ function autocomplete(inp, arr) {
             }
         }
     }
+
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
 }
+
+let isScrolling = false;
+window.addEventListener('scroll', throttleScroll, false);
+
+function throttleScroll(e) {
+    if (isScrolling == false) {
+        window.requestAnimationFrame(function () {
+            scrolling(e);
+            isScrolling = false;
+        });
+    }
+    isScrolling = true;
+}
+
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
+let numberAll = document.querySelectorAll('.number');
+
+if (numberAll) {
+
+    function scrolling(e) {
+
+        for (let i = 0; i < numberAll.length; i++) {
+            let number = numberAll[i],
+                val = number.querySelector('.number__val'),
+                from = parseInt(val.dataset.from),
+                to = parseInt(val.dataset.to);
+
+            if (number.classList.contains('active')) {
+                continue;
+            }
+
+            if (isFullyVisible(number)) {
+                number.classList.add('active');
+                counting(val, from, to, 2000);
+            }
+        }
+
+    }
+}
+
+function counting(val, from, to, time) {
+    let i = from,
+        frame = time / to;
+
+    let numInterval = setInterval(function (e) {
+        if (i <= to) {
+            val.innerHTML = i;
+            i++;
+        } else {
+            clearInterval(numInterval);
+        }
+
+    }, frame)
+
+}
+
+function isPartiallyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+    var height = elementBoundary.height;
+
+    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
+
+function isFullyVisible(el) {
+    var elementBoundary = el.getBoundingClientRect();
+
+    var top = elementBoundary.top;
+    var bottom = elementBoundary.bottom;
+
+    return ((top >= 0) && (bottom <= window.innerHeight));
+}
+
+
+

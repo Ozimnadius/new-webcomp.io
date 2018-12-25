@@ -82,7 +82,13 @@ function Switches(prop) {
     this.tabs = document.querySelectorAll(prop.tab);
     this.tabSelector = prop.tab;
     this.autoWidth = prop.autoWidth || false;
-    this.scrollbar = prop.scrollbar || true;
+    // this.scrollbar = prop.scrollbar || true;
+
+    if (prop.scrollbar === false) {
+        this.scrollbar = false;
+    } else  {
+        this.scrollbar = true;
+    }
 
     let that = this;
 

@@ -21,9 +21,10 @@ section.smm-first
         .smm-first__socials
             .smm-first__socials-wrap
                 each item in smmSocials
-                    a(href=item.href).smm-first__social
+                    a(href=item.href class=item.dopClass).smm-first__social
                         .smm-first__img
-                            img(src=item.src).smm-first__img-img
+                            //img(src=item.src).smm-first__img-img
+                            +icon(item.src, 'smm-first__img-img')
                         .smm-first__val= item.title
                         .smm-first__text
                             != item.text
@@ -32,5 +33,5 @@ section.smm-first
 
 
         //- BUTTON
-        .smm-first__button
+        button(type='button').smm-first__button.callorderOpen
             +btn3('Хочу увеличить продажи')

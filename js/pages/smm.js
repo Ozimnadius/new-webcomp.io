@@ -9,4 +9,16 @@
             scrollbar: false
         });
     }
+
+    $('.scrollTo').on('click', function (e) {
+        e.preventDefault();
+
+        let form = $($(this).attr('href'));
+
+        $('html, body').animate({
+            scrollTop: form.offset().top
+        }, 400);
+
+    });
+
 }());

@@ -41,6 +41,7 @@ window.onload = function () {
         direction: 'horizontal',
         slidesPerView: 3,
         spaceBetween: 2,
+        grabCursor: true,
         scrollbar: {
             el: '.slider__scrollbar .swiper-scrollbar',
             dragSize: 'auto'
@@ -52,6 +53,7 @@ window.onload = function () {
         direction: 'horizontal',
         slidesPerView: 3,
         spaceBetween: 2,
+        grabCursor: true,
         scrollbar: {
             el: '.slider2__scrollbar .swiper-scrollbar',
             dragSize: 'auto'

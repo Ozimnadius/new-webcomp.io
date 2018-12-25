@@ -64,5 +64,5 @@ aside.aside
     .aside__socials
         .socials
             each val, index in socials
-                a(href=val target='_blank' class='socials__item')
+                a(href=val target='_blank' class='socials__item socials__item_'+index)
                     +icon(index, 'socials__item-svg')

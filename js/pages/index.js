@@ -9,7 +9,8 @@
         sectionBottom = document.querySelector('.index-bottom'),
         scrollTop = 0,
         page = document.querySelector('.page'),
-        pagination = document.querySelector('.pag');
+        pagination = document.querySelector('.pag'),
+        nextSectionBtn = document.querySelector('.nextSection');
 
 
     function scrollToSection(sectionIndex) {
@@ -88,6 +89,7 @@
         if (pagItems) {
             pagItems.addEventListener('click', function (e) {
                 if (e.target.classList.contains('pag__item')) {
+                    e.preventDefault();
                     scrollToSection(index(pagAllItem, e.target));
                 }
             });
@@ -141,6 +143,13 @@
                 });
             }
         }
+    }
+
+    if (nextSectionBtn) {
+        nextSectionBtn.addEventListener('click', function (e) {
+            let index = this.dataset.id;
+            scrollToSection(index);
+        })
     }
 
     $('.index-about__content').hyphenate();

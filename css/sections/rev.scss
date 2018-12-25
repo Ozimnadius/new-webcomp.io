@@ -116,9 +116,28 @@
       .rev{
         &__middle, &__desc, &__data {
           opacity: 0;
+          visibility: hidden;
         }
         &__img:after {
           background: rgba(#000,.8);
+        }
+      }
+    }
+
+    &.swiper-slide-next {
+      .rev{
+        &__desc {
+          opacity: 0.5;
+          visibility: visible;
+        }
+
+        &__item {
+          &:hover {
+            .rev__text {
+              opacity: 0.3;
+              text-decoration: none;
+            }
+          }
         }
       }
     }

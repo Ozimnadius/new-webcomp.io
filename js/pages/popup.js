@@ -1,4 +1,4 @@
-(function () {
+// (function () {
 
     const popup = document.querySelector('.popup'),
         popupClose = document.querySelector('.popup__close'),
@@ -194,4 +194,4 @@
 
 
 
-}());
+// }());

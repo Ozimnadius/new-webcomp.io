@@ -10,6 +10,7 @@ window.onload = function () {
         initialSlide: 1,
         centeredSlides: true,
         slideToClickedSlide: true,
+        grabCursor: true,
         on: {
             slideChange: function () {
                 let index = this.activeIndex;

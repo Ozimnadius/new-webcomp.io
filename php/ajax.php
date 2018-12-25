@@ -21,7 +21,7 @@ switch ($action) {
     case 'timerForm':
         echo json_encode(array(
             'status' => true,
-            'endTime' => 'December 21 2018 23:59:59',
+            'endTime' => 'December 31 2018 23:59:59',
             'html' => timerForm()
         ));
         exit();

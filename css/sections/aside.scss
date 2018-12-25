@@ -82,6 +82,13 @@ $asideRight: 90px;
     color: $Battleship-grey;
     letter-spacing: 1.23px;
     margin-bottom: 10px;
+    transition: .4s;
+
+    &:hover {
+      .contacts__item_white {
+        color: $Selective-yellow;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -327,6 +334,30 @@ $asideRight: 90px;
       width: 13px;
       height: 13px;
       fill: $text;
+      transition: .4s;
     }
+
+    &:hover {
+      &.socials__item {
+        &_vk {
+          .socials__item-svg {
+            fill: #4582B3;
+          }
+        }
+        &_fb {
+          .socials__item-svg {
+            fill: #3B5999;
+          }
+
+        }
+        &_insta {
+          .socials__item-svg {
+            fill: #C4286F;
+          }
+
+        }
+      }
+    }
+
   }
 }

@@ -236,6 +236,9 @@
   }
 
   &-seo {
+    background: url("../images/bg/indexSeoBg.jpg") 0 0 no-repeat;
+    background-size: cover;
+
     display: flex;
     flex-direction: column;
     justify-content: center;

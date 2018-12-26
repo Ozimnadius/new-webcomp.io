@@ -6,7 +6,8 @@
             sws: '.site-cost__switches-list',
             sw: '.site-cost__switch',
             line: '.site-cost__subline',
-            tab: '.site-cost__tab'
+            tab: '.site-cost__tab',
+            switchActive: false
         });
     }
 

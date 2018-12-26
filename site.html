@@ -300,23 +300,31 @@
                 <div class="site-cost">
                   <div class="site-cost__title">Сколько стоит ваш сайт</div>
                   <div class="site-cost__sub">Заполнение брифа онлайн для расчёта точной стоимости<br>или загрузите свое ТЗ для оценки</div>
-                  <div class="site-cost__tabs">
+                  <form class="form site-cost__form site-cost__tabs" action="#" method="post">
                     <div class="site-cost__tab active" data-id="1">
-                      <form class="form" action="#" method="post">
+                      <div class="form__wrapper">
                         <div class="form__row">
                           <div class="form__field">
-                            <input class="input" type="text" name="name" placeholder="Название компании">
+                            <input class="input" type="text" name="company" placeholder="Название компании">
                           </div>
                           <div class="form__field">
-                            <input class="input" type="tel" name="tel" placeholder="Телефон">
+                            <select class="select" name="companyStyle">
+                              <option disabled selected>Наличие фирменного стиля</option>
+                              <option>Есть фирменный стиль</option>
+                              <option>Нужно разработать</option>
+                            </select>
                           </div>
                           <div class="form__field">
-                            <input class="input" type="email" name="email" placeholder="E-mail">
+                            <select class="select" name="specification">
+                              <option disabled selected>Наличие тех. задания</option>
+                              <option>Есть подробное тех. задание</option>
+                              <option>Нужно составить тех. задание</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field">
-                            <select class="select">
+                            <select class="select" name="siteType">
                               <option disabled selected>Тип сайта</option>
                               <option>Вариант 1</option>
                               <option>Вариант 2</option>
@@ -324,7 +332,7 @@
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
+                            <select class="select" name="endTime">
                               <option disabled selected>Срок сдачи</option>
                               <option>Вариант 1</option>
                               <option>Вариант 2</option>
@@ -332,7 +340,7 @@
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
+                            <select class="select" name="buisinessArea">
                               <option disabled selected>Сфера деятельности</option>
                               <option>Вариант 1</option>
                               <option>Вариант 2</option>
@@ -342,117 +350,162 @@
                         </div>
                         <div class="form__row">
                           <div class="form__field form__field_3">
-                            <textarea class="input input_area" placeholder="Комментарий"></textarea>
+                            <textarea class="input input_area" placeholder="Дополнительная иформация" name="dopInfo1"></textarea>
                           </div>
                         </div>
                         <div class="form__submit">
                           <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
-                      </form>
+                      </div>
                     </div>
                     <div class="site-cost__tab" data-id="2">
-                      <form class="form" action="#" method="post">
+                      <div class="form__wrapper">
                         <div class="form__row">
                           <div class="form__field">
-                            <input class="input" type="text" name="name" placeholder="Название компании">
+                            <select class="select" name="adaptive">
+                              <option disabled selected>Адаптивная версия</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
                           </div>
                           <div class="form__field">
-                            <input class="input" type="tel" name="tel" placeholder="Телефон">
+                            <select class="select" name="crm">
+                              <option disabled selected>Интеграция с CRM</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
                           </div>
                           <div class="form__field">
-                            <input class="input" type="email" name="email" placeholder="E-mail">
+                            <select class="select" name="warehouse">
+                              <option disabled selected>Интеграция со складом</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Тип сайта</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="socialsApp">
+                              <option disabled selected>Подключение социальных сервисов</option>
+                              <option>Да</option>
+                              <option>Нет</option>
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Срок сдачи</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="payApp">
+                              <option disabled selected>Подключение платежных сервисов</option>
+                              <option>Да</option>
+                              <option>Нет</option>
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Сфера деятельности</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="deliveryApp">
+                              <option disabled selected>Интеграция со службами доставки</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form__row">
+                          <div class="form__field">
+                            <select class="select" name="dopApp">
+                              <option disabled selected>Синхронизация с доп. источниками</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
+                          </div>
+                          <div class="form__field">
+                            <select class="select" name="complexFilters">
+                              <option disabled selected>Подключение сложных фильтров</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
+                          </div>
+                          <div class="form__field">
+                            <select class="select" name="calcs">
+                              <option disabled selected>Разработка калькуляторов</option>
+                              <option>Да</option>
+                              <option>Нет</option>
                             </select>
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field form__field_3">
-                            <textarea class="input input_area" placeholder="Комментарий"></textarea>
+                            <textarea class="input input_area" placeholder="Дополнительные пожелания по функционалу" name="dopInfo2"></textarea>
                           </div>
                         </div>
                         <div class="form__submit">
                           <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
-                      </form>
+                      </div>
                     </div>
                     <div class="site-cost__tab" data-id="3">
-                      <form class="form" action="#" method="post">
+                      <div class="form__wrapper">
                         <div class="form__row">
                           <div class="form__field">
-                            <input class="input" type="text" name="name" placeholder="Название компании">
+                            <select class="select" name="logo">
+                              <option disabled selected>Разработка лого</option>
+                              <option>Есть фирменный стиль</option>
+                              <option>Нужно разработать</option>
+                            </select>
                           </div>
                           <div class="form__field">
-                            <input class="input" type="tel" name="tel" placeholder="Телефон">
+                            <input class="input" type="number" name="pages" placeholder="Сколько страниц нарисовать?">
                           </div>
                           <div class="form__field">
-                            <input class="input" type="email" name="email" placeholder="E-mail">
+                            <select class="select" name="dopDesign">
+                              <option disabled selected>Дизайн доп. материалов к сайту</option>
+                              <option>Да</option>
+                              <option>Нет</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Тип сайта</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="siteStyle">
+                              <option disabled selected>Стиль сайта</option>
+                              <option>Строгий/Корпоративный</option>
+                              <option>Яркий/Броский</option>
+                              <option>Минималистичный</option>
+                              <option>Позитивный</option>
+                              <option>Flat-дизайн</option>
+                              <option>Художественное оформление</option>
+                              <option>Гранж</option>
+                              <option>Метро</option>
+                              <option>Ретро</option>
+                              <option>Футуристический</option>
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Срок сдачи</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="siteInfographics">
+                              <option disabled selected>Инфографика для сайта</option>
+                              <option>Да</option>
+                              <option>Нет</option>
                             </select>
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Сфера деятельности</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
+                            <select class="select" name="siteFont">
+                              <option disabled selected>Шрифт для сайта</option>
+                              <option>Есть</option>
+                              <option>Нужно разработать</option>
                             </select>
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field form__field_3">
-                            <textarea class="input input_area" placeholder="Комментарий"></textarea>
+                            <textarea class="input input_area" placeholder="Уточнения и пожелания" name="dopInfo3"></textarea>
                           </div>
                         </div>
                         <div class="form__submit">
                           <button class="form__button button" type="button">Следующий шаг</button>
                         </div>
-                      </form>
+                      </div>
                     </div>
                     <div class="site-cost__tab" data-id="4">
-                      <form class="form" action="#" method="post">
+                      <div class="form__wrapper">
                         <div class="form__row">
                           <div class="form__field">
-                            <input class="input" type="text" name="name" placeholder="Название компании">
+                            <input class="input" type="text" name="name" placeholder="Контактное лицо">
                           </div>
                           <div class="form__field">
                             <input class="input" type="tel" name="tel" placeholder="Телефон">
@@ -463,47 +516,32 @@
                         </div>
                         <div class="form__row">
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Тип сайта</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
-                            </select>
+                            <input class="input" type="file" name="files" placeholder="Доп файлы">
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Срок сдачи</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
-                            </select>
+                            <input class="input" type="text" name="goodSites" placeholder="Список сайтов которые нравятся">
                           </div>
                           <div class="form__field">
-                            <select class="select">
-                              <option disabled selected>Сфера деятельности</option>
-                              <option>Вариант 1</option>
-                              <option>Вариант 2</option>
-                              <option>Вариант 3</option>
-                            </select>
+                            <input class="input" type="text" name="badSites" placeholder="Список сайтов которые не нравятся">
                           </div>
                         </div>
                         <div class="form__row">
                           <div class="form__field form__field_3">
-                            <textarea class="input input_area" placeholder="Комментарий"></textarea>
+                            <textarea class="input input_area" placeholder="Дополнительные пожелания" name="dopInfo4"></textarea>
                           </div>
                         </div>
                         <div class="form__submit">
                           <button class="form__submit-button button" type="submit">Завершить</button>
                         </div>
-                      </form>
+                      </div>
                     </div>
-                  </div>
+                  </form>
                   <div class="site-cost__switches">
                     <div class="site-cost__line">
                       <div class="site-cost__subline"></div>
                     </div>
                     <div class="site-cost__switches-list">
-                      <button class="site-cost__switch active" data-id="1"><span class="site-cost__switch-num">1.</span><span class="site-cost__switch-title"> Контакты и тип сайта</span></button>
+                      <button class="site-cost__switch active" data-id="1"><span class="site-cost__switch-num">1.</span><span class="site-cost__switch-title"> Общая информация</span></button>
                       <button class="site-cost__switch" data-id="2"><span class="site-cost__switch-num">2.</span><span class="site-cost__switch-title"> Задачи и функционал</span></button>
                       <button class="site-cost__switch" data-id="3"><span class="site-cost__switch-num">3.</span><span class="site-cost__switch-title"> Дизайн и стиль</span></button>
                       <button class="site-cost__switch" data-id="4"><span class="site-cost__switch-num">4.</span><span class="site-cost__switch-title"> Файлы и примеры</span></button>

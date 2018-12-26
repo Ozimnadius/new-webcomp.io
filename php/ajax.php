@@ -40,6 +40,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'promotionForm':
+        echo json_encode(array(
+            'status' => true,
+            'html' => promotionForm()
+        ));
+        exit();
+        break;
     default:
         echo json_encode(array(
             'status' => false,
@@ -245,7 +252,7 @@ function tarifForm($id, $name)
                 </tbody>
             </table>
         </div>
-        <button type="button" class="hosting__button callorderOpen">
+        <button type="button" class="hosting__button">
             <div class="btn">
                 <div class="btn__title">заказать</div>
                 <div class="btn__lines">
@@ -294,6 +301,62 @@ function pushForm($name)
                 </div>
             </button>
 
+        </form>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function promotionForm()
+{
+    ob_start();
+    ?>
+    <div class="promotion">
+        <form class="promotion__form form" action="#" method="post">
+            <div class="promotion__subtitle">
+                Заполнение брифа онлайн для расчёта точной стоимости <br>
+                или загрузите свое ТЗ для оценки
+            </div>
+            <div class="form__row">
+                <div class="form__field">
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                </div>
+                <div class="form__field">
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
+                </div>
+                <div class="form__field">
+                    <input class="input" type="email" name="email" placeholder="E-mail">
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__field">
+                    <input class="input" type="text" name="site" placeholder="Название сайта">
+                </div>
+                <div class="form__field">
+                    <input class="input" type="text" name="region" placeholder="Регион продвижения">
+                </div>
+                <div class="form__field">
+                    <input class="input" type="text" name="businessArea" placeholder="Сфера деятельности">
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__field form__field_3">
+                    <textarea class="input input_area" placeholder="Перечислите, основные направления для подбора запросов. Пример: Установка пластиковых окон, продажа земельных участков, услуги частного психотерапевта"></textarea>
+                </div>
+            </div>
+            <button class="form__submit promotion__submit" type="submit">
+                <div class="btn">
+                    <div class="btn__title">Получить консультацию маркетолога</div>
+                    <div class="btn__lines">
+                        <div class="btn__line-top"></div>
+                        <div class="btn__line-right"></div>
+                        <div class="btn__line-bottom"></div>
+                        <div class="btn__line-left"></div>
+                    </div>
+                </div>
+            </button>
         </form>
     </div>
     <?

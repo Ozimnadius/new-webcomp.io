@@ -38,7 +38,7 @@
   }
 }
 
-.callorder {
+.callorder,.promotion {
   width: 1120px;
 
   &__title {
@@ -63,6 +63,17 @@
     margin-top: 50px;
   }
 
+}
+
+.promotion {
+
+  &__subtitle {
+    opacity: 0.5;
+    color: $text;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 45.08px;
+  }
 }
 
 .timer {

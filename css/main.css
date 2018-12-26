@@ -1580,9 +1580,16 @@ input, textarea, select {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
-  padding: 15px;
-  color: rgba(255, 255, 255, 0.3);
+  padding: 14px;
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 300;
+  line-height: 1;
+  font-family: "Exo 2";
+  font-size: 17px;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 50px;
 }
 
 .input::-webkit-input-placeholder, .select::-webkit-input-placeholder {
@@ -1913,6 +1920,9 @@ input, textarea, select {
 
 .contacts__item_white {
   color: #ffffff;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
 }
 
 .nav {
@@ -8222,6 +8232,7 @@ input, textarea, select {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 340px;
+  margin-bottom: 20px;
 }
 
 .banner-send__input {
@@ -8257,6 +8268,12 @@ input, textarea, select {
   flex-grow: 1;
   height: 100%;
   padding-right: 20px;
+}
+
+.banner-send__confirm {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 26px;
+  text-transform: uppercase;
 }
 
 /*-----------------SECTION-NEWS--------------------*/
@@ -10616,11 +10633,11 @@ input, textarea, select {
   justify-content: center;
 }
 
-.callorder {
+.callorder, .promotion {
   width: 1120px;
 }
 
-.callorder__title {
+.callorder__title, .promotion__title {
   font-size: 64px;
   font-weight: 300;
   text-transform: uppercase;
@@ -10628,7 +10645,7 @@ input, textarea, select {
   margin-bottom: 10px;
 }
 
-.callorder__subtitle {
+.callorder__subtitle, .promotion__subtitle {
   color: #ffba00;
   font-size: 25px;
   font-weight: 300;
@@ -10638,8 +10655,16 @@ input, textarea, select {
   margin-bottom: 50px;
 }
 
-.callorder__submit {
+.callorder__submit, .promotion__submit {
   margin-top: 50px;
+}
+
+.promotion__subtitle {
+  opacity: 0.5;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 45.08px;
 }
 
 .timer {

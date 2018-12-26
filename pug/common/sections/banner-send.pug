@@ -9,5 +9,6 @@ include ../_settings
         | по продвижению сайта
     form(action='#' method='post').banner-send__form
         input(type='email' name='email' placeholder='E-mail').banner-send__input
-        button.banner-send__submit
+        button(type='submit').banner-send__submit
             +arrow('arrow_white')
+    .banner-send__confirm

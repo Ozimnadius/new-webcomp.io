@@ -1087,9 +1087,15 @@
   width: 100%;
   border: 1px solid rgba($text, .2);
   text-align: center;
-  padding: 15px;
-  color: rgba($text, .3);
+  padding: 14px;
+  color: rgba($text, .4);
   font-weight: 300;
+  line-height: 1;
+  font-family: "Exo 2";
+  font-size: 17px;
+  font-weight: 300;
+  box-sizing: border-box;
+  height: 50px;
 
   &::placeholder {
     color: rgba($text, .3);

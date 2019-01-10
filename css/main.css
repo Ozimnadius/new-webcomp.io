@@ -8198,6 +8198,17 @@ input, textarea, select {
   text-align: center;
 }
 
+.popup .hosting__planet.host-tarifs__item_2 .host-tarifs__tag {
+  padding-right: 50px;
+  padding-bottom: 12px;
+  position: absolute;
+  left: -380px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /*-----------------SECTION-BANNER-SEND--------------------*/
 .banner-send {
   background: url("../images/content/news/send.jpg") 0 0 no-repeat;

@@ -344,3 +344,14 @@
   }
 
 }
+
+.popup {
+  .hosting__planet.host-tarifs__item_2 .host-tarifs__tag {
+    padding-right: 50px;
+    padding-bottom: 12px;
+    position: absolute;
+    left: -380px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

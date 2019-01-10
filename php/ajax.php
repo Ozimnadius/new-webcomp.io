@@ -183,10 +183,10 @@ function tarifForm($id, $name)
     ?>
     <div class="hosting">
         <div class="hosting__planet host-tarifs__item_<?=$id?>">
-            <div class="host-tarifs__img">
-                <img class="host-tarifs__img-img" src="images/content/hosting/tarifs/img<?=$id+1?>.png">
+            <div class="host-tarifs__img" style="height: 100px">
+                <img class="host-tarifs__img-img" style="height: 100%" src="images/content/hosting/tarifs/img<?=$id+1?>.png">
                 <div class="host-tarifs__glow">
-                    <img class="host-tarifs__glow-img" src="images/content/hosting/tarifs/glow<?=$id+1?>.png">
+                    <img class="host-tarifs__glow-img" style="height: 100%;" src="images/content/hosting/tarifs/glow<?=$id+1?>.png">
                 </div>
             </div>
             <div class="host-tarifs__tag">

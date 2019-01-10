@@ -185,7 +185,7 @@ function tarifForm($id, $name)
         <div class="hosting__planet host-tarifs__item_<?=$id?>">
             <div class="host-tarifs__img" style="height: 100px">
                 <img class="host-tarifs__img-img" style="height: 100%" src="images/content/hosting/tarifs/img<?=$id+1?>.png">
-                <div class="host-tarifs__glow">
+                <div class="host-tarifs__glow" style="transform: scale(1.15)">
                     <img class="host-tarifs__glow-img" style="height: 100%;" src="images/content/hosting/tarifs/glow<?=$id+1?>.png">
                 </div>
             </div>

@@ -10,7 +10,14 @@
         scrollTop = 0,
         page = document.querySelector('.page'),
         pagination = document.querySelector('.pag'),
-        nextSectionBtn = document.querySelector('.nextSection');
+        nextSectionBtn = document.querySelector('.nextSection'),
+        historySection = localStorage.getItem('sectionIndex'),
+        historyPage = localStorage.getItem('page');
+
+
+    if (historySection && !page.classList.contains('page_second') && document.querySelector('.'+historyPage)) {
+        scrollToSection(localStorage.getItem('sectionIndex'));
+    }
 
 
     function scrollToSection(sectionIndex) {
@@ -76,6 +83,9 @@
                 pagination.classList.remove('hidden');
             }
         }
+
+        localStorage.setItem('sectionIndex', sectionIndex);
+        localStorage.setItem('page', mainContent.firstElementChild.className);
 
         setTimeout(function () {
             inScroll = false;

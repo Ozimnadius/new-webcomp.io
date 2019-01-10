@@ -1172,6 +1172,9 @@ input, textarea, select {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .calc__fields_2 {
@@ -2304,7 +2307,6 @@ input, textarea, select {
 .index-about__content {
   position: relative;
   z-index: 40;
-  opacity: .5;
   width: 420px;
   font-size: 17px;
   font-weight: 300;
@@ -2702,6 +2704,11 @@ input, textarea, select {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .best__switch.active {
@@ -7936,14 +7943,7 @@ input, textarea, select {
 
 .host-tarifs__item_4 {
   bottom: 14%;
-  right: 0;
-}
-
-.host-tarifs__item_4 .host-tarifs__glow {
-  left: -35px;
-  right: 35px;
-  top: 5px;
-  bottom: -5px;
+  right: -12.5%;
 }
 
 .host-tarifs__item_4 .host-tarifs__tag {

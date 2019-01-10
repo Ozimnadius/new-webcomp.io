@@ -17,16 +17,16 @@ section.index-price
                 .calc__fields
                         -
                             var type = [
-                            {name: 'Корпоративный сайт', checked: true},
-                            {name: 'Сайт-визитка', checked: false},
-                            {name: 'Интернет магазин', checked: false},
-                            {name: 'Лендинг', checked: false}
+                                {name: 'Корпоративный сайт', checked: true, title: 'Сайт компании для презентации своих услуг с возможностями взаимодействия с целевой аудиторией'},
+                                {name: 'Сайт-визитка', checked: false, title: 'Сайт компании для создания имиджа в сети'},
+                                {name: 'Интернет магазин', checked: false, title: 'Многофункциональная площадка для торговли онлайн'},
+                                {name: 'Лендинг', checked: false, title: 'Одностраничный сайт нацеленный на одну группу товаров или услугу'}
                             ];
 
                         each val, index in type
                             .calc__field
                                 input(type='radio' id='radio'+index name='type' checked= val.checked).calc__radio
-                                label(for='radio'+index).calc__label= val.name
+                                label(for='radio'+index title=val.title).calc__label= val.name
                                     .calc__radio-fake
 
 
@@ -35,16 +35,16 @@ section.index-price
                 .calc__fields
                         -
                             var needs = [
-                            {name: 'Уникальный дизайн', checked: false},
-                            {name: 'Адаптивная верстка', checked: true},
-                            {name: 'Продвижение', checked: true},
-                            {name: 'Лендинг', checked: false}
+                            {name: 'Уникальный дизайн', checked: false, title: 'Создание привлекательной упаковки для вашего проекта, подчеркнет индивидуальность вашей компании или предложения'},
+                            {name: 'Адаптивная верстка', checked: true, title: 'Способность проекта работать на всех видах устройств одинаково хорошо'},
+                            {name: 'Продвижение', checked: true, title: 'Комплекс рекламных услуг нацеленных на привлечение целевой аудитории'},
+                            {name: 'Разработка тех. задания', checked: false, title: 'Поможем составить правильное техническое задание на создание сайта с учётом современных стандартов и ваших требований к проекту'}
                             ];
 
                         each val, index in needs
                             .calc__field
                                 input(type='checkbox' id='checkbox'+index name='needs' checked= val.checked).calc__checkbox
-                                label(for='checkbox'+index).calc__label= val.name
+                                label(for='checkbox'+index title=val.title).calc__label= val.name
                                     .calc__checkbox-fake
 
 
@@ -53,15 +53,15 @@ section.index-price
                 .calc__fields
                         -
                             var fill = {
-                            pages: {name: 'Кол-во стр:', val: 0},
-                            products: {name: 'Кол-во товаров:', val: 0},
-                            words: {name: 'Кол-во слов:', val: 130},
-                            photos: {name: 'Кол-во фото:', val: 0}
+                            pages: {name: 'Кол-во стр:', val: 0, title: 'Количество страниц на которые необходимо написать уникальный текст, оформить изображением или отформатировать информацию для размещения на сайте'},
+                            products: {name: 'Кол-во товаров:', val: 0, title: 'Количество карточек товара необходимых для размещения, включая описание к товару, характеристики, фотографии, цены и др.'},
+                            words: {name: 'Доп. баннеры:', val: 130, title: 'Дополнительная отрисовка баннеров, для рекламных акций или вплывающих окон'},
+                            photos: {name: 'Обработка изображений:', val: 0, title: 'Обработка изображения для размещения на сайте'}
                             };
 
                         each val,index in fill
                             .calc__field
-                                label.calc__label
+                                label(title=val.title).calc__label
                                     .calc__label-title= val.name
                                     input(type='text' name=index value=val.val).calc__input
 
@@ -85,7 +85,7 @@ section.index-price
 
                         .calc__field
                             input(type='checkbox' id='urgency2' name='urgency').calc__checkbox
-                            label(for='urgency2').calc__label Хочу домен в подарок
+                            label(for='urgency2').calc__label Нужно подобрать домен
                                 .calc__checkbox-fake
 
 

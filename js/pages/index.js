@@ -202,6 +202,28 @@
             this.classList.toggle('right');
 
         });
+
+        for (let i=0; i<switches.length; i++){
+            switches[i].addEventListener('click',function (e) {
+                let id = this.dataset.id,
+                    activeTab = document.querySelector('.best__tab[data-id="' + id + '"]');
+
+                //Toggle switces
+                for (let i = 0; i < switches.length; i++) {
+                    switches[i].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                //Toggle tabs
+                for (let i = 0; i < tabs.length; i++) {
+                    tabs[i].classList.remove('active');
+                }
+                activeTab.classList.add('active');
+
+                //Toggle button
+                switchButton.classList.toggle('right');
+            });
+        }
     }
 
 

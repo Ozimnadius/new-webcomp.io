@@ -21,7 +21,7 @@ switch ($action) {
     case 'timerForm':
         echo json_encode(array(
             'status' => true,
-            'endTime' => 'December 31 2018 23:59:59',
+            'endTime' => 'December 31 2019 23:59:59',
             'html' => timerForm()
         ));
         exit();
@@ -47,6 +47,14 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'testForm':
+        echo json_encode(array(
+            'status' => true,
+            'html' =>testForm()
+        ));
+        exit();
+        break;
+
     default:
         echo json_encode(array(
             'status' => false,
@@ -74,106 +82,7 @@ function callorderForm()
 
 function timerForm()
 {
-    ob_start();
-    ?>
-    <div class="timer">
-        <div class="timer__title">
-            Спасибо ваша заявка принята
-        </div>
-        <div class="timer__subtitle">
-            МЫ свяжемся с вами в ближайшее время
-        </div>
-
-        <div class="timer__count">
-            <div class="timer__col">
-                <div class="timer__hour">
-                    <div class="timer__hour-ten">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                        </div>
-                    </div>
-                    <div class="timer__hour-unit">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                            <div class="timer__num" data-id="3">3</div>
-                            <div class="timer__num" data-id="4">4</div>
-                            <div class="timer__num" data-id="5">5</div>
-                            <div class="timer__num" data-id="6">6</div>
-                            <div class="timer__num" data-id="7">7</div>
-                            <div class="timer__num" data-id="8">8</div>
-                            <div class="timer__num" data-id="9">9</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timer__col">
-                <div class="timer__minute">
-                    <div class="timer__minute-ten">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                            <div class="timer__num" data-id="3">3</div>
-                            <div class="timer__num" data-id="4">4</div>
-                            <div class="timer__num" data-id="5">5</div>
-                            <div class="timer__num" data-id="6">6</div>
-                        </div>
-                    </div>
-                    <div class="timer__minute-unit">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                            <div class="timer__num" data-id="3">3</div>
-                            <div class="timer__num" data-id="4">4</div>
-                            <div class="timer__num" data-id="5">5</div>
-                            <div class="timer__num" data-id="6">6</div>
-                            <div class="timer__num" data-id="7">7</div>
-                            <div class="timer__num" data-id="8">8</div>
-                            <div class="timer__num" data-id="9">9</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="timer__col">
-                <div class="timer__second">
-                    <div class="timer__second-ten">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                            <div class="timer__num" data-id="3">3</div>
-                            <div class="timer__num" data-id="4">4</div>
-                            <div class="timer__num" data-id="5">5</div>
-                            <div class="timer__num" data-id="6">6</div>
-                        </div>
-                    </div>
-                    <div class="timer__second-unit">
-                        <div class="timer__wrap">
-                            <div class="timer__num" data-id="0">0</div>
-                            <div class="timer__num" data-id="1">1</div>
-                            <div class="timer__num" data-id="2">2</div>
-                            <div class="timer__num" data-id="3">3</div>
-                            <div class="timer__num" data-id="4">4</div>
-                            <div class="timer__num" data-id="5">5</div>
-                            <div class="timer__num" data-id="6">6</div>
-                            <div class="timer__num" data-id="7">7</div>
-                            <div class="timer__num" data-id="8">8</div>
-                            <div class="timer__num" data-id="9">9</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <?
-    $html = ob_get_contents();
-    ob_end_clean();
+    $html = file_get_contents('./popup/timer/form_'.$_POST['formId'].'.php');
     return $html;
 }
 
@@ -322,6 +231,81 @@ function promotionForm()
             </button>
         </form>
     </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function testForm()
+{
+    $answers = [
+        'factors' => 'Количество уникальных посетителей',
+        'openRate' => 'Какой процент людей открыл письмо',
+        'googleAdwords'=>'Все вышеперечисленное',
+        'leadGeneration'=>'Call to action',
+        'twitterGif'=>'Да',
+        'advYoutube'=>'Статичная',
+        'ctr'=>'40',
+        'robots'=>'Все вышеперечисленное',
+        'sef'=>'ЧеловекоПонятный URL',
+        'formatSeo'=>'RDFA',
+        'speedLoad'=>'Длина url страницы',
+        'priceGoogle'=>'Оба варианта',
+        'bestAdv'=>'Первое',
+        'landingConversion'=>'Средней конверсии не существует',
+        'blackSeo'=>'Изменение даты публикации материала',
+        'altText'=>'.gif',
+        '1000Page'=>'Все вышеперечисленное',
+        'dataMarkup'=>'Все вышеперечисленное',
+        'banGoogle'=>'Все вышеперечисленное',
+        'filterAgc'=>'Отсутствие добавочной ценности в контенте сайта'
+    ];
+    $correct = 0;
+    $wrong = 0;
+    $totalQuestions = count($answers);
+
+
+
+    foreach ($answers as  $key=>$answer) {
+        if($_POST[$key] == $answer) {
+            $correct++;
+        } else {
+            $wrong++;
+        }
+    }
+
+
+    ob_start();
+    ?>
+    <form action="#" method="post" class="testing__form2">
+        <div class="testing__slide-title">
+            Результаты теста <?=$correct ?> из <?=$totalQuestions ?> верных ответов.
+        </div>
+        <div class="testing__fields">
+            <div class="testing__row">
+                <div class="testing__field">
+                    <label class="testing__label">
+                        Введите свою почту и мы отправим Вам промо-код и правильные ответы на почту.
+                        <input type="email" name="email" class="input">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="testing__buttons">
+            <button class="testing__submit" type="submit">
+                <div class="btn">
+                    <div class="btn__title">Отправить</div>
+                    <div class="btn__lines">
+                        <div class="btn__line-top"></div>
+                        <div class="btn__line-right"></div>
+                        <div class="btn__line-bottom"></div>
+                        <div class="btn__line-left"></div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </form>
     <?
     $html = ob_get_contents();
     ob_end_clean();

@@ -132,7 +132,7 @@ window.onload = function () {
                     allSlides = this.slides.length,
                     percents = document.querySelector('.testing__pag-percents');
 
-                percents.innerHTML = (activeIndex/allSlides)*100 + ' %';
+                percents.innerHTML = Math.round((activeIndex/allSlides)*100) + ' %';
             }
         },
     });

@@ -34,36 +34,34 @@ block content
                 form(action='#' method='post').testing__form.form
                     .swiper-container.testing__swiper
                         .swiper-wrapper.testing__wrapper
-                            each slide in [1,2,3,4,5]
+                            each slide, index in testingList
                                 .swiper-slide
-                                    .testing__number= slide
+                                    .testing__number= index+1
                                     .testing__slide
-                                        .testing__slide-title
-                                            | Какой тип сайта больше подойдёт для
-                                            br
-                                            | продвижения услуг компании?
+                                        .testing__slide-title= slide.title
 
                                         .testing__fields
-                                            each row in testingList
+                                            each row in slide.questions
                                                 .testing__row
                                                     each item in row
                                                         .testing__field
                                                             label.testing__radio
-                                                                input(type='radio' name='type' checked=item.check).testing__radio-input
-                                                                .testing__radio-label= item.title
+                                                                input(type='radio' name=slide.group value=item).testing__radio-input
+                                                                .testing__radio-label= item
                                                                     .testing__radio-fake
 
 
                                         .testing__buttons
-                                            if slide > 1 && slide <= 5
-                                                .testing__slide-prev
-                                                    +btn('Предыдущий вопрос')
-                                            if slide < 5
-                                                .testing__slide-next
-                                                    +btn('Следующий вопрос')
-                                            if slide >= 5
-                                                button(type='submit').testing__slide-submit
-                                                    +btn('Завершить тест')
+                                            if slide.buttons.prev
+                                                button(type='button').testing__slide-prev
+                                                    +btn(slide.buttons.prev)
+                                            if slide.buttons.next
+                                                button(type='button').testing__slide-next.disabled
+                                                    +btn(slide.buttons.next)
+                                            if slide.buttons.submit
+                                                button(type='submit').testing__slide-submit.disabled
+                                                    +btn(slide.buttons.submit)
+                                        input(type='hidden' name='action' value='testForm')
                         .testing__pag
                             .swiper-pagination
                             .testing__pag-bottom

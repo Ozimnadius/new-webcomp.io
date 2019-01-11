@@ -175,9 +175,12 @@ if (pushOpenAll) {
     }
 }
 
-function getTimerForm() {
+function getTimerForm(formId) {
+
+    formId = formId || 1;
 
     let data = {
+        formId: formId,
         action: 'timerForm'
     };
 

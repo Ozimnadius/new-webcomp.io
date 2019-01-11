@@ -155,6 +155,13 @@
     &-next,&-prev {
       outline: none;
     }
+
+    &-next, &-submit{
+      &.disabled {
+        pointer-events: none;
+        opacity: .5;
+      }
+    }
   }
 
   &__fields {
@@ -192,6 +199,7 @@
 
   &__field {
     width: 50%;
+    padding-right: 15px;
   }
 
   &__radio {
@@ -221,8 +229,10 @@
     }
 
     &-fake {
-      width: 20px;
+       min-width: 20px;
+       width: 20px;
       height: 20px;
+
       border: 1px solid rgba(#636363,.7);
       border-radius: 50%;
       order: -1;
@@ -286,5 +296,45 @@
       color: #ffb700;
       font-weight: 700;
     }
+  }
+
+  &__form2 {
+
+    width: 1120px;
+
+    .testing__fields {
+      padding: 0 90px;
+    }
+
+    .testing__row {
+      padding-left: 0;
+      padding-top: 0;
+    }
+    .testing__field {
+      width: 100%;
+      padding: 0;
+    }
+
+    .testing__label {
+      color: $Selective-yellow;
+      font-size: 22px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .input{
+      max-width: 354px;
+      margin-left: 30px;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+
   }
 }

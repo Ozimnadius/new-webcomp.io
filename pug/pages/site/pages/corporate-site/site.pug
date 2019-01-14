@@ -1,0 +1,11 @@
+extends ../../../main.second.pug
+
+block variables
+    - var title = 'Корпоративный сайт'
+
+block content
+    .site
+        include sections/first
+        .container
+            include sections/middle
+        include sections/bottom

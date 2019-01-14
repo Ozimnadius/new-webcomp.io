@@ -1,0 +1,70 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.theme-price
+
+    //- title
+    .theme-price__title Уникальная разработка дизайна страниц сайта
+
+    //- switches
+    .theme-price__switches
+
+        .theme-price__switches-list
+            each sw in themePriceSwitches
+                button(data-id=sw.id class=sw.dopClass).theme-price__switch
+                    span.theme-price__switch-title= sw.title
+
+
+        .theme-price__line
+            .theme-price__subline
+
+
+
+    //- tabs
+    .theme-price__tabs
+        each tab in themePriceTabs
+            div(data-id=tab.id  class=tab.dopClass).theme-price__tab
+                .theme-price__list
+                    each row in themePriceRows
+                        .theme-price__row
+                            each item in row
+                                .theme-price__item
+                                    if item.title
+                                        .theme-price__item-title= item.title
+                                    .theme-price__item-price= item.price
+                                    .theme-price__item-text= item.text
+
+                    .theme-price__row
+                        -
+                            var list = [
+                            {
+                                title: '+',
+                                items: [
+                                    'Анализ конкурентов — <b>Бесплатно</b>)',
+                                    'Адаптивная верстка — <b>15 000 Р</b>',
+                                    'Написание ТЗ — <b>3 000 Р</b>',
+                                    'Дизайн 5 стр для моб.устройств — <b>Бесплатно</b>'
+                                ]
+                            },
+                            {
+                                title: '+',
+                                items: [
+                                    'Анализ конкурентов — <b>Бесплатно</b>',
+                                    'Адаптивная верстка — <b>8 000 Р</b>',
+                                    'Написание ТЗ — <b>3 000 Р</b>'
+                                ]
+                            }
+                            ];
+
+                        each item in list
+                            .theme-price__item
+                                .theme-price__item-price= item.title
+                                .theme-price__item-list
+                                    each val in item.items
+                                        .theme-price__item-li!= val
+
+                    .theme-price__row
+                        .theme-price__item
+                            .theme-price__price 40 000 Р
+                        .theme-price__item
+                            .theme-price__price 20 000 Р

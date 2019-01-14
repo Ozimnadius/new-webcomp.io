@@ -1,0 +1,16 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.theme-iss
+
+    //- title
+    .theme-iss__title Тематические направления в которых у нас есть опыт создания сайтов
+
+    //- list
+    .theme-iss__list
+        each col in themeIssue
+            .theme-iss__col
+                each item in col
+                    a(href='/').theme-iss__item= item
+
+    //button.theme-iss__button показать еще

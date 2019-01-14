@@ -1,0 +1,14 @@
+extends ../../../../../main.second.pug
+
+block variables
+    - var title = 'Недвижимость'
+
+block content
+    .theme
+        include sections/first
+        .container3
+            include sections/issue
+            include sections/cats
+            include sections/edge
+            include sections/price
+        include sections/bottom

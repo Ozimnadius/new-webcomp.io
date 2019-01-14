@@ -1,0 +1,111 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.theme-first
+
+    .container.promote-first__wrapper
+        //- BREADCRUMBS
+        .theme-first__bread
+            -
+                var breadcrumbs = {
+                links: [
+                    {
+                    url: './',
+                    title: 'Главная'
+                    },
+                    {
+                    url: './promote.html',
+                    title: 'Продвижение'
+                    },
+                    {
+                    url: './promote-thematic.html',
+                    title: 'Продвижение по тематике'
+                    }
+                ],
+                alink: 'Мед. клиника'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                a.bread__item.active= breadcrumbs.alink
+
+        //- TITLE
+        .theme-first__title
+            | Мы создадим продающий сайт
+            br
+            | по вашей тематике
+
+        //- SUBTITLE
+        .theme-first__subtitle
+            |Комплексный подход к проектированию прототипов и программной
+            br
+            |разработке, учитывающий особенности Вашего бизнеса
+
+        //- BUTTON
+        button(type='button').theme-first__button.promote-first__button
+            +btn3('Узнать стоимость продвижения')
+
+    .promote-first__calc
+        .promote-calc__close
+        .promote-calc__title
+            | сколько стоит
+            br
+            | продвижение вашего сайта
+        .promote-calc__subtitle Выберите способ продвижения
+
+        .promote-calc__form
+            form(action='#' method='post').form
+                .form__row.form__row_2
+                    -
+                        var promo = [
+                        {name: 'Продвижение в Яндекс', checked: true},
+                        {name: 'Продвижение в Google', checked: false},
+                        {name: 'Контекстная реклама в Яндекс', checked: false},
+                        {name: 'Контекстная реклама в Google', checked: false}
+                        ];
+
+                    each val, index in promo
+                        .form__field2
+                            input(type='radio' id='radio' + index name='promo' checked= val.checked).check
+                            label(for='radio' + index).check__label= val.name
+                                .check__fake
+
+                .form__row.form__row_2
+                    -
+                        var promo = [
+                        {name: 'Реклама в ВКонтакте', checked: false},
+                        {name: 'Реклама в Instagram', checked: false},
+                        {name: 'Реклама в Одноклассники', checked: false},
+                        {name: 'Реклама в Facebook', checked: false}
+                        ];
+
+                    each val, index in promo
+                        .form__field2
+                            input(type='radio' id='radio' + (index + 4) name='promo' checked= val.checked).check
+                            label(for='radio' + (index + 4)).check__label= val.name
+                                .check__fake
+
+                .form__row
+                    .form__field
+                        input(type='text' name='words' placeholder='Кол-во продвигаемых слов').input
+                    .form__field
+                        select.select
+                            option(disabled=true selected=true) Регион продвижения
+                            option Вариант 1
+                            option Вариант 2
+                            option Вариант 3
+                    .form__field
+                        select.select
+                            option(disabled=true selected=true) Ваша тематика
+                            option Вариант 1
+                            option Вариант 2
+                            option Вариант 3
+                .form__row
+                    .form__field
+                        input(type='text' name='name' placeholder='Имя').input
+                    .form__field
+                        input(type='tel' name='tel' placeholder='Телефон').input
+                    .form__field
+                        input(type='email' name='email' placeholder='E-mail').input
+                button(type='submit').form__submit
+                    +btn('Узнать стоимость')

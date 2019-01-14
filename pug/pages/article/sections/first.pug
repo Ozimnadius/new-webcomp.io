@@ -5,7 +5,24 @@ section.art-first
 
     //- BREADCRUMBS
     .art-first__bread
-        include ../../../common/breadcrumbs
+        -
+            var breadcrumbs = {
+            links: [
+            {
+            url: './',
+            title: 'Главная'
+            },
+            {
+            url: './news.html',
+            title: 'Блог'
+            }
+            ],
+            alink: 'Быстрый способ поднять конверсию на сайте'
+            };
+        .bread
+            each bread in breadcrumbs.links
+                a(href=bread.url).bread__item= bread.title
+            a.bread__item.active= breadcrumbs.alink
 
     //- NAVIGATION
     .art-first__nav

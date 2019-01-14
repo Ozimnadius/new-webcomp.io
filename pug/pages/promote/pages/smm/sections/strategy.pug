@@ -1,0 +1,36 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.smm-str
+
+    //-title
+    .smm-str__title Стратегия продвижения вашей компании
+
+    .smm-str__row
+        .smm-str__left
+            .smm-str__sws
+                .smm-str__sws-list
+                    each sw in smmStrSwitches
+                        div(class=sw.dopClass data-id=sw.id).smm-str__sw= sw.title
+
+        .smm-str__right
+            .smm-str__tabs
+                each tab in smmStrTabs
+                    div(class=tab.dopClass data-id=tab.id).smm-str__tab
+                        .smm-str__desc
+                            p
+                                | Анализируем имеющиеся у вас аккаунты в социальных сетях
+                                | и даем рекомендации по доработке/изменению описания,
+                                | визуального контента, публикаций
+                            p
+                                | Анализируем аккаунты ваших конкурентов, для выявления
+                                | эффективных маркетинговых фишек и инструментов
+                            p
+                                | Выявляем вашу целевую аудиторию, сегментируем, выявляем
+                                | эффективные каналы привлечения подписчиков
+                        .smm-str__work
+                            .smm-str__work-img
+                                +icon('time', 'smm-str__work-svg')
+                            .smm-str__work-text Время работы: 1 неделя
+
+                        a(href='#form').smm-str__button.button.button_red.scrollTo Узнайте стоимость клиента

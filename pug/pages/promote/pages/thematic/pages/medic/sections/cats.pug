@@ -1,0 +1,25 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.theme-cats
+    //- title
+    .theme-iss__title Изменение стоимости заявки на новом сайте
+
+    //- list
+    .theme-cats__list
+        each cat in themeCats
+            a(href=cat.href style='background:'+cat.bg+';').theme-cats__item
+                .proportion.proportion_1x1
+                .theme-cats__img
+                    img(src=cat.src).theme-cats__img-img
+                .theme-cats__line
+                .theme-cats__fromTo
+                    .theme-cats__from
+                        .theme-cats__from-name до
+                        .theme-cats__from-val= cat.from
+                    .theme-cats__to
+                        .theme-cats__to-name после
+                        .theme-cats__to-val= cat.to
+                .theme-cats__thematic= cat.thematic
+                .theme-cats__title= cat.title
+

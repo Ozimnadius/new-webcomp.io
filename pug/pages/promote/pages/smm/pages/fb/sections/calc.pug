@@ -1,0 +1,50 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.smm-calc#form
+
+    //-title
+    .smm-calc__title Укажите Параметры вашего бизнеса
+
+    //-subtitle
+    .smm-calc__sub Мы рассчитаем стоимость продвижения онлайн
+
+    //- list
+    .smm-calc__form
+        form(action='#' method='post').form
+            .form__row
+                .form__field
+                    input(type='text' name='addr' placeholder='Адрес сайта').input
+                .form__field
+                    input(type='text' name='budget' placeholder='Бюджет в месяц').input
+                .form__field
+                    select.select
+                        option(disabled=true selected=true) Сфера деятельности
+                        option Вариант 1
+                        option Вариант 2
+                        option Вариант 3
+            .form__row
+                .form__field
+                    input(type='text' name='term' placeholder='Срок реализации').input
+                .form__field
+                    input(type='text' name='smm' placeholder='Соц сети (если есть)').input
+                .form__field
+                    select.select
+                        option(disabled=true selected=true) Какие услуги вам интересны
+                        option Вариант 1
+                        option Вариант 2
+                        option Вариант 3
+            .form__row
+                .form__field
+                    input(type='text' name='name' placeholder='ФИО').input
+                .form__field
+                    input(type='tel' name='tel' placeholder='Телефон').input
+                .form__field
+                    input(type='email' name='email' placeholder='E-mail').input
+            .form__row
+                .form__field.form__field_3
+                    textarea(placeholder='Комментарий').input.input_area
+
+
+            .form__submit
+                button(type='submit').form__button.button рассчитать стоимость

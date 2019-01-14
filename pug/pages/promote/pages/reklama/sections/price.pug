@@ -1,0 +1,66 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.rek-price
+
+    //- title
+    .rek-price__title Стоимость продвижения
+
+    //- switches
+    .rek-price__switches
+
+        .rek-price__switches-list
+            each sw in rekPriceSwitches
+                button(data-id=sw.id class=sw.dopClass).rek-price__switch
+                    span.rek-price__switch-title= sw.title
+
+
+        .rek-price__line
+            .rek-price__subline
+
+
+
+    //- tabs
+    .rek-price__tabs
+        each tab in rekPriceTabs
+            div(data-id=tab.id  class=tab.dopClass).rek-price__tab
+                .rek-price__list
+                    each row in rekPriceRows
+                        .rek-price__row
+                            each item in row
+                                .rek-price__item
+                                    if item.title
+                                        .rek-price__item-title= item.title
+                                    .rek-price__item-price= item.price
+                                    .rek-price__item-text= item.text
+
+                    .rek-price__row
+                        -
+                            var list = [
+                            {
+                                title: '+',
+                                items: [
+                                    'Анализ конкурентов',
+                                    'Составление ядра запросов',
+                                    'Полная SEO оптимизация'
+                                ]
+                            },
+                            {
+                                title: '+',
+                                items: [
+                                    'Базовая проработка целевой аудитории',
+                                    'Рекомендации по улучшению конверий на сайте'
+                                ]
+                            }
+                            ];
+
+                        each item in list
+                            .rek-price__item
+                                .rek-price__item-price= item.title
+                                .rek-price__item-list
+                                    each val in item.items
+                                        .rek-price__item-li= val
+
+                    .rek-price__row
+                        .rek-price__item
+                            .rek-price__price 9 900 Р

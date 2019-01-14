@@ -1,0 +1,27 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.rek-desc
+
+    //- TITLE
+    .rek-desc__title Мы найдём ваших клиентов
+
+    //- content
+    .rek-desc__content.content
+        each block in rekDesc
+            .rek-desc__block
+                h3= block.title
+                ul
+                    each li in block.list
+                        li= li
+
+    //- button
+    button(type='button').rek-desc__button.button.button_red.promotionOpen Получить прогноз по бюджету
+
+    //- list
+    .rek-desc__list
+        each item in rekDescList
+            .rek-desc__item
+                .rek-desc__item-img
+                    img(src= item.src).rek-first__item-pic
+                .rek-desc__item-text= item.text

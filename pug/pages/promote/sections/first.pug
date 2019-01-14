@@ -9,7 +9,20 @@ section.promote-first
 
             //- BREADCRUMBS
             .promote-first__bread
-                include ../../../common/breadcrumbs
+                -
+                    var breadcrumbs = {
+                        links: [
+                            {
+                                url: './',
+                                title: 'Главная'
+                            }
+                        ],
+                        alink: 'Продвижение'
+                    };
+                .bread
+                    each bread in breadcrumbs.links
+                        a(href=bread.url).bread__item= bread.title
+                    a.bread__item.active= breadcrumbs.alink
 
             //- TITLE
             .promote-first__title
@@ -75,13 +88,13 @@ section.promote-first
                             input(type='text' name='words' placeholder='Кол-во продвигаемых слов').input
                         .form__field
                             select.select
-                                option(disabled=true selected=true) Регион продвижения
+                                option(value='') Регион продвижения
                                 option Вариант 1
                                 option Вариант 2
                                 option Вариант 3
                         .form__field
                             select.select
-                                option(disabled=true selected=true) Ваша тематика
+                                option(value='') Ваша тематика
                                 option Вариант 1
                                 option Вариант 2
                                 option Вариант 3

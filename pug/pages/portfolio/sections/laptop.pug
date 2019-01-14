@@ -7,7 +7,21 @@ section(style='background: url("images/bg/portBg.jpg") 0 0 no-repeat;').port-lap
 
         //- BREADCRUMBS
         .port-lap__bread
-            include ../../../common/breadcrumbs
+            -
+                var breadcrumbs = {
+                links: [
+                {
+                url: './',
+                title: 'Главная'
+                }
+                ],
+                alink: 'Портфолио'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                a.bread__item.active= breadcrumbs.alink
+
 
         //- Wrapper
         .port-lap__wrapper

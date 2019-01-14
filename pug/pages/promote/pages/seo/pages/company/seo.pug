@@ -1,0 +1,14 @@
+extends ../../../../../main.second.pug
+
+block variables
+    - var title = 'SEO продвижение компании'
+
+block content
+    .seo
+        include sections/first
+        .container3
+            include sections/desc
+            include sections/cats
+            include sections/price
+            include sections/faq
+        include sections/bottom

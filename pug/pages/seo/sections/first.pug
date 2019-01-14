@@ -6,7 +6,20 @@ section.seo-first
     .container
         //- BREADCRUMBS
         .seo-first__bread
-            include ../../../common/breadcrumbs
+            -
+                var breadcrumbs = {
+                links: [
+                {
+                url: './',
+                title: 'Главная'
+                }
+                ],
+                alink: 'Продвижение SEO'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                    a.bread__item.active= breadcrumbs.alink
 
         //- TITLE
         .seo-first__title

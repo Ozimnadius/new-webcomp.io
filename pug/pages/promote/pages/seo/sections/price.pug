@@ -1,0 +1,59 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.seo-price
+
+    //- title
+    .seo-price__title Стоимость продвижения
+
+    //- switches
+    .seo-price__switches
+
+        .seo-price__switches-list
+            each sw in seoPriceSwitches
+                button(data-id=sw.id class=sw.dopClass).seo-price__switch
+                    span.seo-price__switch-title= sw.title
+
+
+        .seo-price__line
+            .seo-price__subline
+
+
+
+    //- tabs
+    .seo-price__tabs
+        each tab in seoPriceTabs
+            div(data-id=tab.id  class=tab.dopClass).seo-price__tab
+                .seo-price__list
+                    each row in seoPriceRows
+                        .seo-price__row
+                            each item in row
+                                .seo-price__item
+                                    .seo-price__item-title= item.title
+                                    .seo-price__item-text= item.text
+
+                    .seo-price__row
+                        -
+                            var list = [
+                            {
+                            title: '+',
+                            items: ['Анализ конкурентов', 'Составление ядра запросов', 'Полная SEO оптимизация']
+                            },
+                            {
+                            title: '+',
+                            items: ['Статистика и маркетинговый план', 'Отчётность 2 раза в месяц']
+                            }
+                            ];
+
+                        each item in list
+                            .seo-price__item
+                                .seo-price__item-title= item.title
+                                .seo-price__item-list
+                                    each val in item.items
+                                        .seo-price__item-li= val
+
+                    .seo-price__row
+                        .seo-price__item
+                            .seo-price__price 19 900 Р / мес
+                        .seo-price__item.seo-price__item_bottom
+                            .seo-price__desc После 3х месяцев оплата за результат

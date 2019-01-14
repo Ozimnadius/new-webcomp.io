@@ -1,0 +1,42 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.seo-first
+
+    .container
+        //- BREADCRUMBS
+        .seo-first__bread
+            -
+                var breadcrumbs = {
+                links: [
+                    {
+                        url: './',
+                        title: 'Главная'
+                    },
+                    {
+                        url: './promote.html',
+                        title: 'Продвижение'
+                    }
+                ],
+                alink: 'Продвижение SEO'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                a.bread__item.active= breadcrumbs.alink
+
+        //- TITLE
+        .seo-first__title
+            |SEO продвижение
+            br
+            |с оплатой за результат
+
+        //- SUBTITLE
+        .seo-first__subtitle
+            | Продвигаем бесплатно пока сайт
+            br
+            | не выйдет в ТОП
+
+        //- BUTTON
+        button(type='button').seo-first__button.callorderOpen
+            +btn('Хочу увеличить продажи')

@@ -1,0 +1,14 @@
+extends ../../../main.second.pug
+
+block variables
+    - var title = 'Контекстная реклама'
+
+block content
+    .rek
+        include sections/first
+        .container3
+            include sections/desc
+            include sections/slider
+            include sections/price
+            include sections/budget
+        include sections/bottom

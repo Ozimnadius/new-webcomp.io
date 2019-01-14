@@ -2,6 +2,5 @@ include _mixins
 include _settings
 
 .bread
-    each bread in breadcrumbs.links
-        a(href=bread.url).bread__item= bread.title
-    a.bread__item.active= breadcrumbs.aLink
+    a(href='./').bread__item Главная
+    a.bread__item.active Страница

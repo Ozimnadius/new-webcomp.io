@@ -215,6 +215,21 @@
         bottom: 0;
         left: 0;
         right: 0;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar{
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: rgba($text,.3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          background-color: rgba($Selective-yellow,.5);
+        }
+
       }
       iframe{
         width: 100%;

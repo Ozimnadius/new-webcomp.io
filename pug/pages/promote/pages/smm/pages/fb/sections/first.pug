@@ -1,0 +1,59 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.smm-first
+
+    .container
+        //- BREADCRUMBS
+        .smm-first__bread
+            -
+                var breadcrumbs = {
+                links: [
+                {
+                url: './',
+                title: 'Главная'
+                },
+                {
+                url: './promote.html',
+                title: 'Продвижение'
+                },
+                {
+                url: './promote-smm.html',
+                title: 'SMM Продвижение'
+                },
+
+                ],
+                alink: 'Реклама в Facebook'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                a.bread__item.active= breadcrumbs.alink
+
+        //- TITLE
+        .smm-first__title
+            | Хотите увеличить продажи
+            br
+            | и узнаваемость бренда
+
+        //- SUBTITLE
+        .smm-first__subtitle Продвижение в социальных сетях, SMM от 20 000 Р
+
+        //- SOCIALS
+        .smm-first__socials
+            .smm-first__socials-wrap
+                each item in smmSocials
+                    a(href=item.href class=item.dopClass).smm-first__social
+                        .smm-first__img
+                            //img(src=item.src).smm-first__img-img
+                            +icon(item.src, 'smm-first__img-img')
+                        .smm-first__val= item.title
+                        .smm-first__text
+                            != item.text
+                        .smm-first__arrow
+                            +arrow
+
+
+        //- BUTTON
+        button(type='button').smm-first__button.callorderOpen
+            +btn3('Хочу увеличить продажи')

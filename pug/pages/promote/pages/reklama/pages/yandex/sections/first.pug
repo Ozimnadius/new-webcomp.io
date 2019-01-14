@@ -1,0 +1,67 @@
+include ../../../../../../../common/_mixins
+include ../../../../../../../common/_settings
+
+section.rek-first
+
+    .container
+        //- BREADCRUMBS
+        .rek-first__bread
+            -
+                var breadcrumbs = {
+                links: [
+                {
+                url: './',
+                title: 'Главная'
+                },
+                {
+                url: './promote.html',
+                title: 'Продвижение'
+                },
+                {
+                url: './promote-reklama.html',
+                title: 'Контекстная реклама'
+                },
+
+                ],
+                alink: 'Яндек Директ'
+                };
+            .bread
+                each bread in breadcrumbs.links
+                    a(href=bread.url).bread__item= bread.title
+                a.bread__item.active= breadcrumbs.alink
+
+        //- TITLE
+        .rek-first__title Контекстная реклама
+
+        //- SUBTITLE
+        .rek-first__subtitle Настройка рекламы сегодня — горячие клиенты завтра
+
+        //-middle
+        .rek-first__middle
+            .rek-first__left
+            a(href='./').rek-first__item
+                    .rek-first__item-title Яндекс директ
+                    .rek-first__item-arrow
+                        +arrow('arrow_prev')
+                    .rek-first__item-desc
+                        +icon('man', 'rek-first__item-svg')
+                        .rek-first__item-text
+                            span.rek-first__item-val 59
+                            span.rek-first__item-type  млн.
+            .rek-first__img
+                img(src='images/content/rek/rekFirst.png').rek-first__img-img
+            .rek-first__right
+                a(href='./').rek-first__item
+                    .rek-first__item-title Google Advance
+                    .rek-first__item-arrow
+                        +arrow()
+                    .rek-first__item-desc
+                        .rek-first__item-text
+                            span.rek-first__item-val 59
+                            span.rek-first__item-type  млн.
+                        +icon('man', 'rek-first__item-svg rek-first__item-svg_2')
+
+        //- BUTTON
+        button(type='button').rek-first__button.callorderOpen
+            .rek-first__button-squad
+            +btn3('Хочу увеличить продажи')

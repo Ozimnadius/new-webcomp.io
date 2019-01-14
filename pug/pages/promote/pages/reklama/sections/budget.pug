@@ -1,0 +1,31 @@
+include ../../../../../common/_mixins
+include ../../../../../common/_settings
+
+section.rek-bud
+
+    //- title
+    .rek-bud__title Снижаем бюджет на контекстную рекламу
+
+    //- list
+    .rek-bud__list
+        each item in rekBudget
+            .rek-bud__item
+                .rek-bud__item-title
+                    span.rek-bud__item-val= item.title.val
+                    if item.title.type
+                        span.rek-bud__item-type= ' '+item.title.type
+                .rek-bud__item-text!= item.text
+
+    //- subtitle
+    .rek-bud__subtitle Как наша работа влияет на стоимость рекламы
+
+    //- checks
+    .rek-bud__checks
+        each check in rekBudgetCheks
+            .rek-bud__check
+                .rek-bud__check-check
+                .rek-bud__check-title!= check
+
+    //- button
+    button(type='button').rek-bud__button.button.promotionOpen Узнайте стоимость клиента
+

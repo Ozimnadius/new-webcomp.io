@@ -1,0 +1,289 @@
+include ../../../common/_mixins
+include ../../../common/_settings
+
+section.site-middle
+
+    //- develop
+    .site-dev
+        //- logo
+        .site-dev__logo
+            img(src='images/content/dev/devLogo.png').site-dev__img
+
+        //- desc
+        .site-dev__desc
+            .site-dev__desc-item
+                span.site-dev__desc-name Описание:
+                span.site-dev__desc-val  Лидер на рынке электронных книг: Россия, СНГ
+
+            .site-dev__desc-item
+                span.site-dev__desc-name Цель:
+                span.site-dev__desc-val  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
+
+
+        //- swiper
+        .site-dev__swiper
+            .proportion.proportion_1006x591
+            .site-dev__swiper-wrap
+                .swiper-container.site-dev__container
+                    .swiper-wrapper
+                        each val in [1,2,3]
+                            .swiper-slide.site-dev__slide
+                                .proportion.proportion_750x470
+                                .site-dev__slide-img
+                                    //iframe(src='https://ubf-cons.ru/')
+                                    img(src='images/content/dev/dev1.jpg').site-dev__slide-pic
+
+                .site-dev__prev
+                    .seporator.seporator_prev
+                        .seporator__triangle
+                        .seporator__line
+
+
+                .site-dev__next
+                    .seporator
+                        .seporator__line
+                        .seporator__triangle
+
+        //- title
+        .site-dev__title Как мы разрабатываем сайты
+
+        //- chart
+        .site-dev__chart
+            //- img
+            //img(src='images/content/dev/devChart.png').site-dev__chart-img
+
+            //-list
+            .site-dev__list
+                each item in siteDev
+                    .site-dev__item
+                      .site-dev__item-day= item.day
+                      .site-dev__item-desc= item.desc
+                      .site-dev__item-arrow
+                          +arrow
+
+
+        //- banner
+        .site__banner
+            .banner
+                .banner__left
+                    .banner__title
+                        | Хотите сайт
+                        br
+                        | дешевле?
+
+                .banner__right
+                    .banner__text
+                        |Готовые решение под вашу
+                        br
+                        |тематику от
+                        b  20 000 Р
+                    button(type='button').banner__button.button.callorderOpen заказать сайт
+
+    //- team
+    .site-team
+        .site-team__title Наша команда работает для Вас
+        .site-team__name Иванов Александр
+        .site-team__text Специалист по SEO более 10 лет. Более 50 успешных проектов
+        img(src='images/content/team.png').site-team__img
+
+    //- cost
+    .site-cost
+
+        //- title
+        .site-cost__title Сколько стоит ваш сайт
+
+        //- subtitle
+        .site-cost__sub
+            |Заполнение брифа онлайн для расчёта точной стоимости
+            br
+            |или загрузите свое ТЗ для оценки
+
+
+        //- tabs
+        form(action='#' method='post').form.site-cost__form.site-cost__tabs
+            div(data-id='1').site-cost__tab.active
+                .form__wrapper
+                    .form__row
+                        .form__field
+                            input(type='text' name='company' placeholder='Название компании').input
+                        .form__field
+                            select(name='companyStyle').select
+                                option(disabled=true selected=true) Наличие фирменного стиля
+                                option Есть фирменный стиль
+                                option Нужно разработать
+                        .form__field
+                            select(name='specification').select
+                                option(disabled=true selected=true) Наличие тех. задания
+                                option Есть подробное тех. задание
+                                option Нужно составить тех. задание
+                    .form__row
+                        .form__field
+                            select(name='siteType').select
+                                option(disabled=true selected=true) Тип сайта
+                                option Вариант 1
+                                option Вариант 2
+                                option Вариант 3
+                        .form__field
+                            select(name='endTime').select
+                                option(disabled=true selected=true) Срок сдачи
+                                option Вариант 1
+                                option Вариант 2
+                                option Вариант 3
+                        .form__field
+                            select(name='buisinessArea').select
+                                option(disabled=true selected=true) Сфера деятельности
+                                option Вариант 1
+                                option Вариант 2
+                                option Вариант 3
+                    .form__row
+                        .form__field.form__field_3
+                            textarea(placeholder='Дополнительная иформация' name='dopInfo1').input.input_area
+                    .form__submit
+                        button(type='button').form__button.button Следующий шаг
+            div(data-id='2').site-cost__tab
+                .form__wrapper
+                    .form__row
+                        .form__field
+                            select(name='adaptive').select
+                                option(disabled=true selected=true) Адаптивная версия
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='crm').select
+                                option(disabled=true selected=true) Интеграция с CRM
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='warehouse').select
+                                option(disabled=true selected=true) Интеграция со складом
+                                option Да
+                                option Нет
+                    .form__row
+                        .form__field
+                            select(name='socialsApp').select
+                                option(disabled=true selected=true) Подключение социальных сервисов
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='payApp').select
+                                option(disabled=true selected=true) Подключение платежных сервисов
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='deliveryApp').select
+                                option(disabled=true selected=true) Интеграция со службами доставки
+                                option Да
+                                option Нет
+                    .form__row
+                        .form__field
+                            select(name='dopApp').select
+                                option(disabled=true selected=true) Синхронизация с доп. источниками
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='complexFilters').select
+                                option(disabled=true selected=true) Подключение сложных фильтров
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='calcs').select
+                                option(disabled=true selected=true) Разработка калькуляторов
+                                option Да
+                                option Нет
+                    .form__row
+                        .form__field.form__field_3
+                            textarea(placeholder='Дополнительные пожелания по функционалу' name='dopInfo2').input.input_area
+                    .form__submit
+                        button(type='button').form__button.button Следующий шаг
+            div(data-id='3').site-cost__tab
+                .form__wrapper
+                    .form__row
+                        .form__field
+                            select(name='logo').select
+                                option(disabled=true selected=true) Разработка лого
+                                option Есть фирменный стиль
+                                option Нужно разработать
+                        .form__field
+                            input(type='number' name='pages' placeholder='Сколько страниц нарисовать?').input
+                        .form__field
+                            select(name='dopDesign').select
+                                option(disabled=true selected=true) Дизайн доп. материалов к сайту
+                                option Да
+                                option Нет
+                    .form__row
+                        .form__field
+                            select(name='siteStyle').select
+                                option(disabled=true selected=true) Стиль сайта
+                                option Строгий/Корпоративный
+                                option Яркий/Броский
+                                option Минималистичный
+                                option Позитивный
+                                option Flat-дизайн
+                                option Художественное оформление
+                                option Гранж
+                                option Метро
+                                option Ретро
+                                option Футуристический
+                        .form__field
+                            select(name='siteInfographics').select
+                                option(disabled=true selected=true) Инфографика для сайта
+                                option Да
+                                option Нет
+                        .form__field
+                            select(name='siteFont').select
+                                option(disabled=true selected=true) Шрифт для сайта
+                                option Есть
+                                option Нужно разработать
+                    .form__row
+                        .form__field.form__field_3
+                            textarea(placeholder='Уточнения и пожелания' name='dopInfo3').input.input_area
+                    .form__submit
+                        button(type='button').form__button.button Следующий шаг
+
+            div(data-id='4').site-cost__tab
+                .form__wrapper
+                    .form__row
+                        .form__field
+                            input(type='text' name='name' placeholder='Контактное лицо').input
+                        .form__field
+                            input(type='tel' name='tel' placeholder='Телефон').input
+                        .form__field
+                            input(type='email' name='email' placeholder='E-mail').input
+                    .form__row
+                        .form__field
+                            input(type='file' name='files' placeholder='Доп файлы').input
+                        .form__field
+                            input(type='text' name='goodSites' placeholder='Список сайтов которые нравятся').input
+                        .form__field
+                            input(type='text' name='badSites' placeholder='Список сайтов которые не нравятся').input
+                    .form__row
+                        .form__field.form__field_3
+                            textarea(placeholder='Дополнительные пожелания' name='dopInfo4').input.input_area
+                    .form__submit
+                        button(type='submit').form__submit-button.button Завершить
+
+
+
+
+
+
+
+        //- switches
+        .site-cost__switches
+
+            .site-cost__line
+                .site-cost__subline
+
+            .site-cost__switches-list
+                button(data-id='1').site-cost__switch.active
+                    span.site-cost__switch-num 1.
+                    span.site-cost__switch-title  Общая информация
+                button(data-id='2').site-cost__switch
+                    span.site-cost__switch-num 2.
+                    span.site-cost__switch-title  Задачи и функционал
+                button(data-id='3').site-cost__switch
+                    span.site-cost__switch-num 3.
+                    span.site-cost__switch-title  Дизайн и стиль
+                button(data-id='4').site-cost__switch
+                    span.site-cost__switch-num 4.
+                    span.site-cost__switch-title  Файлы и примеры

@@ -32,6 +32,9 @@ const vendorJs = [
     'node_modules/swiper/dist/js/swiper.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
+    // 'node_modules/microplugin/src/microplugin.js',
+    // 'node_modules/sifter/bin/sifter.js',
+    'node_modules/selectize/dist/js/standalone/selectize.js',
 ];
 
 
@@ -40,6 +43,7 @@ const vendorCss = [
     'node_modules/normalize.css/normalize.css',
     'node_modules/swiper/dist/css/swiper.css',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    'node_modules/selectize/dist/css/selectize.default.css',
 ];
 
 
@@ -70,7 +74,7 @@ gulp.task('vendor:js', function () {
     return gulp
         .src(vendorJs)
         .pipe(concat('vendor.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('js/'));
 });
 

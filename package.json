@@ -23,6 +23,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
+    "microplugin": "0.0.3",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "jquery-validation": "^1.19.0",
     "jquery.maskedinput": "^1.4.1",
     "normalize.css": "^7.0.0",
+    "selectize": "^0.12.6",
     "smart-grid": "^2.1.2",
     "swiper": "^4.4.1"
   }

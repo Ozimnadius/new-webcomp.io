@@ -206,5 +206,7 @@ function isFullyVisible(el) {
     return ((top >= 0) && (bottom <= window.innerHeight));
 }
 
+$('select').selectize();
+
 
 

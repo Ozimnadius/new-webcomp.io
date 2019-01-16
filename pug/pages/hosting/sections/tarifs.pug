@@ -5,11 +5,11 @@ section.host-tarifs
     .proportion.proportion_1558x787
     .host-tarifs__list
         each item, indx in hostTarifs
-            a(href='#' data-name=item.tarif data-id=indx class='host-tarifs__item_'+indx).host-tarifs__item
+            a(href='#' data-name=item.tarif data-id=indx data-src=item.src class='host-tarifs__item_'+indx).host-tarifs__item
                 .host-tarifs__img
-                    img(src= item.src).host-tarifs__img-img
-                    .host-tarifs__glow
-                        img(src= item.glow).host-tarifs__glow-img
+                    div(style='background-image:url('+ item.src+');').host-tarifs__img-img
+                    //.host-tarifs__glow
+                    //    img(src= item.glow).host-tarifs__glow-img
                 .host-tarifs__tag
                     .host-tarifs__title= item.tarif
                     .host-tarifs__sub тариф

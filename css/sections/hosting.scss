@@ -23,6 +23,22 @@
         top: 0;
         left: 33.4%;
 
+        &:hover {
+          .host-tarifs__img-img {
+            box-shadow: inset -8px 6px 5px 0px rgba($bg, 0.75), 0px 0px 5px 4px rgba(#789fbb, 0.5);
+          }
+        }
+
+        .host-tarifs__img {
+
+          &-img {
+            width: 80px;
+            height: 80px;
+            animation: tarif0 10s linear 0s infinite;
+            box-shadow: inset -8px 6px 5px 0px rgba($bg, 0.75), 0px 0px 4px 2px rgba(#789fbb, 0.5);
+          }
+        }
+
         .host-tarifs__tag {
           padding-right: 50px;
           right: calc(100% - 30px);
@@ -42,6 +58,26 @@
       &_1{
         top: 10.8%;
         left: 11.8%;
+
+        &:hover {
+          .host-tarifs__img-img {
+            box-shadow: inset -12px 10px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+          }
+        }
+
+        .host-tarifs__img {
+
+          &-img {
+            width: 125px;
+            height: 125px;
+            animation: tarif1 20s linear 0s infinite;
+            box-shadow: inset -12px 10px 5px 0px rgba($bg, 0.75), 0px 0px 5px 3px rgba(#789fbb, 0.3);
+          }
+        }
+
+        .host-tarifs__glow {
+          display: none;
+        }
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -63,12 +99,33 @@
         top: 44%;
         left: 2.5%;
 
+        &:hover {
+          .host-tarifs__img-img {
+            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 9px 10px rgba(#789fbb, 0.5);
+          }
+        }
+
+        .host-tarifs__img {
+
+          &-img {
+            width: 280px;
+            height: 280px;
+            animation: tarif2 40s linear 0s infinite;
+            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+          }
+
+        }
+
         .host-tarifs__tag {
+          //padding-right: 50px;
+          //padding-bottom: 12px;
+          //position: absolute;
+          //left: 16px;
+          //top: 45px;
           padding-right: 50px;
-          padding-bottom: 12px;
-          position: absolute;
-          left: 16px;
-          top: 45px;
+          right: calc(100% - 25px);
+          top: 50%;
+          transform: translateY(-50%);
         }
 
         .host-tarifs__title {
@@ -84,6 +141,25 @@
       &_3{
         bottom: 0;
         left: 39%;
+
+        &:hover {
+          .host-tarifs__img-img {
+            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 10px 11px rgba(#789fbb, 0.5);
+          }
+        }
+
+        .host-tarifs__img {
+
+          &-img {
+            width: 320px;
+            height: 320px;
+
+            animation: tarif3 40s linear 0s infinite;
+            transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+
+            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+          }
+        }
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -108,12 +184,22 @@
         bottom: 14%;
         right: -12.5%;
 
-        //.host-tarifs__glow {
-        //  left: -35px;
-        //  right: 35px;
-        //  top: 5px;
-        //  bottom: -5px;
-        //}
+        &:hover {
+          .host-tarifs__img-img {
+            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 12px 14px rgba(#789fbb, 0.5);
+          }
+        }
+
+        .host-tarifs__img {
+
+          &-img {
+            width: 535px;
+            height: 535px;
+            animation: tarif4 70s linear 0s infinite;
+            transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+            box-shadow: inset -55px 30px 5px 0px rgba($bg, 0.75), 0px 0px 9px 9px rgba(#789fbb, 0.5);
+          }
+        }
 
         .host-tarifs__tag {
           padding-right: 50px;
@@ -134,7 +220,6 @@
         }
       }
 
-
       &:hover {
 
         .host-tarifs__glow {
@@ -154,6 +239,10 @@
       &-img {
         position: relative;
         z-index: 20;
+        background-size: cover;
+        border-radius: 50%;
+        transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+        transition: .3s;
       }
     }
 
@@ -354,4 +443,29 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+@keyframes tarif0 {
+  0% { background-position:0 0 }
+  100% { background-position: 160px 0 }
+}
+
+@keyframes tarif1 {
+  0% { background-position:0 0 }
+  100% { background-position: 250px 0 }
+}
+
+@keyframes tarif2 {
+  0% { background-position:0 0 }
+  100% { background-position: 560px 0 }
+}
+
+@keyframes tarif3 {
+  0% { background-position:0 0 }
+  100% { background-position: 640px 0 }
+}
+
+@keyframes tarif4 {
+  0% { background-position:0 0 }
+  100% { background-position: 1070px 0 }
 }

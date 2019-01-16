@@ -376,3 +376,15 @@
   }
 
 }
+
+.monster {
+  width: 1920px;
+  height: 1100px;
+  background: url('/images/icons/sprite2.png') left center;
+
+  animation: play 5.5s steps(50) infinite;
+}
+
+@keyframes play {
+  100% { background-position: -96050px; }
+}

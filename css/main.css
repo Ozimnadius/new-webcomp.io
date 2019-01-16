@@ -2751,6 +2751,26 @@ input, textarea, select {
   margin-right: -250px;
 }
 
+.monster {
+  width: 1920px;
+  height: 1100px;
+  background: url("/images/icons/sprite2.png") left center;
+  -webkit-animation: play 5.5s steps(50) infinite;
+  animation: play 5.5s steps(50) infinite;
+}
+
+@-webkit-keyframes play {
+  100% {
+    background-position: -96050px;
+  }
+}
+
+@keyframes play {
+  100% {
+    background-position: -96050px;
+  }
+}
+
 /*-----------------SECTION-BEST--------------------*/
 .best__row {
   display: -webkit-box;
@@ -8041,6 +8061,20 @@ input, textarea, select {
   left: 33.4%;
 }
 
+.host-tarifs__item_0:hover .host-tarifs__img-img {
+  -webkit-box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 5px 4px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 5px 4px rgba(120, 159, 187, 0.5);
+}
+
+.host-tarifs__item_0 .host-tarifs__img-img {
+  width: 80px;
+  height: 80px;
+  -webkit-animation: tarif0 10s linear 0s infinite;
+  animation: tarif0 10s linear 0s infinite;
+  -webkit-box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 4px 2px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 4px 2px rgba(120, 159, 187, 0.5);
+}
+
 .host-tarifs__item_0 .host-tarifs__tag {
   padding-right: 50px;
   right: calc(100% - 30px);
@@ -8061,6 +8095,24 @@ input, textarea, select {
 .host-tarifs__item_1 {
   top: 10.8%;
   left: 11.8%;
+}
+
+.host-tarifs__item_1:hover .host-tarifs__img-img {
+  -webkit-box-shadow: inset -12px 10px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -12px 10px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
+}
+
+.host-tarifs__item_1 .host-tarifs__img-img {
+  width: 125px;
+  height: 125px;
+  -webkit-animation: tarif1 20s linear 0s infinite;
+  animation: tarif1 20s linear 0s infinite;
+  -webkit-box-shadow: inset -12px 10px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 5px 3px rgba(120, 159, 187, 0.3);
+  box-shadow: inset -12px 10px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 5px 3px rgba(120, 159, 187, 0.3);
+}
+
+.host-tarifs__item_1 .host-tarifs__glow {
+  display: none;
 }
 
 .host-tarifs__item_1 .host-tarifs__tag {
@@ -8085,12 +8137,27 @@ input, textarea, select {
   left: 2.5%;
 }
 
+.host-tarifs__item_2:hover .host-tarifs__img-img {
+  -webkit-box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 9px 10px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 9px 10px rgba(120, 159, 187, 0.5);
+}
+
+.host-tarifs__item_2 .host-tarifs__img-img {
+  width: 280px;
+  height: 280px;
+  -webkit-animation: tarif2 40s linear 0s infinite;
+  animation: tarif2 40s linear 0s infinite;
+  -webkit-box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
+}
+
 .host-tarifs__item_2 .host-tarifs__tag {
   padding-right: 50px;
-  padding-bottom: 12px;
-  position: absolute;
-  left: 16px;
-  top: 45px;
+  right: calc(100% - 25px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .host-tarifs__item_2 .host-tarifs__title {
@@ -8105,6 +8172,22 @@ input, textarea, select {
 .host-tarifs__item_3 {
   bottom: 0;
   left: 39%;
+}
+
+.host-tarifs__item_3:hover .host-tarifs__img-img {
+  -webkit-box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 10px 11px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 10px 11px rgba(120, 159, 187, 0.5);
+}
+
+.host-tarifs__item_3 .host-tarifs__img-img {
+  width: 320px;
+  height: 320px;
+  -webkit-animation: tarif3 40s linear 0s infinite;
+  animation: tarif3 40s linear 0s infinite;
+  -webkit-transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  -webkit-box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 7px 7px rgba(120, 159, 187, 0.5);
 }
 
 .host-tarifs__item_3 .host-tarifs__tag {
@@ -8130,6 +8213,22 @@ input, textarea, select {
 .host-tarifs__item_4 {
   bottom: 14%;
   right: -12.5%;
+}
+
+.host-tarifs__item_4:hover .host-tarifs__img-img {
+  -webkit-box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 12px 14px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -25px 18px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 12px 14px rgba(120, 159, 187, 0.5);
+}
+
+.host-tarifs__item_4 .host-tarifs__img-img {
+  width: 535px;
+  height: 535px;
+  -webkit-animation: tarif4 70s linear 0s infinite;
+  animation: tarif4 70s linear 0s infinite;
+  -webkit-transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  -webkit-box-shadow: inset -55px 30px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 9px 9px rgba(120, 159, 187, 0.5);
+  box-shadow: inset -55px 30px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 9px 9px rgba(120, 159, 187, 0.5);
 }
 
 .host-tarifs__item_4 .host-tarifs__tag {
@@ -8169,6 +8268,13 @@ input, textarea, select {
 .host-tarifs__img-img {
   position: relative;
   z-index: 20;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .host-tarifs__glow {
@@ -8393,6 +8499,96 @@ input, textarea, select {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@-webkit-keyframes tarif0 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 160px 0;
+  }
+}
+
+@keyframes tarif0 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 160px 0;
+  }
+}
+
+@-webkit-keyframes tarif1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}
+
+@keyframes tarif1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 250px 0;
+  }
+}
+
+@-webkit-keyframes tarif2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 560px 0;
+  }
+}
+
+@keyframes tarif2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 560px 0;
+  }
+}
+
+@-webkit-keyframes tarif3 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 640px 0;
+  }
+}
+
+@keyframes tarif3 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 640px 0;
+  }
+}
+
+@-webkit-keyframes tarif4 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1070px 0;
+  }
+}
+
+@keyframes tarif4 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1070px 0;
+  }
 }
 
 /*-----------------SECTION-BANNER-SEND--------------------*/

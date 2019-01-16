@@ -228,6 +228,7 @@ if (tarifs) {
             let data = {
                 id: this.dataset.id,
                 name: this.dataset.name,
+                src: this.dataset.src,
                 action: 'tarifForm'
             };
 

@@ -29,7 +29,7 @@ switch ($action) {
     case 'tarifForm':
         echo json_encode(array(
             'status' => true,
-            'html' => tarifForm($data['id'], $data['name'])
+            'html' => tarifForm($data['id'], $data['name'], $data['src'])
         ));
         exit();
         break;
@@ -50,7 +50,7 @@ switch ($action) {
     case 'testForm':
         echo json_encode(array(
             'status' => true,
-            'html' =>testForm()
+            'html' => testForm()
         ));
         exit();
         break;
@@ -76,30 +76,66 @@ function autocomplete()
 
 function callorderForm()
 {
-    $html = file_get_contents('./popup/callorder/form_'.$_POST['formId'].'.php');
+    $html = file_get_contents('./popup/callorder/form_' . $_POST['formId'] . '.php');
     return $html;
 }
 
 function timerForm()
 {
-    $html = file_get_contents('./popup/timer/form_'.$_POST['formId'].'.php');
+    $html = file_get_contents('./popup/timer/form_' . $_POST['formId'] . '.php');
     return $html;
 }
 
-function tarifForm($id, $name)
+function tarifForm($id, $name, $src)
 {
+
+    $tarrifs = [
+        'XS' => [
+            'ssd'=>'1 Гб',
+            'domen'=>'1 домен',
+            'sql'=>'Неограничено',
+            'visitors'=>'Неограничено',
+            'price'=>'190 Р'
+        ],
+        'S' => [
+            'ssd'=>'2 Гб',
+            'domen'=>'1 домен',
+            'sql'=>'Неограничено',
+            'visitors'=>'Неограничено',
+            'price'=>'240 Р'
+        ],
+        'M' => [
+            'ssd'=>'5 Гб',
+            'domen'=>'3 домена',
+            'sql'=>'Неограничено',
+            'visitors'=>'Неограничено',
+            'price'=>'350 Р'
+        ],
+        'L' => [
+            'ssd'=>'10 Гб',
+            'domen'=>'5 доменов',
+            'sql'=>'Неограничено',
+            'visitors'=>'Неограничено',
+            'price'=>'690 Р'
+        ],
+        'XL' => [
+            'ssd'=>'30 Гб',
+            'domen'=>'7 доменов',
+            'sql'=>'Неограничено',
+            'visitors'=>'Неограничено',
+            'price'=>'1990 Р'
+        ]
+    ];
+
     ob_start();
     ?>
     <div class="hosting">
-        <div class="hosting__planet host-tarifs__item_<?=$id?>">
+        <div class="hosting__planet host-tarifs__item_<?= $id ?>">
             <div class="host-tarifs__img" style="height: 100px">
-                <img class="host-tarifs__img-img" style="height: 100%" src="images/content/hosting/tarifs/img<?=$id+1?>.png">
-                <div class="host-tarifs__glow" style="transform: scale(1.15)">
-                    <img class="host-tarifs__glow-img" style="height: 100%;" src="images/content/hosting/tarifs/glow<?=$id+1?>.png">
-                </div>
+                <div class="host-tarifs__img-img" style="background-image:url(<?=$src?>); width: 100px; height: 100px;  box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 4px 2px rgba(120, 159, 187, 0.5);"></div>
             </div>
             <div class="host-tarifs__tag">
-                <div class="host-tarifs__title">Тариф <span class="host-tarifs__title_y">«<?=$name?>»</span></div>
+                <div class="host-tarifs__title">Тариф <span class="host-tarifs__title_y">«<?= $name ?>»</span></div>
             </div>
         </div>
         <div class="hosting__content">
@@ -115,11 +151,11 @@ function tarifForm($id, $name)
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1 Гб</td>
-                    <td>1 домен</td>
-                    <td>Неограничено</td>
-                    <td>Неограничено</td>
-                    <td>190 Р</td>
+                    <td><?=$tarrifs[$name]['ssd'] ?></td>
+                    <td><?=$tarrifs[$name]['domen'] ?></td>
+                    <td><?=$tarrifs[$name]['sql'] ?></td>
+                    <td><?=$tarrifs[$name]['visitors'] ?></td>
+                    <td><?=$tarrifs[$name]['price'] ?></td>
                 </tr>
                 </tbody>
             </table>
@@ -152,7 +188,7 @@ function pushForm($name)
                 Мы эффективно продвинули
             </div>
             <div class="push__subtitle">
-                более 10 сайтов по <?=$name?>. Если вы хотите:
+                более 10 сайтов по <?= $name ?>. Если вы хотите:
             </div>
             <div class="push__list">
                 <div class="push__item">Выявить слабые стороны своего проекта</div>
@@ -215,7 +251,8 @@ function promotionForm()
             </div>
             <div class="form__row">
                 <div class="form__field form__field_3">
-                    <textarea class="input input_area" placeholder="Перечислите, основные направления для подбора запросов. Пример: Установка пластиковых окон, продажа земельных участков, услуги частного психотерапевта"></textarea>
+                    <textarea class="input input_area"
+                              placeholder="Перечислите, основные направления для подбора запросов. Пример: Установка пластиковых окон, продажа земельных участков, услуги частного психотерапевта"></textarea>
                 </div>
             </div>
             <button class="form__submit promotion__submit" type="submit">
@@ -242,33 +279,32 @@ function testForm()
     $answers = [
         'factors' => 'Количество уникальных посетителей',
         'openRate' => 'Какой процент людей открыл письмо',
-        'googleAdwords'=>'Все вышеперечисленное',
-        'leadGeneration'=>'Call to action',
-        'twitterGif'=>'Да',
-        'advYoutube'=>'Статичная',
-        'ctr'=>'40',
-        'robots'=>'Все вышеперечисленное',
-        'sef'=>'ЧеловекоПонятный URL',
-        'formatSeo'=>'RDFA',
-        'speedLoad'=>'Длина url страницы',
-        'priceGoogle'=>'Оба варианта',
-        'bestAdv'=>'Первое',
-        'landingConversion'=>'Средней конверсии не существует',
-        'blackSeo'=>'Изменение даты публикации материала',
-        'altText'=>'.gif',
-        '1000Page'=>'Все вышеперечисленное',
-        'dataMarkup'=>'Все вышеперечисленное',
-        'banGoogle'=>'Все вышеперечисленное',
-        'filterAgc'=>'Отсутствие добавочной ценности в контенте сайта'
+        'googleAdwords' => 'Все вышеперечисленное',
+        'leadGeneration' => 'Call to action',
+        'twitterGif' => 'Да',
+        'advYoutube' => 'Статичная',
+        'ctr' => '40',
+        'robots' => 'Все вышеперечисленное',
+        'sef' => 'ЧеловекоПонятный URL',
+        'formatSeo' => 'RDFA',
+        'speedLoad' => 'Длина url страницы',
+        'priceGoogle' => 'Оба варианта',
+        'bestAdv' => 'Первое',
+        'landingConversion' => 'Средней конверсии не существует',
+        'blackSeo' => 'Изменение даты публикации материала',
+        'altText' => '.gif',
+        '1000Page' => 'Все вышеперечисленное',
+        'dataMarkup' => 'Все вышеперечисленное',
+        'banGoogle' => 'Все вышеперечисленное',
+        'filterAgc' => 'Отсутствие добавочной ценности в контенте сайта'
     ];
     $correct = 0;
     $wrong = 0;
     $totalQuestions = count($answers);
 
 
-
-    foreach ($answers as  $key=>$answer) {
-        if($_POST[$key] == $answer) {
+    foreach ($answers as $key => $answer) {
+        if ($_POST[$key] == $answer) {
             $correct++;
         } else {
             $wrong++;
@@ -280,7 +316,7 @@ function testForm()
     ?>
     <form action="#" method="post" class="testing__form2">
         <div class="testing__slide-title">
-            Результаты теста <?=$correct ?> из <?=$totalQuestions ?> верных ответов.
+            Результаты теста <?= $correct ?> из <?= $totalQuestions ?> верных ответов.
         </div>
         <div class="testing__fields">
             <div class="testing__row">

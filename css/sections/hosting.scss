@@ -25,7 +25,7 @@
 
         &:hover {
           .host-tarifs__img-img {
-            box-shadow: inset -8px 6px 5px 0px rgba($bg, 0.75), 0px 0px 5px 4px rgba(#789fbb, 0.5);
+            box-shadow: inset 16px 0 40px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 5px 4px rgba(#789fbb, 0.5);
           }
         }
 
@@ -35,7 +35,7 @@
             width: 80px;
             height: 80px;
             animation: tarif0 10s linear 0s infinite;
-            box-shadow: inset -8px 6px 5px 0px rgba($bg, 0.75), 0px 0px 4px 2px rgba(#789fbb, 0.5);
+            box-shadow: inset 16px 0 40px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 4px 2px rgba(#789fbb, 0.5);
           }
         }
 
@@ -61,7 +61,7 @@
 
         &:hover {
           .host-tarifs__img-img {
-            box-shadow: inset -12px 10px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+            box-shadow: inset 26px 0 60px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 7px 7px rgba(#789fbb, 0.5);
           }
         }
 
@@ -71,7 +71,7 @@
             width: 125px;
             height: 125px;
             animation: tarif1 20s linear 0s infinite;
-            box-shadow: inset -12px 10px 5px 0px rgba($bg, 0.75), 0px 0px 5px 3px rgba(#789fbb, 0.3);
+            box-shadow: inset 26px 0 60px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 5px 3px rgba(#789fbb, 0.3);
           }
         }
 
@@ -101,7 +101,7 @@
 
         &:hover {
           .host-tarifs__img-img {
-            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 9px 10px rgba(#789fbb, 0.5);
+            box-shadow: inset 46px 0 90px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 9px 10px rgba(#789fbb, 0.5);
           }
         }
 
@@ -111,7 +111,7 @@
             width: 280px;
             height: 280px;
             animation: tarif2 40s linear 0s infinite;
-            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+            box-shadow: inset 46px 0 90px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16),  0px 0px 7px 7px rgba(#789fbb, 0.5);
           }
 
         }
@@ -144,7 +144,7 @@
 
         &:hover {
           .host-tarifs__img-img {
-            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 10px 11px rgba(#789fbb, 0.5);
+            box-shadow: inset 46px 0 90px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16), 0px 0px 10px 11px rgba(#789fbb, 0.5);
           }
         }
 
@@ -153,11 +153,9 @@
           &-img {
             width: 320px;
             height: 320px;
-
             animation: tarif3 40s linear 0s infinite;
             transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
-
-            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 7px 7px rgba(#789fbb, 0.5);
+            box-shadow: inset 46px 0 90px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16), 0px 0px 7px 7px rgba(#789fbb, 0.5);
           }
         }
 
@@ -186,7 +184,7 @@
 
         &:hover {
           .host-tarifs__img-img {
-            box-shadow: inset -25px 18px 5px 0px rgba($bg, 0.75), 0px 0px 12px 14px rgba(#789fbb, 0.5);
+            box-shadow: inset 66px 0 120px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16), 0px 0px 12px 14px rgba(#789fbb, 0.5);
           }
         }
 
@@ -197,7 +195,7 @@
             height: 535px;
             animation: tarif4 70s linear 0s infinite;
             transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
-            box-shadow: inset -55px 30px 5px 0px rgba($bg, 0.75), 0px 0px 9px 9px rgba(#789fbb, 0.5);
+            box-shadow: inset 66px 0 120px 3px rgba(0,0,0,0.9), inset -3px 0 5px 2px rgba(255,255,255,0.16), 0px 0px 9px 9px rgba(#789fbb, 0.5);
           }
         }
 
@@ -221,6 +219,10 @@
       }
 
       &:hover {
+
+        .host-tarifs__img-img {
+          animation-play-state: paused;
+        }
 
         .host-tarifs__glow {
           transform: scale(1.1);

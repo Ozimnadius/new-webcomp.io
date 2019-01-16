@@ -35,7 +35,30 @@ window.onload = function () {
             nextEl: '.site-dev__next',
             prevEl: '.site-dev__prev',
         },
+        on: {
+            init: function () {
+                setDevDesc(this.slides[this.activeIndex]);
+            },
+            slideChange: function (e) {
+                setDevDesc(this.slides[this.activeIndex]);
+            }
+        }
+
+
     });
+
+    function setDevDesc (slide) {
+        let logoObj = document.querySelector('.site-dev__img'),
+            descObj = document.querySelectorAll('.site-dev__desc-item')[0].querySelector('.site-dev__desc-val'),
+            goalObj = document.querySelectorAll('.site-dev__desc-item')[1].querySelector('.site-dev__desc-val'),
+            logo = slide.dataset.logo,
+            desc = slide.dataset.desc,
+            goal = slide.dataset.goal;
+
+        logoObj.src = logo;
+        descObj.innerText = desc;
+        goalObj.innerText = goal;
+    }
 
     let seoCatsSwiper = new Swiper('.slider__container', {
         // Optional parameters
@@ -119,20 +142,20 @@ window.onload = function () {
         },
         on: {
             init: function () {
-                let activeIndex = this.activeIndex+1,
+                let activeIndex = this.activeIndex + 1,
                     allSlides = this.slides.length,
                     percents = document.querySelector('.testing__pag-percents');
 
-                percents.innerHTML = (activeIndex/allSlides)*100 + ' %';
+                percents.innerHTML = (activeIndex / allSlides) * 100 + ' %';
                 // debugger;
                 // console.log('swiper initialized');
             },
             slideChange: function () {
-                let activeIndex = this.activeIndex+1,
+                let activeIndex = this.activeIndex + 1,
                     allSlides = this.slides.length,
                     percents = document.querySelector('.testing__pag-percents');
 
-                percents.innerHTML = Math.round((activeIndex/allSlides)*100) + ' %';
+                percents.innerHTML = Math.round((activeIndex / allSlides) * 100) + ' %';
             }
         },
     });

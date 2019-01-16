@@ -132,7 +132,7 @@ function tarifForm($id, $name, $src)
     <div class="hosting">
         <div class="hosting__planet host-tarifs__item_<?= $id ?>">
             <div class="host-tarifs__img" style="height: 100px">
-                <div class="host-tarifs__img-img" style="background-image:url(<?=$src?>); width: 100px; height: 100px;  box-shadow: inset -8px 6px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 4px 2px rgba(120, 159, 187, 0.5);"></div>
+                <div class="host-tarifs__img-img" style="background-image:url(<?=$src?>); width: 100px; height: 100px;  box-shadow: inset 16px 0 40px 3px rgba(0, 0, 0, 0.9), inset -3px 0 5px 2px rgba(255, 255, 255, 0.16), 0px 0px 4px 2px rgba(120, 159, 187, 0.5);"></div>
             </div>
             <div class="host-tarifs__tag">
                 <div class="host-tarifs__title">Тариф <span class="host-tarifs__title_y">«<?= $name ?>»</span></div>

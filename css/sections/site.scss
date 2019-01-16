@@ -80,7 +80,7 @@
     }
     &__img {
       height: 102px;
-      width: 102px;
+      //width: 102px;
     }
 
     &__desc {
@@ -108,7 +108,7 @@
     &__swiper {
       margin: 0 295px;
       position: relative;
-      margin-bottom: 100px;
+      margin-bottom: 25px;
 
 
       &-wrap {
@@ -122,6 +122,12 @@
         left: 0;
         right: 0;
       }
+    }
+
+    &__works {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 150px;
     }
 
     &__title {

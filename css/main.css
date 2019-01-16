@@ -120,6 +120,14 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
 }
 
+.page:after {
+  content: url(../images/bg/smoke.gif);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .page section {
   height: 100vh;
 }
@@ -2342,6 +2350,11 @@ input, textarea, select {
 
 .index-first__img {
   height: 93vh;
+  width: 104.90909vh;
+  background: url("/images/icons/sprite.png") left center;
+  background-size: cover;
+  -webkit-animation: play 0.8s steps(6) infinite;
+  animation: play 0.8s steps(6) infinite;
   position: relative;
   z-index: 20;
   display: block;
@@ -2752,22 +2765,44 @@ input, textarea, select {
 }
 
 .monster {
-  width: 1920px;
-  height: 1100px;
-  background: url("/images/icons/sprite2.png") left center;
-  -webkit-animation: play 5.5s steps(50) infinite;
-  animation: play 5.5s steps(50) infinite;
+  height: 93vh;
+  width: 104.90909vh;
+  background: url("/images/icons/sprite.png") left center;
+  background-size: cover;
+  -webkit-animation: play 0.8s steps(6) infinite;
+  animation: play 0.8s steps(6) infinite;
 }
 
 @-webkit-keyframes play {
   100% {
-    background-position: -96050px;
+    background-position: -600%;
   }
 }
 
 @keyframes play {
   100% {
-    background-position: -96050px;
+    background-position: -600%;
+  }
+}
+
+.monster2 {
+  height: 93vh;
+  width: 104.90909vh;
+  background: url("/images/icons/sprite2.png") left center;
+  background-size: cover;
+  -webkit-animation: play2 3.8s steps(30) infinite;
+  animation: play2 3.8s steps(30) infinite;
+}
+
+@-webkit-keyframes play2 {
+  100% {
+    background-position: -3000%;
+  }
+}
+
+@keyframes play2 {
+  100% {
+    background-position: -3000%;
   }
 }
 
@@ -3898,6 +3933,10 @@ input, textarea, select {
   line-height: 34.98px;
 }
 
+.site-dev__desc-item:last-child {
+  min-height: 70px;
+}
+
 .site-dev__desc-name {
   font-size: 21px;
   font-weight: 500;
@@ -4067,10 +4106,10 @@ input, textarea, select {
   position: absolute;
   width: 280px;
   top: 50%;
-  margin-top: -5px;
+  margin-top: -30px;
   cursor: pointer;
   outline: none;
-  padding: 5px 0;
+  padding: 25px 0;
 }
 
 .site-dev__prev:hover .seporator_prev .seporator__line, .site-dev__next:hover .seporator_prev .seporator__line {

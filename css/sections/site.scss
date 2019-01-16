@@ -90,9 +90,15 @@
       padding: 0 160px;
       margin-bottom: 55px;
 
+
+
       &-item {
         text-align: center;
         line-height: 34.98px;
+
+        &:last-child {
+          min-height: 70px;
+        }
       }
 
       &-name {
@@ -248,10 +254,10 @@
       position: absolute;
       width: 280px;
       top: 50%;
-      margin-top: -5px;
+      margin-top: -30px;
       cursor: pointer;
       outline: none;
-      padding: 5px 0;
+      padding: 25px 0;
 
       &:hover {
         .seporator_prev {

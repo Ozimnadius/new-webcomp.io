@@ -7,17 +7,17 @@ section.site-middle
     .site-dev
         //- logo
         .site-dev__logo
-            img(src='images/content/dev/devLogo.png').site-dev__img
+            img(src='images/bg/no-logo.png').site-dev__img
 
         //- desc
         .site-dev__desc
             .site-dev__desc-item
-                span.site-dev__desc-name Описание:
-                span.site-dev__desc-val  Лидер на рынке электронных книг: Россия, СНГ
+                span.site-dev__desc-name Описание:&nbsp;
+                span.site-dev__desc-val Создание корпоративного сайта для мед. центра
 
             .site-dev__desc-item
-                span.site-dev__desc-name Цель:
-                span.site-dev__desc-val  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
+                span.site-dev__desc-name Цель:&nbsp;
+                span.site-dev__desc-val Разработать удобный сайт для презентации медицинских услуг
 
 
         //- swiper
@@ -26,12 +26,44 @@ section.site-middle
             .site-dev__swiper-wrap
                 .swiper-container.site-dev__container
                     .swiper-wrapper
-                        each val in [1,2,3]
-                            .swiper-slide.site-dev__slide
+                        -
+                            var slides = [
+                            {
+                            slide: 'images/content/dev/corp/img1.jpg',
+                            logo: 'images/bg/no-logo.png',
+                            desc: 'Создание корпоративного сайта для мед. центра',
+                            goal: 'Разработать удобный сайт для презентации медицинских услуг'
+                            },
+                            {
+                            slide: 'images/content/dev/corp/img2.jpg',
+                            logo: 'images/content/dev/corp/logo2.png',
+                            desc: 'Корпоративный портал завода «Корвет»',
+                            goal: 'Разработать портал с каталогом продукции и обширной внутренней структурой с размещением необходимой документации и удобным взаимодействием с сайтом'
+                            },
+                            {
+                            slide: 'images/content/dev/corp/img3.jpg',
+                            logo: 'images/bg/no-logo.png',
+                            desc: 'Корпоративный сайт строительной компании',
+                            goal: 'Разработать продающее решение по строительству домов под ключ'
+                            },
+                            {
+                            slide: 'images/content/dev/corp/img4.jpg',
+                            logo: 'images/content/dev/corp/logo4.png',
+                            desc: 'Создание корпоративного сайта для компании «Animals Travel» ',
+                            goal: 'Разработка корпоративного сайта для презентации услуг с акцентами на удобство и простоту с применением яркого дизайна'
+                            },
+                            {
+                            slide: 'images/content/dev/corp/img5.jpg',
+                            logo: 'images/content/dev/corp/logo5.png',
+                            desc: 'Корпоративный сайт пекарни',
+                            goal: 'Создание корпоративного сайта с меню выпечки и возможностью оформление заказа на сайте'
+                            }
+                            ];
+                        each slide in slides
+                            div(data-logo=slide.logo data-desc=slide.desc data-goal=slide.goal).swiper-slide.site-dev__slide
                                 .proportion.proportion_750x470
                                 .site-dev__slide-img
-                                    //iframe(src='https://ubf-cons.ru/')
-                                    img(src='images/content/dev/dev1.jpg').site-dev__slide-pic
+                                    img(src=slide.slide).site-dev__slide-pic
 
                 .site-dev__prev
                     .seporator.seporator_prev

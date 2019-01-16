@@ -12,13 +12,12 @@ section.site-middle
         //- desc
         .site-dev__desc
             .site-dev__desc-item
-                span.site-dev__desc-name Описание:
-                span.site-dev__desc-val  Лидер на рынке электронных книг: Россия, СНГ
+                span.site-dev__desc-name Описание:&nbsp;
+                span.site-dev__desc-val Продающий лендинг по подбору автомобилей
 
             .site-dev__desc-item
-                span.site-dev__desc-name Цель:
-                span.site-dev__desc-val  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
-
+                span.site-dev__desc-name Цель:&nbsp;
+                span.site-dev__desc-val Разработка конверсионного лендинга для увеличение обращений из интернета
 
         //- swiper
         .site-dev__swiper
@@ -26,12 +25,45 @@ section.site-middle
             .site-dev__swiper-wrap
                 .swiper-container.site-dev__container
                     .swiper-wrapper
-                        each val in [1,2,3]
-                            .swiper-slide.site-dev__slide
+                        -
+                            var slides = [
+                                {
+                                slide: 'images/content/dev/land/img1.jpg',
+                                logo: 'images/content/dev/land/logo1.png',
+                                desc: 'Продающий лендинг по подбору автомобилей',
+                                goal: 'Разработка конверсионного лендинга для увеличение обращений из интернета'
+                                },
+                                {
+                                slide: 'images/content/dev/land/img2.jpg',
+                                logo: 'images/content/dev/land/logo2.png',
+                                desc: 'Лендинг кофейной тематики',
+                                goal: 'Предоставить дизайн проект продающего сайта кофейной тематики'
+                                },
+                                {
+                                slide: 'images/content/dev/land/img3.jpg',
+                                logo: 'images/content/dev/land/logo3.png',
+                                desc: 'Посадочная страница для презентации приложения',
+                                goal: 'Презентация приложения нацеленная на стимуляцию к установке'
+                                },
+                                {
+                                slide: 'images/content/dev/land/img4.jpg',
+                                logo: 'images/content/dev/land/logo4.png',
+                                desc: 'Лендинг для бренда часов',
+                                goal: 'Дизайн проект для лендинга часов'
+                                },
+                                {
+                                slide: 'images/content/dev/land/img5.jpg',
+                                logo: 'images/content/dev/land/logo5.png',
+                                desc: 'Лендинг для строительства',
+                                goal: 'Увеличение заявок и минимизация затрат на рекламу'
+                                },
+
+                            ];
+                        each slide in slides
+                            div(data-logo=slide.logo data-desc=slide.desc data-goal=slide.goal).swiper-slide.site-dev__slide
                                 .proportion.proportion_750x470
                                 .site-dev__slide-img
-                                    //iframe(src='https://ubf-cons.ru/')
-                                    img(src='images/content/dev/dev1.jpg').site-dev__slide-pic
+                                    img(src=slide.slide).site-dev__slide-pic
 
                 .site-dev__prev
                     .seporator.seporator_prev
@@ -43,6 +75,7 @@ section.site-middle
                     .seporator
                         .seporator__line
                         .seporator__triangle
+
 
 
         //- works

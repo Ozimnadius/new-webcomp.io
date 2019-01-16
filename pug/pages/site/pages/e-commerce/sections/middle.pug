@@ -12,13 +12,12 @@ section.site-middle
         //- desc
         .site-dev__desc
             .site-dev__desc-item
-                span.site-dev__desc-name Описание:
-                span.site-dev__desc-val  Лидер на рынке электронных книг: Россия, СНГ
+                span.site-dev__desc-name Описание:&nbsp;
+                span.site-dev__desc-val Мульти брендовый интернет-магазин сантехники
 
             .site-dev__desc-item
-                span.site-dev__desc-name Цель:
-                span.site-dev__desc-val  Проведение SEO кампании с целью повышения известности и узнаваемости бренда
-
+                span.site-dev__desc-name Цель:&nbsp;
+                span.site-dev__desc-val Разработка масштабного магазина сантехники с подключение базы склада и системой оплаты и доставки
 
         //- swiper
         .site-dev__swiper
@@ -26,12 +25,38 @@ section.site-middle
             .site-dev__swiper-wrap
                 .swiper-container.site-dev__container
                     .swiper-wrapper
-                        each val in [1,2,3]
-                            .swiper-slide.site-dev__slide
+                        -
+                            var slides = [
+                                {
+                                slide: 'images/content/dev/ecomm/img1.jpg',
+                                logo: 'images/bg/no-logo.png',
+                                desc: 'Мульти брендовый интернет-магазин сантехники',
+                                goal: 'Разработка масштабного магазина сантехники с подключение базы склада и системой оплаты и доставки'
+                                },
+                                {
+                                slide: 'images/content/dev/ecomm/img2.jpg',
+                                logo: 'images/bg/no-logo.png',
+                                desc: 'Разработка интернет-магазина стоматологического оборудования',
+                                goal: 'Создание магазина с товарными предложениями и функционалом удобного заказа с сайта'
+                                },
+                                {
+                                slide: 'images/content/dev/ecomm/img3.jpg',
+                                logo: 'images/bg/no-logo.png',
+                                desc: 'Интернет-магазин кондитерских изделий',
+                                goal: 'Создание яркого сайта для кондитерской студии'
+                                },
+                                {
+                                slide: 'images/content/dev/ecomm/img4.jpg',
+                                logo: 'images/bg/no-logo.png',
+                                desc: 'Интернет-магазин электрогенераторов',
+                                goal: 'Создание интернет-магазина с удобным фильтром по оборудованию'
+                                }
+                            ];
+                        each slide in slides
+                            div(data-logo=slide.logo data-desc=slide.desc data-goal=slide.goal).swiper-slide.site-dev__slide
                                 .proportion.proportion_750x470
                                 .site-dev__slide-img
-                                    //iframe(src='https://ubf-cons.ru/')
-                                    img(src='images/content/dev/dev1.jpg').site-dev__slide-pic
+                                    img(src=slide.slide).site-dev__slide-pic
 
                 .site-dev__prev
                     .seporator.seporator_prev
@@ -43,6 +68,7 @@ section.site-middle
                     .seporator
                         .seporator__line
                         .seporator__triangle
+
 
 
         //- works

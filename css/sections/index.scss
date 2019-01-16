@@ -21,6 +21,11 @@
 
     &__img {
       height: vh(1023);
+      width: vh(1154);
+      background: url('/images/icons/sprite.png') left center;
+      background-size: cover;
+      animation: play 0.8s steps(6) infinite;
+
       position: relative;
       z-index: 20;
       display: block;
@@ -378,13 +383,26 @@
 }
 
 .monster {
-  width: 1920px;
-  height: 1100px;
-  background: url('/images/icons/sprite2.png') left center;
+  height: vh(1023);
+  width: vh(1154);
+  background: url('/images/icons/sprite.png') left center;
+  background-size: cover;
 
-  animation: play 5.5s steps(50) infinite;
+  animation: play 0.8s steps(6) infinite;
 }
 
 @keyframes play {
-  100% { background-position: -96050px; }
+  100% { background-position: -600%; }
+}
+
+.monster2 {
+  height: vh(1023);
+  width: vh(1154);
+  background: url('/images/icons/sprite2.png') left center;
+  background-size: cover;
+  animation: play2 3.8s steps(30) infinite;
+
+}
+@keyframes play2 {
+  100% { background-position: -3000%;}
 }

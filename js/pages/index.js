@@ -1,4 +1,27 @@
 (function () {
+
+    // let canvas = document.querySelector('.smoke'),
+    //     ctx = canvas.getContext('2d');
+    // canvas.width = innerWidth;
+    // canvas.height = innerHeight;
+    //
+    // let party = smokemachine(ctx, [131, 145, 206]);
+    // party.start(); // start animating
+    // party.setPreDrawCallback(function (dt) {
+    //     party.addSmoke(innerWidth - 200, innerHeight + 400, .9);
+    //     canvas.width = innerWidth;
+    //     canvas.height = innerHeight;
+    // });
+    // onmousemove = function (e) {
+    //     let x = e.clientX,
+    //         y = e.clientY,
+    //         n = .9,
+    //         t = Math.floor(Math.random() * 200) + 7600;
+    //     party.addsmoke(x, y, n, t)
+    // }
+
+
+
     let pagItems = document.querySelector('.pag__items'),
         pagAllItem = document.querySelectorAll('.pag__item'),
         sections = document.querySelectorAll('section'),
@@ -15,7 +38,7 @@
         historyPage = localStorage.getItem('page');
 
 
-    if (historySection && !page.classList.contains('page_second') && document.querySelector('.'+historyPage)) {
+    if (historySection && !page.classList.contains('page_second') && document.querySelector('.' + historyPage)) {
         scrollToSection(localStorage.getItem('sectionIndex'));
     }
 
@@ -213,8 +236,8 @@
 
         });
 
-        for (let i=0; i<switches.length; i++){
-            switches[i].addEventListener('click',function (e) {
+        for (let i = 0; i < switches.length; i++) {
+            switches[i].addEventListener('click', function (e) {
                 let id = this.dataset.id,
                     activeTab = document.querySelector('.best__tab[data-id="' + id + '"]');
 

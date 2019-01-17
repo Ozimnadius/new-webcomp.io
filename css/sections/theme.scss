@@ -298,6 +298,7 @@
       text-transform: uppercase;
       padding-left: 100px;
       margin-bottom: 60px;
+      font-weight: 400;
     }
 
     &__switches {
@@ -435,6 +436,23 @@
     &__price {
       color: #c70541;
       font-size: 70px;
+    }
+
+
+    &__button {
+      padding: 15px 20px;
+      border: 1px solid rgba($bg,.7);
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: $bg;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.92px;
     }
   }
 

@@ -2,22 +2,124 @@ include ../../../common/_mixins
 include ../../../common/_settings
 
 section.theme-cats
+    //- title
+    .theme-iss__title Изменение стоимости заявки на новом сайте
 
     //- list
     .theme-cats__list
-        each cat in themeCats
-            a(href=cat.href style='background:'+cat.bg+';').theme-cats__item
+        // each cat in themeCats
+        //     a(href=cat.href style='background:'+cat.bg+';').theme-cats__item
+        //         .proportion.proportion_1x1
+        //         .theme-cats__img
+        //             img(src=cat.src).theme-cats__img-img
+        //         .theme-cats__line
+        //         .theme-cats__fromTo
+        //             .theme-cats__from
+        //                 .theme-cats__from-name до
+        //                 .theme-cats__from-val= cat.from
+        //             .theme-cats__to
+        //                 .theme-cats__to-name после
+        //                 .theme-cats__to-val= cat.to
+        //         .theme-cats__thematic= cat.thematic
+        //         .theme-cats__title= cat.title
+        //- CATLOG
+        -
+            var list = [
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site1.png',
+            color: '#fdd752',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site2.png',
+            color: '#013243',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site3.png',
+            color: '#00a2ff',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site4.png',
+            color: '#c70541',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site5.png',
+            color: '#000000',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site6.png',
+            color: '#bd0808',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site7.png',
+            color: '#e8b4c6',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site8.png',
+            color: '#040a1a',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site7.png',
+            color: '#e8b4c6',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site8.png',
+            color: '#040a1a',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site1.png',
+            color: '#fdd752',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site2.png',
+            color: '#013243',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site3.png',
+            color: '#00a2ff',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site4.png',
+            color: '#c70541',
+            href: './portfolio.html'
+            },
+            {
+            title: 'Промо-сайт',
+            img: 'images/content/sites/site5.png',
+            color: '#000000',
+            href: './portfolio.html'
+            }
+            ]
+        each val, index in list
+            a(href=val.href title=val.title style='background-color:'+val.color).index-cat__item.index-cat__item_5
                 .proportion.proportion_1x1
-                .theme-cats__img
-                    img(src=cat.src).theme-cats__img-img
-                .theme-cats__line
-                .theme-cats__fromTo
-                    .theme-cats__from
-                        .theme-cats__from-name до
-                        .theme-cats__from-val= cat.from
-                    .theme-cats__to
-                        .theme-cats__to-name после
-                        .theme-cats__to-val= cat.to
-                .theme-cats__thematic= cat.thematic
-                .theme-cats__title= cat.title
+                .index-cat__item-title= val.title
+                .index-cat__item-img
+                    img(src=val.img).index-cat__item-pic
 

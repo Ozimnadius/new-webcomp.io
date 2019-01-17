@@ -120,14 +120,6 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
 }
 
-.page:after {
-  content: url(../images/bg/smoke.gif);
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .page section {
   height: 100vh;
 }
@@ -2565,6 +2557,10 @@ input, textarea, select {
   position: relative;
 }
 
+.index-cat__item_5 {
+  width: 20%;
+}
+
 .index-cat__item:hover .index-cat__item-pic {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -2594,6 +2590,19 @@ input, textarea, select {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
+}
+
+.index-cat__item-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 7%;
+  text-align: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .index-cat__menu {
@@ -6458,6 +6467,7 @@ input, textarea, select {
   text-transform: uppercase;
   padding-left: 100px;
   margin-bottom: 60px;
+  font-weight: 400;
 }
 
 .theme-price__switches {
@@ -6617,6 +6627,26 @@ input, textarea, select {
 .theme-price__price {
   color: #c70541;
   font-size: 70px;
+}
+
+.theme-price__button {
+  padding: 15px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.92px;
 }
 
 .theme .bottom {

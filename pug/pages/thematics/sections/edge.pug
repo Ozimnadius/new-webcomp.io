@@ -2,4 +2,75 @@ include ../../../common/_mixins
 include ../../../common/_settings
 
 section.rek-edge
-    include ../../../common/sections/edge
+    .edge
+
+        //- title
+        .edge__title Наши преимущества
+
+        //- list
+        .edge__list
+            .edge__row
+                .edge__item
+                    .edge__desc
+                        .edge__name
+                            | Лидируем в рейтингах
+                            br
+                            | надежных исполнителей
+
+                            .edge__img
+                                +icon('edge1', 'promote-edge__svg')
+
+                        .edge__arrow
+                            +arrow('arrow_black')
+
+                .edge__item
+                    .edge__desc
+
+                        .edge__name
+                            | Имеем опыт в
+                            br
+                            | более 350 нишах
+                            .edge__img
+                                +icon('edge2', 'promote-edge__svg')
+
+                        .edge__arrow
+                            +arrow('arrow_black arrow_prev')
+            .edge__row
+                .edge__item
+
+                    .edge__desc
+                        .edge__name
+                            | Даем результат
+                            br
+                            | быстрее
+                            .edge__img
+                                +icon('edge3', 'promote-edge__svg')
+
+                        .edge__arrow
+                            +arrow('arrow_black')
+                .edge__item
+
+                    .edge__desc
+                        .edge__name
+                            | Применяем уникальные
+                            br
+                            | технологии
+                            .edge__img
+                                +icon('edge4', 'promote-edge__svg')
+
+                        .edge__arrow
+                            +arrow('arrow_black arrow_prev')
+
+
+        //- content
+        .edge__content
+            .edge__col.
+                Для нас разработка сайта это творческий процесс к которому мы подходим детально и скрупулёзно изучаем
+                нишу клиента. Это очень важный этап в бизнесе любой компании, который позволяет избежать лишнего расхода
+                средств в дальнейшем.
+            .edge__col.
+                Мы не только разрабатываем продающий дизайн, а закладываем функционал для
+                масштабирования проекта в перспективе. Закажите разработку у нас и мы выведем ваш бизнес в интернете на новый уровень.
+
+        //- button
+        //- button(type='button').edge__button.button.button_red.callorderOpen заказать сайт

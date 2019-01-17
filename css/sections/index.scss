@@ -207,6 +207,10 @@
       width: 25%;
       position: relative;
 
+      &_5 {
+        width: 20%;
+      }
+
       &:hover {
         .index-cat__item-pic {
           transform: scale(1.2);
@@ -227,6 +231,16 @@
       &-pic {
         display: block;
         transition: .4s;
+      }
+      &-title {
+        color: rgba($text, .7);
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 7%;
+        text-align: center;
+        transition: .3s;
       }
     }
 
